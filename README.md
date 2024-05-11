@@ -226,10 +226,34 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
 
 1. Deploy app
 Follow the instruction at https://github.com/geoffrich/svelte-adapter-azure-swa
-Run the below command and then in update your `svelete.config.js` & `src/app.d.ts` 
+Run the below command
     ```
     npm install -D svelte-adapter-azure-swa
     ```
+
+1. Update  your `svelete.config.js`
+    ```javascript
+    import azure from 'svelte-adapter-azure-swa';
+
+    export default {
+        kit: {
+            ...
+            adapter: azure()
+        }
+    };
+    ```
+
+1. Update  your  `src/app.d.ts`
+    ```typescript
+    /// <reference types="svelte-adapter-azure-swa" />
+    ```
+1. Update package.json to include the below. Here using the version supported by GitHub.
+    ```
+	"engines": {
+        "node": ">=20.11.1"
+    }
+    ```
+    ![alt text](image-11.png)
 
 1. Use VScode to publish the project to GitHub
     ![alt text](image-4.png)
@@ -262,16 +286,29 @@ Run the below command and then in update your `svelete.config.js` & `src/app.d.t
 1. Add env variable application setting `PUBLIC_SUPABASE_URL`
     ![alt text](image-9.png)
 
-1. Repeat the same for env variable application setting `PUBLIC_SUPABASE_ANON_KEY`
+1. Repeat the same for env variable `PUBLIC_SUPABASE_ANON_KEY`
+
+1. Repeat the same for env variable `VITE_PUBLIC_URL` and past the Static Web App URL.
 
 1. Check Your Current Node.js Version: Run `node -v` in your terminal to find out the version of Node.js that is currently installed.
 
-1. Update GitHub workflow to include the below
+
+1. Go to [project settings](https://github.com/anoobbacker/election-leaderboard/settings) and add `.env` variable for Actions
+    ![alt text](image-13.png)
+
+1. Once added it will look like:
+    ![alt text](image-14.png)
+
+1. Add the variables to the workflow
     ```
-      - name: Setup Node.js
-        id: setupnodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'v20.12.2'  # Specify the Node.js version    
+        env:
+          PUBLIC_SUPABASE_URL: ${{vars.PUBLIC_SUPABASE_URL }}
+          PUBLIC_SUPABASE_ANON_KEY: ${{vars.PUBLIC_SUPABASE_ANON_KEY }}
     ```
-    ![alt text](image-10.png)
+
+1. After adding it should look like below:
+    ![alt text](image-15.png)
+
+1. Re-run the workflow
+
+1. 
