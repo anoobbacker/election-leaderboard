@@ -230,3 +230,48 @@ Run the below command and then in update your `svelete.config.js` & `src/app.d.t
     ```
     npm install -D svelte-adapter-azure-swa
     ```
+
+1. Use VScode to publish the project to GitHub
+    ![alt text](image-4.png)
+
+1. View the GitHub project
+    ![alt text](image-5.png)
+
+1. Create a Azure Stack Web App. Click [here](https://portal.azure.com/#create/Microsoft.StaticApp)
+    - Web App Name: kotas-election
+    - Plan type: Free (For hobby or personal projects)
+    - Source: GitHub
+    - Account: `youraccountname`
+    - Organization: `yourorg`
+    - Repository: `election-leaderboard`
+    - Branch: `main`
+    - Build Presets: `SvelteKit`
+    - App location: `./`
+    - Api location: `build/server`
+    - Ouput location: `builder/static`
+
+    ![alt text](image-6.png)
+
+1. Go to the web app & copy the `URL` from _Essentials_
+    
+    ![alt text](image-7.png)
+
+1. Go to `Static Web App` > `Environment variables`
+    ![alt text](image-8.png)
+
+1. Add env variable application setting `PUBLIC_SUPABASE_URL`
+    ![alt text](image-9.png)
+
+1. Repeat the same for env variable application setting `PUBLIC_SUPABASE_ANON_KEY`
+
+1. Check Your Current Node.js Version: Run `node -v` in your terminal to find out the version of Node.js that is currently installed.
+
+1. Update GitHub workflow to include the below
+    ```
+      - name: Setup Node.js
+        id: setupnodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'v20.12.2'  # Specify the Node.js version    
+    ```
+    ![alt text](image-10.png)
