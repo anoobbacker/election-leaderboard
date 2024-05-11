@@ -9,7 +9,7 @@ export const load: PageServerLoad = async ({ url, locals: { supabase, safeGetSes
   // if the user is already logged in return them to the account page
   if (session) {
     console.log(new Date().toLocaleString(), 'src/routes/+page.server.ts: Redirect to /predict');  // Log when action is called
-    throw redirect(303, '/predict')
+    throw redirect(303, '/')
   }
 
   console.log(new Date().toLocaleString(), 'src/routes/+page.server.ts: Load return');  // Log when action is called
@@ -17,36 +17,35 @@ export const load: PageServerLoad = async ({ url, locals: { supabase, safeGetSes
 }
 
 export const actions: Actions = {
-  login: async ({ request, locals: { supabase, safeGetSession } }) => {
+  login: async ({ request, locals: { supabase } }) => {
     const origin = import.meta.env.VITE_PUBLIC_URL as string
     console.log(new Date().toLocaleString(), 'Login action called', "URL = ", origin);  // Log when action is called
-    const { session } = await safeGetSession()
-
-    if (session) {
-      throw redirect(303, '/predict')
-    }
     
     const formData = await request.formData()
     const email = formData.get('email') as string
+    const password = formData.get('password') as string
+
+    if (!email) {
+			return fail(400, { email, missing: true });
+		}
+
+    if (!password) {
+			return fail(400, { password, missing: true });
+		}
     
-    const redirectTo = origin || formData.get('redirectTo') as string
+    console.log(new Date().toLocaleString(), 'Form data received:', email);
 
-    console.log(new Date().toLocaleString(), 'Form data received:', Object.fromEntries(formData));
-
-    const { data: data, error: err } = await supabase.auth.signInWithOtp({ 
+    const { data: data, error: err } = await supabase.auth.signInWithPassword({ 
       email: email,
-      options: {
-        emailRedirectTo: redirectTo
-      } 
+      password: password,
     })
 
     if (err) {
-      return { success: false, message: err.message }
+      console.log(new Date().toLocaleString(), 'Login action return', 'Error = ', err?.message);  // Log when action is called
+      return fail(500, {email, incorrect: true});
     }
     
-    return {
-      success: true,
-      message: 'Check your email for the magic link.'
-    }
+    console.log(new Date().toLocaleString(), 'Login action return successfully');  // Log when action is called    
+    return {success: true}
   },
 }

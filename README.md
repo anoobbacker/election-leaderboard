@@ -290,6 +290,9 @@ Run the below command
 
 1. Repeat the same for env variable `VITE_PUBLIC_URL` and past the Static Web App URL.
 
+1. To edit the Supabase allow list of URL, go to [URL Configuration](https://supabase.com/dashboard/project/_/auth/url-configuration) and add public URL for the Static Web App.
+    ![alt text](image-16.png)
+
 1. Check Your Current Node.js Version: Run `node -v` in your terminal to find out the version of Node.js that is currently installed.
 
 
