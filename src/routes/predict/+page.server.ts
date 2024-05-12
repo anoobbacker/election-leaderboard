@@ -53,13 +53,13 @@ export const load: PageServerLoad = async ({ locals: { supabase, safeGetSession 
 
 export const actions: Actions = {
   update: async ({ request, locals: { supabase, safeGetSession } }) => {
-    console.log(new Date().toLocaleString(), 'Update action called');  // Log when action is called
+    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
 
     const formData = await request.formData()
     const formDataEntries = Array.from(formData.entries());
     const constituencies = new Set();
 
-    console.log(new Date().toLocaleString(), 'Form data received:', Object.fromEntries(formData));
+    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Form data received:', Object.fromEntries(formData));
 
     // Extract constituency names from form keys
     formDataEntries.forEach(([key, _]) => {
@@ -69,7 +69,7 @@ export const actions: Actions = {
       }
     });
 
-    console.log(new Date().toLocaleString(), 'Processed form constituencies:', constituencies);
+    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Processed form constituencies:', constituencies);
 
     // const { session } = await safeGetSession()
     const uuid = (await supabase.auth.getUser())?.data?.user?.id;
@@ -80,7 +80,7 @@ export const actions: Actions = {
       const voteShare = formData.get(`${constituency}-winnervoteshare`);
       const winningMargin = formData.get(`${constituency}-winningvotes`);
 
-      console.log(new Date().toLocaleString(), 'Candidate:', candidate, 'Votes Share:', voteShare, 'Votes:', winningMargin);
+      console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Candidate:', candidate, 'Votes Share:', voteShare, 'Votes:', winningMargin);
 
       const { data, error } = await supabase
         .from('election_prediction_2024')
@@ -97,7 +97,7 @@ export const actions: Actions = {
         }
     }
 
-    console.log(new Date().toLocaleString(), 'Update action return');  // Log when action is called
+    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action return');  // Log when action is called
     return {};
   },
 }

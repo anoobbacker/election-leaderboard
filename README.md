@@ -255,6 +255,19 @@ Run the below command
     ```
     ![alt text](image-11.png)
 
+1. Refer [env-variables](https://kit.svelte.dev/docs/adapter-node#environment-variables) to understand how to set env variables in production. In production, .env files are not automatically loaded. To do so, install dotenv in your project...
+
+    ```
+    npm install dotenv
+    ```
+
+    ...and invoke it before running the built app:
+
+    ```diff
+    -node build
+    +node -r dotenv/config build
+    ```
+
 1. Use VScode to publish the project to GitHub
     ![alt text](image-4.png)
 
@@ -314,4 +327,4 @@ Run the below command
 
 1. Re-run the workflow
 
-1. 
+1. To view the Static Web App logs, open Azure Cloud Shell and run the below command:

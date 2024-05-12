@@ -4,9 +4,9 @@ import type { LayoutLoad } from './$types'
 import { createBrowserClient, isBrowser, parse } from '@supabase/ssr'
 
 export const load = (async ({ fetch, data, depends }) => {
-  console.log('===Universal load function called===');
   depends('supabase:auth')
 
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: Universal load called');  // Log when action is called
   const supabase = createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
     global: {
       fetch,
@@ -33,5 +33,6 @@ export const load = (async ({ fetch, data, depends }) => {
     data: { session },
   } = await supabase.auth.getSession()
 
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: Universal load return');  // Log when action is called
   return { supabase, session, avatar_url }
 }) satisfies LayoutLoad

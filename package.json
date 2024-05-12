@@ -1,6 +1,6 @@
 {
 	"name": "election-leaderboard",
-	"version": "0.0.1",
+	"version": "1.0.1",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -43,9 +43,10 @@
 		"@supabase/auth-ui-shared": "^0.1.8",
 		"@supabase/auth-ui-svelte": "^0.2.9",
 		"@supabase/ssr": "^0.3.0",
-		"@supabase/supabase-js": "^2.43.1"
+		"@supabase/supabase-js": "^2.43.1",
+		"dotenv": "^16.4.5"
 	},
 	"engines": {
-    "node": ">=20.11.1"
-  }
+		"node": ">=20.11.1"
+	}
 }
