@@ -1,16 +1,14 @@
-import { fail, redirect } from '@sveltejs/kit'
-import type { Actions, PageServerLoad } from './$types'
+// /src/routes/private/candidate/+page.server.ts
+
+import type { PageServerLoad } from './$types'
 
 interface CandidatePartyLookup {
   [key: string]: string;  // Define an index signature
 }
 
-export const load: PageServerLoad = async ({ locals: { supabase, safeGetSession } }) => {
-  const { session } = await safeGetSession()
-
-  if (!session) {
-    throw redirect(303, '/')
-  }
+export const load: PageServerLoad = async ({ depends, locals: { supabase, session } }) => {
+  depends('supabase:db:kerala_election_2024');
+  depends('supabase:db:candidate_party_mapping');
 
   // Fetching election data if needed for other parts of your page
   const { data: electionData, error: electionError } = await supabase

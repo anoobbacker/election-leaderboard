@@ -1,3 +1,5 @@
+// /src/routes/private/predict/+page.server.ts
+
 import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
@@ -9,13 +11,8 @@ interface CandidatePredictionLookup {
   [key: string]: {candidate_name: string, vote_share: string, winning_margin: string};  // Define an index signature
 }
 
-export const load: PageServerLoad = async ({ locals: { supabase, safeGetSession } }) => {
-  const { session } = await safeGetSession()
-
-  if (!session) {
-    throw redirect(303, '/')
-  }
-
+export const load: PageServerLoad = async ({ depends, locals: { supabase, session } }) => {
+  const uuid = session?.user.id;
   // Fetching election data if needed for other parts of your page
   const { data: electionData, error: electionError } = await supabase
     .from('kerala_election_2024')
@@ -30,7 +27,7 @@ export const load: PageServerLoad = async ({ locals: { supabase, safeGetSession 
   const { data: candidatePrediction, error: candidatePredictionError } = await supabase
     .from('election_prediction_2024')
     .select('constituency, candidate_name, vote_share, winning_margin')
-    .eq('participant_id', session.user.id);
+    .eq('participant_id', uuid);
 
   if (electionError || candidatePartyError || candidatePredictionError) {
     console.error('Failed to load data:', electionError || candidatePartyError || candidatePredictionError);
@@ -52,7 +49,7 @@ export const load: PageServerLoad = async ({ locals: { supabase, safeGetSession 
 }
 
 export const actions: Actions = {
-  update: async ({ request, locals: { supabase, safeGetSession } }) => {
+  update: async ({ request, locals: { supabase, session } }) => {
     console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
 
     const formData = await request.formData()
@@ -71,8 +68,7 @@ export const actions: Actions = {
 
     console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Processed form constituencies:', constituencies);
 
-    // const { session } = await safeGetSession()
-    const uuid = (await supabase.auth.getUser())?.data?.user?.id;
+    const uuid = session?.user.id;
 
     // Prepare and insert data for each constituency
     for (const constituency of constituencies) {
