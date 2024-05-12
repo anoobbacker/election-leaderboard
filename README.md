@@ -208,11 +208,8 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     npm install -D @tailwindcss/forms
     ```
 
-1. Set up Supabase AuthUI. Follow instructions [here](https://supabase.com/docs/guides/getting-started/tutorials/with-sveltekit).
+1. DONOT follow [here](https://supabase.com/docs/guides/auth/server-side/sveltekit). Rather follow: https://supabase.com/docs/guides/auth/server-side/sveltekit
 
-    ```
-    npm install @supabase/auth-ui-svelte @supabase/auth-ui-shared
-    ```
 
 1. Run app
     Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
