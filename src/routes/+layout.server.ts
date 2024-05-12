@@ -3,11 +3,11 @@ import type { LayoutServerLoad } from './$types'
 
 export const load = (async ({ locals: { supabase, safeGetSession } }) => {
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad called');  // Log when action is called
-  const { session } = await safeGetSession()
-  const user = (await supabase.auth.getUser())?.data?.user;
-  
+  const { session, user } = await safeGetSession()
+    
   let avatar_url = ''
-  if (user) {
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad ', session, user);  // Log when action is called
+  if (session && user) {
     const { data: profile, error: profileError } = await supabase
     .from('profiles')
     .select(`username, avatar_url`)
@@ -22,9 +22,11 @@ export const load = (async ({ locals: { supabase, safeGetSession } }) => {
       };
     }
     avatar_url = profile.avatar_url
-    console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad return. Set avatar url = ', avatar_url);  // Log when action is called
+  } else {
+    console.error(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad No session or  user');  // Log when action is called  
   }
 
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
   return {
     session,
     avatar_url

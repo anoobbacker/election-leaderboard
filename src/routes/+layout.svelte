@@ -37,6 +37,7 @@
 	<title>Kotas: Kerala Election Prediction Leaderboard</title>
 </svelte:head>
 
+{#if session}
 <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -102,6 +103,7 @@
     </div>
   </div>
 </nav>
+{/if}
 
 {#if session && currentPath != '/'}
 <div class="bg-white py-12 sm:py-16">

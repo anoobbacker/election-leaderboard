@@ -328,3 +328,16 @@ Run the below command
 1. Re-run the workflow
 
 1. To view the Static Web App logs, open Azure Cloud Shell and run the below command:
+
+# Tech used
+This uses Svelte, Supabase, Bootstrap, HTML, JS, CSS for a static single pages design best suited for all devices like mobile, desktop etc.
+
+- [SvelteKit](https://kit.svelte.dev/)
+- [Supabase](https://supabase.com)
+- [TailwindCSS](hhttps://tailwindui.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Vite](https://vitest.dev/)
+- Avatars generated from [Getavataaars](https://getavataaars.com).
+
+# Copyright and License
+Code released under the [MIT](https://github.com/anoobbacker/betwc/blob/master/LICENSE) license.
