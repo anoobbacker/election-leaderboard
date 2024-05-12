@@ -3,12 +3,9 @@
 	import '../app.pcss';
 	import { goto, invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
-  import type { LayoutData } from './$types';
-
-	export let data: LayoutData;
-
-	let { supabase, session } = data
-	$: ({ supabase, session } = data)
+  
+	export let data;
+	$: ({ session, supabase } = data);
 
   onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
