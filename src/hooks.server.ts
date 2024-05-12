@@ -70,11 +70,13 @@ const authGuard: Handle = async ({ event, resolve }) => {
   event.locals.user = user
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {
+    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session. Redirecting to /login');  // Log when action is called  
     return redirect(303, '/login')
   }
 
   if (event.locals.session && event.url.pathname === '/login') {
-    return redirect(303, '/private')
+    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Redirecting to /auth/callback');  // Log when action is called  
+    return redirect(303, '/auth/callback')
   }
 
   return resolve(event)
