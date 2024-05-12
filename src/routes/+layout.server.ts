@@ -3,7 +3,9 @@ import type { LayoutServerLoad } from './$types'
 
 export const load = (async ({ locals: { supabase, safeGetSession } }) => {
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad called');  // Log when action is called
-  const { session, user } = await safeGetSession()
+  const { session } = await safeGetSession()
+  const user = (await supabase.auth.getUser())?.data?.user;
+  
   let avatar_url = ''
   if (user) {
     const { data: profile, error: profileError } = await supabase

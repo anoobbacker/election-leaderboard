@@ -4,15 +4,15 @@ import type { Actions, PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ url, locals: { supabase, safeGetSession} }) => {
   const origin = import.meta.env.VITE_PUBLIC_URL as string
-  console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Load called', 'URL = ', url.origin, 'Orgin = ', origin);  // Log when action is called
+  console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad called', 'URL = ', url.origin, 'Orgin = ', origin);  // Log when action is called
   const { data: session, error: err } = await supabase.auth.getSession()
   // if the user is already logged in return them to the account page
   if (session.session) {
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Redirect to /', err);  // Log when action is called
+    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad Redirect to /', err);  // Log when action is called
     throw redirect(303, '/')
   }
 
-  console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Load return');  // Log when action is called
+  console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad return');  // Log when action is called
   return { url: url.origin }
 }
 
