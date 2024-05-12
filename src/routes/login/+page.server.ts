@@ -5,10 +5,10 @@ import type { Actions, PageServerLoad } from './$types'
 export const load: PageServerLoad = async ({ url, locals: { supabase, safeGetSession} }) => {
   const origin = import.meta.env.VITE_PUBLIC_URL as string
   console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad called', 'URL = ', url.origin, 'Orgin = ', origin);  // Log when action is called
-  const { data: session, error: err } = await supabase.auth.getSession()
+  const { session, user } = await safeGetSession()
   // if the user is already logged in return them to the account page
-  if (session.session) {
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad Redirect to /', err);  // Log when action is called
+  if (session) {
+    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: ServerLoad Redirect to /');  // Log when action is called
     throw redirect(303, '/')
   }
 

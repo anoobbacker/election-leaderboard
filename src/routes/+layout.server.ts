@@ -3,11 +3,11 @@ import type { LayoutServerLoad } from './$types'
 
 export const load = (async ({ locals: { supabase, safeGetSession } }) => {
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad called');  // Log when action is called
-  const { session, user } = await safeGetSession()
+  const { session: ssession, user } = await safeGetSession()
     
   let avatar_url = ''
-  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad ', session, user);  // Log when action is called
-  if (session && user) {
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad ', ssession, user);  // Log when action is called
+  if (ssession && user) {
     const { data: profile, error: profileError } = await supabase
     .from('profiles')
     .select(`username, avatar_url`)
@@ -17,7 +17,7 @@ export const load = (async ({ locals: { supabase, safeGetSession } }) => {
     if (profileError) {
       console.error(new Date().toLocaleString(), 'src/routes/+layout.server.ts: Failed to load profile ', profileError);  // Log when action is called
       return {
-        session,
+        ssession,
         avatar_url: ''
       };
     }
@@ -28,7 +28,7 @@ export const load = (async ({ locals: { supabase, safeGetSession } }) => {
 
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
   return {
-    session,
+    ssession,
     avatar_url
   }
 }) satisfies LayoutServerLoad

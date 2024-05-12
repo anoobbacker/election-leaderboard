@@ -2,7 +2,7 @@
 <script lang="ts">
 	import '../app.pcss';
   import { page } from '$app/stores';
-	import { invalidate } from '$app/navigation'
+	import { invalidate, invalidateAll } from '$app/navigation'
 	import { onMount, onDestroy } from 'svelte'
   import type { LayoutData } from './$types';
 
@@ -23,8 +23,10 @@
 
 	onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((event, _session) => {
+      console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange', event, _session, session);  // Log when action is called
 			if (_session?.expires_at !== session?.expires_at) {
 				invalidate('supabase:auth')
+        // invalidateAll()
 			}
 		})
 		return () => data.subscription.unsubscribe()
