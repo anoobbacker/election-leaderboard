@@ -4,11 +4,7 @@
 	import { invalidateAll, goto } from '$app/navigation';
 	import type { SubmitFunction } from '@sveltejs/kit';
 
-	export let data
 	export let form
-
-	let { url } = data
-	$: ({ url } = data)
 
 	let loginForm: HTMLFormElement
 	let loading = false

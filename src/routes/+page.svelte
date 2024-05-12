@@ -79,7 +79,7 @@
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Forecast your predictions!</h2>
         <p class="mt-6 text-lg leading-8 text-gray-300">Kerala Election 2024.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-          <a href="/predict" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
+          <a href="/login" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
         </div>
       </div>
       <div class="relative mt-16 h-80 lg:mt-8">

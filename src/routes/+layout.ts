@@ -1,27 +1,38 @@
 // src/routes/+layout.ts
 import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import type { LayoutLoad } from './$types'
-import { createBrowserClient, isBrowser, parse } from '@supabase/ssr'
+import { createBrowserClient, createServerClient, isBrowser, parse } from '@supabase/ssr'
 
-export const load = (async ({ fetch, data, depends }) => {
+export const load: LayoutLoad = async ({ data, depends, fetch }) => {
+  /**
+   * Declare a dependency so the layout can be invalidated, for example, on
+   * session refresh.
+   */
   depends('supabase:auth')
 
   console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load called');  // Log when action is called
-  const supabase = createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
-    global: {
-      fetch,
-    },
-    cookies: {
-      get(key) {
-        if (!isBrowser()) {
-          return JSON.stringify(data.ssession)
-        }
-
-        const cookie = parse(document.cookie)
-        return cookie[key]
-      },
-    },
-  })
+  const supabase = isBrowser()
+    ? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
+        global: {
+          fetch,
+        },
+        cookies: {
+          get(key) {
+            const cookie = parse(document.cookie)
+            return cookie[key]
+          },
+        },
+      })
+    : createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
+        global: {
+          fetch,
+        },
+        cookies: {
+          get() {
+            return JSON.stringify(data.session)
+          },
+        },
+      })
 
   let avatar_url = data.avatar_url
   /**
@@ -33,6 +44,10 @@ export const load = (async ({ fetch, data, depends }) => {
     data: { session },
   } = await supabase.auth.getSession()
 
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
   console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load return');  // Log when action is called
-  return { supabase, session, avatar_url }
-}) satisfies LayoutLoad
+  return { session, supabase, user, avatar_url }
+}

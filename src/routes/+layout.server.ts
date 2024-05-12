@@ -1,23 +1,23 @@
 // src/routes/+layout.server.ts
 import type { LayoutServerLoad } from './$types'
 
-export const load = (async ({ locals: { supabase, safeGetSession } }) => {
+export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) => {
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad called');  // Log when action is called
-  const { session: ssession, user } = await safeGetSession()
-    
+  const uuid = session?.user.id
+
   let avatar_url = ''
-  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad ', ssession, user);  // Log when action is called
-  if (ssession && user) {
+  console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad ', session, uuid);  // Log when action is called
+  if (uuid) {
     const { data: profile, error: profileError } = await supabase
     .from('profiles')
     .select(`username, avatar_url`)
-    .eq('id', user.id)
+    .eq('id', uuid)
     .single()
 
     if (profileError) {
       console.error(new Date().toLocaleString(), 'src/routes/+layout.server.ts: Failed to load profile ', profileError);  // Log when action is called
       return {
-        ssession,
+        session,
         avatar_url: ''
       };
     }
@@ -28,7 +28,7 @@ export const load = (async ({ locals: { supabase, safeGetSession } }) => {
 
   console.log(new Date().toLocaleString(), 'src/routes/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
   return {
-    ssession,
+    session,
     avatar_url
   }
-}) satisfies LayoutServerLoad
+}
