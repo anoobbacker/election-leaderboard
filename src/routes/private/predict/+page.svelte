@@ -4,10 +4,9 @@
 	import type { SubmitFunction } from '@sveltejs/kit';
 
 	export let data
-	export let form
 
-	let { session, supabase, electionData, candidatePartyLookup, candidatePredictionLookup } = data
-	$: ({ session, supabase, electionData, candidatePartyLookup, candidatePredictionLookup } = data)
+	let { electionData, candidatePartyLookup, candidatePredictionLookup } = data
+	$: ({ electionData, candidatePartyLookup, candidatePredictionLookup } = data)
 
   let electionPredictionForm: HTMLFormElement
 	let loading = false

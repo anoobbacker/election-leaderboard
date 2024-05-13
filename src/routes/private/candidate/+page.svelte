@@ -4,7 +4,6 @@
 	import type { SubmitFunction } from '@sveltejs/kit';
 
 	export let data
-	export let form
 
 	let { session, supabase, electionData, candidatePartyLookup } = data
 	$: ({ session, supabase, electionData, candidatePartyLookup } = data)
