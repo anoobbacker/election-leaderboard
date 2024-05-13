@@ -20,9 +20,11 @@ const supabase: Handle = async ({ event, resolve }) => {
        * standard behavior.
        */
       set: (key, value, options) => {
+        console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Set Cookie.',key, value, options);  // Log when action is called
         event.cookies.set(key, value, { ...options, path: '/' })
       },
       remove: (key, options) => {
+        console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Remove Cookie.',key, options);  // Log when action is called
         event.cookies.delete(key, { ...options, path: '/' })
       },
     },
@@ -47,6 +49,7 @@ const supabase: Handle = async ({ event, resolve }) => {
     } = await event.locals.supabase.auth.getUser()
     if (error) {
       // JWT validation has failed
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',error);  // Log when action is called
       return { session: null, user: null }
     }
 
