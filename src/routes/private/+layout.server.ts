@@ -17,7 +17,6 @@ export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) 
     if (profileError) {
       console.error(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: Failed to load profile ', profileError);  // Log when action is called
       return {
-        session,
         avatar_url: ''
       };
     }
@@ -28,7 +27,6 @@ export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) 
 
   console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
   return {
-    session,
     avatar_url
   }
 }

@@ -14,7 +14,7 @@
 				 * Queue this as a task so the navigation won't prevent the
 				 * triggering function from completing
 				 */
-         console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', newSession);  // Log when action is called
+         console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession);  // Log when action is called
 				setTimeout(() => {
 					goto('/', { invalidateAll: true });
 				});

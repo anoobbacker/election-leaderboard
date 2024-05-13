@@ -34,7 +34,6 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         },
       })
 
-  let avatar_url = data.avatar_url
   /**
    * It's fine to use `getSession` here, because on the client, `getSession` is
    * safe, and on the server, it reads `session` from the `LayoutData`, which
@@ -49,5 +48,5 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
   } = await supabase.auth.getUser()
 
   console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load return');  // Log when action is called
-  return { session, supabase, user, avatar_url }
+  return { session, supabase, user }
 }
