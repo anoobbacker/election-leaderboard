@@ -79,7 +79,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
 
   if (event.locals.session && event.url.pathname === '/login') {
     console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Redirecting to /auth/callback');  // Log when action is called  
-    return redirect(303, '/auth/callback')
+    return redirect(303, '/api/auth/callback')
   }
 
   return resolve(event)

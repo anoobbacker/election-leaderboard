@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte'
   
 	export let data;
-	$: ({ session, supabase } = data);
+	$: ({ supabase } = data);
 
   onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
