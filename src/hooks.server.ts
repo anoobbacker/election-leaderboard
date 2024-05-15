@@ -30,7 +30,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       },
     },
    cookieOptions: {
-      sameSite: 'none',
+      sameSite: false,
       httpOnly: false,
       secure: true,
      },
@@ -79,13 +79,13 @@ const authGuard: Handle = async ({ event, resolve }) => {
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
-  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
+  // let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
 
-  if (!event.locals.session && cookie) {
-    const session: Session = JSON.parse(cookie);
-		const response = await event.locals.supabase.auth.setSession(session);
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session, found cookie!', cookie);  // Log when action is called  
-  }
+  // if (!event.locals.session && cookie) {
+  //   const session: Session = JSON.parse(cookie);
+	// 	const response = await event.locals.supabase.auth.setSession(session);
+  //   console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session, found cookie!', cookie);  // Log when action is called  
+  // }
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {    
     console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session. Redirecting to /login', event.cookies.get("sb-auth"));  // Log when action is called  
