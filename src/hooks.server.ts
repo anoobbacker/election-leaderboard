@@ -30,9 +30,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       },
     },
    cookieOptions: {
-      sameSite: false,
-      httpOnly: false,
-      secure: true,
+      sameSite: false
      },
   })
 
