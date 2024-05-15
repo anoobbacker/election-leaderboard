@@ -12,6 +12,7 @@
 		"generate-types": "tsc"
 	},
 	"devDependencies": {
+		"@azure/static-web-apps-cli": "^1.1.7",
 		"@fontsource/fira-mono": "^4.5.10",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -40,8 +41,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@supabase/auth-ui-shared": "^0.1.8",
-		"@supabase/auth-ui-svelte": "^0.2.9",
 		"@supabase/ssr": "^0.3.0",
 		"@supabase/supabase-js": "^2.43.1",
 		"dotenv": "^16.4.5"
