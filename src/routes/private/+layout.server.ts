@@ -6,7 +6,7 @@ export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) 
   const uuid = session?.user.id
 
   let avatar_url = ''
-  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad ', session, uuid);  // Log when action is called
+  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad ', JSON.stringify(session).replace(/\r/g, ''), uuid);  // Log when action is called
   if (uuid) {
     const { data: profile, error: profileError } = await supabase
     .from('profiles')
