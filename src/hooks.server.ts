@@ -29,6 +29,9 @@ const supabase: Handle = async ({ event, resolve }) => {
         event.cookies.delete(key, { ...options, path: '/' })
       },
     },
+   cookieOptions: {
+      sameSite: 'none',
+     },
   })
 
   /**
