@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte'
   
 	export let data;
-	$: ({ supabase } = data);
+	$: ({ supabase, session } = data);
 
   onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
@@ -20,6 +20,7 @@
 				});
 			}
 			if (newSession?.expires_at !== session?.expires_at) {
+				console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession, session);  // Log when action is called
 				invalidate('supabase:auth');
 			}
 		});

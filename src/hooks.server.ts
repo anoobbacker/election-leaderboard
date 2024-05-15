@@ -38,8 +38,10 @@ const supabase: Handle = async ({ event, resolve }) => {
   event.locals.safeGetSession = async () => {
     const {
       data: { session },
+      error: serr
     } = await event.locals.supabase.auth.getSession()
     if (!session) {
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Session null.', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
