@@ -32,7 +32,7 @@ export const actions: Actions = {
       return fail(500, {email, incorrect: true});
     }
     
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully');  // Log when action is called    
+    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', data.session, data.user);  // Log when action is called    
     return redirect(303, '/private')
   },
 }
