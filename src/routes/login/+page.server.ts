@@ -30,9 +30,9 @@ export const actions: Actions = {
     if (err) {
       console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action signIn error.', 'Error = ', err.message);  // Log when action is called
       return fail(500, {email, incorrect: true});
+    } else {
+      console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', data.session, data.user);  // Log when action is called    
+      return redirect(303, '/private')
     }
-    
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', data.session, data.user);  // Log when action is called    
-    return redirect(303, '/private')
   },
 }
