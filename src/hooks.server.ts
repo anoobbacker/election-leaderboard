@@ -1,9 +1,9 @@
 // src/hooks.server.ts
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
 import { createServerClient } from '@supabase/ssr'
 import { type Handle, redirect } from '@sveltejs/kit'
 import { sequence } from '@sveltejs/kit/hooks'
 
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
 
 const supabase: Handle = async ({ event, resolve }) => {
   /**
@@ -47,11 +47,11 @@ const supabase: Handle = async ({ event, resolve }) => {
 
     const {
       data: { user },
-      error,
+      error: uerr,
     } = await event.locals.supabase.auth.getUser()
-    if (error) {
+    if (uerr) {
       // JWT validation has failed
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',error);  // Log when action is called
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',uerr);  // Log when action is called
       return { session: null, user: null }
     }
 

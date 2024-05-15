@@ -3,7 +3,8 @@ import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
 export const actions: Actions = {
-  login: async ({ request, locals: { supabase } }) => {
+  login: async (event) => {
+    const { request, url, locals: { supabase } } = event
     console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action called');  // Log when action is called
     
     const formData = await request.formData()
