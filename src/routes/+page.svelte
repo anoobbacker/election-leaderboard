@@ -1,5 +1,8 @@
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
+	export let data
+  let { supabase } = data
+  $: ({ supabase } = data)
 </script>
 
 <div class="bg-white py-12 sm:py-16">
