@@ -21,7 +21,10 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
             const cookie = parse(document.cookie)
             return cookie[key]
           },
-        },
+        }, 
+        cookieOptions: {
+          sameSite: 'none',
+         },
       })
     : createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
         global: {
@@ -32,6 +35,9 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
             return JSON.stringify(data.session)
           },
         },
+        cookieOptions: {
+          sameSite: 'none',
+         },
       })
 
   /**
