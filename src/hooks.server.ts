@@ -5,7 +5,7 @@ import { type Handle, redirect } from '@sveltejs/kit'
 import { sequence } from '@sveltejs/kit/hooks'
 
 
-const supabase: Handle = async ({ event, resolve }) => {
+export const supabase: Handle = async ({ event, resolve }) => {
   /**
    * Creates a Supabase client specific to this server request.
    *
@@ -35,17 +35,7 @@ const supabase: Handle = async ({ event, resolve }) => {
    * validating the JWT, this function also calls `getUser()` to validate the
    * JWT before returning the session.
    */
-  event.locals.safeGetSession = async () => {    
-    const {
-      data: { user },
-      error: uerr,
-    } = await event.locals.supabase.auth.getUser()
-    if (uerr) {
-      // JWT validation has failed
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',uerr);  // Log when action is called
-      return { session: null, user: null }
-    }
-
+  event.locals.safeGetSession = async () => {
     const {
       data: { session },
       error: serr
@@ -55,6 +45,15 @@ const supabase: Handle = async ({ event, resolve }) => {
       return { session: null, user: null }
     }
 
+    const {
+      data: { user },
+      error: uerr,
+    } = await event.locals.supabase.auth.getUser()
+    if (uerr) {
+      // JWT validation has failed
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',uerr);  // Log when action is called
+      return { session: null, user: null }
+    }
 
     return { session, user }
   }
