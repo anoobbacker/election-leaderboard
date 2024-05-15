@@ -74,7 +74,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
-  let cookie : string | undefined = event.cookies.get("sb-auth")
+  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
 
   if (!event.locals.session && cookie) {
     const session: Session = JSON.parse(cookie);
