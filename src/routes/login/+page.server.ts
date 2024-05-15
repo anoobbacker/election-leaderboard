@@ -32,7 +32,6 @@ export const actions: Actions = {
       return fail(500, {email, incorrect: true});
     } else {
       const { session, user } = data
-      // event.locals.supabase.auth.setSession({access_token: session.access_token, refresh_token: session.refresh_token})
       console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', JSON.stringify(session).replace(/\r/g, ''), JSON.stringify(user).replace(/\r/g, ''));  // Log when action is called    
       return redirect(303, '/private')
     }
