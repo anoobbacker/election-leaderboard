@@ -45,7 +45,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       error: serr
     } = await event.locals.supabase.auth.getSession()
     if (!session) {
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession No Session found. Error = ', serr);  // Log when action is called
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
@@ -55,7 +55,7 @@ const supabase: Handle = async ({ event, resolve }) => {
     } = await event.locals.supabase.auth.getUser()
     if (uerr) {
       // JWT validation has failed
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: JWT validation failed.',uerr);  // Log when action is called
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() JWT validation failed.',uerr);  // Log when action is called
       return { session: null, user: null }
     }
 
@@ -78,7 +78,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
   event.locals.session = session
   event.locals.user = user
   let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Session cookie.', cookie);  // Log when action is called  
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Session cookie.', cookie);  // Log when action is called  
 
   // if (!event.locals.session && cookie) {
   //   const session: Session = JSON.parse(cookie);
@@ -87,15 +87,16 @@ const authGuard: Handle = async ({ event, resolve }) => {
   // }
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {    
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session. Redirecting to /login');  // Log when action is called  
+    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() No session. Redirecting to /login');  // Log when action is called  
     return redirect(303, '/login')
   }
 
   if (event.locals.session && event.url.pathname === '/login') {
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Redirecting to /private');  // Log when action is called  
+    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Redirecting to /private');  // Log when action is called  
     return redirect(303, '/private')
   }
 
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', event);  // Log when action is called  
   return resolve(event)
 }
 

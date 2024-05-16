@@ -23,7 +23,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
           },
         }, 
         cookieOptions: {
-          sameSite: 'none',
+          sameSite: false,
+          httpOnly: false,
          },
       })
     : createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
@@ -36,7 +37,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
           },
         },
         cookieOptions: {
-          sameSite: 'none',
+          sameSite: false,
+          httpOnly: false,
          },
       })
 
