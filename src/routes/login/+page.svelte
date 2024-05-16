@@ -17,7 +17,7 @@
 				// rerun all `load` functions, following the successful update
 				await invalidateAll();
 			}
-			applyAction(result);
+			// applyAction(result);
 			loading = false
 		}
 	}
