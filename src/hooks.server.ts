@@ -29,7 +29,8 @@ const supabase: Handle = async ({ event, resolve }) => {
       },
     },
    cookieOptions: {
-      sameSite: false
+      sameSite: false,
+      httpOnly: false,
      },
   })
 
@@ -44,7 +45,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       error: serr
     } = await event.locals.supabase.auth.getSession()
     if (!session) {
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Session null.', serr);  // Log when action is called
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession No Session found. Error = ', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
