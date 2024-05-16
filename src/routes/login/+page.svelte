@@ -13,11 +13,11 @@
 	const handleSubmit: SubmitFunction = () => {
 		loading = true
 		return async ( {result} ) => {
-			if ( result.type === 'success' ) {
-				// rerun all `load` functions, following the successful update
-				await invalidateAll();
-			}
-			// applyAction(result);
+			// if ( result.type === 'success' ) {
+			// 	// rerun all `load` functions, following the successful update
+			// 	await invalidateAll();
+			// }
+			applyAction(result);
 			loading = false
 		}
 	}
