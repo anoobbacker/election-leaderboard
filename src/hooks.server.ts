@@ -74,11 +74,12 @@ const supabase: Handle = async ({ event, resolve }) => {
 }
 
 const authGuard: Handle = async ({ event, resolve }) => {
+  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Session cookie.', cookie);  // Log when action is called  
+    
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
-  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Session cookie.', cookie);  // Log when action is called  
 
   // if (!event.locals.session && cookie) {
   //   const session: Session = JSON.parse(cookie);
