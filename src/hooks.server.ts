@@ -1,7 +1,6 @@
 // src/hooks.server.ts
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
 import { createServerClient } from '@supabase/ssr'
-import type { Session } from '@supabase/supabase-js'
 import { type Handle, redirect } from '@sveltejs/kit'
 import { sequence } from '@sveltejs/kit/hooks'
 
@@ -77,7 +76,8 @@ const authGuard: Handle = async ({ event, resolve }) => {
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
-  // let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
+  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Session cookie.', cookie);  // Log when action is called  
 
   // if (!event.locals.session && cookie) {
   //   const session: Session = JSON.parse(cookie);
@@ -86,7 +86,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
   // }
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {    
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session. Redirecting to /login', event.cookies.get("sb-auth"));  // Log when action is called  
+    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session. Redirecting to /login');  // Log when action is called  
     return redirect(303, '/login')
   }
 
