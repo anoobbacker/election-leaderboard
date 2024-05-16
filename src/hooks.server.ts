@@ -74,8 +74,8 @@ const supabase: Handle = async ({ event, resolve }) => {
 }
 
 const authGuard: Handle = async ({ event, resolve }) => {
-  let cookie : string | undefined = event.cookies.get("sb-wsrczwqvtdiuckpnvztv-auth-token")
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Session cookie.', cookie);  // Log when action is called  
+  let cookies : { name: string; value: string; }[] = event.cookies.getAll()
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Cookies: ', JSON.stringify(cookies));  // Log when action is called  
     
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
