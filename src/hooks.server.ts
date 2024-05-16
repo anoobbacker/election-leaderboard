@@ -96,7 +96,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
     return redirect(303, '/private')
   }
 
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', event);  // Log when action is called  
+  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', JSON.stringify(event));  // Log when action is called  
   return resolve(event)
 }
 

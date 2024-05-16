@@ -19,6 +19,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         cookies: {
           get(key) {
             const cookie = parse(document.cookie)
+            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, document.cookie);  // Log when action is called
             return cookie[key]
           },
         }, 
@@ -33,6 +34,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         },
         cookies: {
           get() {
+            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createServerClient Cookie.',JSON.stringify(data.session));  // Log when action is called
             return JSON.stringify(data.session)
           },
         },
