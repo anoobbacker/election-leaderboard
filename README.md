@@ -210,11 +210,26 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
 
 1. DONOT follow [here](https://supabase.com/docs/guides/auth/server-side/sveltekit). Rather follow: https://supabase.com/docs/guides/auth/server-side/sveltekit
 
+1. Create certificate for localhost HTTPS server using below command
+```
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout certs/private.key -out certs/certificate.crt
+```
+
+1. Edit `vite.config.ts` to include the below:
+```diff
+server: {
+		https: {
+			key: './certs/private.key',
+			cert: './certs/certificate.crt',
+		}
+	},
+```
 
 1. Run app
     Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
     ```bash
+    npm -D install @vitejs/plugin-basic-ssl
     npm run dev
 
     # or start the server and open the app in a new browser tab
