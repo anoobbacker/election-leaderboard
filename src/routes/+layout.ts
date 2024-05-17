@@ -41,6 +41,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         cookieOptions: {
           sameSite: false,
           httpOnly: false,
+          secure: false,
          },
       })
 
