@@ -8,11 +8,13 @@
 	let { avatar_url } = data
 	$: ({ avatar_url } = data)
 
-  let currentPath = '';
-  let isDropdownOpen = false;  // State to control the visibility of the mobile menu
-
+  let currentPath = '/private';  
   // Reactively update the currentPath whenever the page store updates
   $: currentPath = $page.url.pathname;
+  
+  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.svelte:', currentPath);  // Log when action is called
+  let isDropdownOpen = false;  // State to control the visibility of the mobile menu
+
   
   function toggleDropdown() {
     isDropdownOpen = !isDropdownOpen;
@@ -44,13 +46,13 @@
           <div class="flex space-x-4">
             <a 
               href="/private" 
-              class="{currentPath === '/private' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
+              class="{currentPath === '/private' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
               aria-current={currentPath === '/private' ? 'page' : false}>
               Home
             </a>
-            <a href="/private/candidate" class="{currentPath === '/private/candidate' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
+            <a href="/private/candidate" class="{currentPath === '/private/candidate' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
             aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
-            <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
+            <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
             aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
           </div>
         </div>
@@ -96,6 +98,8 @@
 </div>
 {/if} -->
 
-<div class="container">
-	<slot />
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl">
+      <slot />    
+  </div>
 </div>
