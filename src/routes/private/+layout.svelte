@@ -46,13 +46,13 @@
             <a 
               href="/private" 
               class="{currentPath === '/private' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
-              aria-current={currentPath === '/private' ? 'page' : undefined}>
+              aria-current={currentPath === '/private' ? 'page' : false}>
               Home
             </a>
             <a href="/private/candidate" class="{currentPath === '/private/candidate' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
-            aria-current={currentPath === '/private/candidate' ? 'page' : undefined}>Candidate</a>
+            aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
             <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
-            aria-current={currentPath === '/private/predict' ? 'page' : undefined}>Predict</a>
+            aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
           </div>
         </div>
       </div>
@@ -79,9 +79,9 @@
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="/private" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-      <a href="/private/candidate" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Candidate</a>
-      <a href="/private/predict" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Predict</a>
+      <a href="/private" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current={currentPath === '/private' ? 'page' : false}>Home</a>
+      <a href="/private/candidate" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
+      <a href="/private/predict" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
     </div>
   </div>
 </nav>
