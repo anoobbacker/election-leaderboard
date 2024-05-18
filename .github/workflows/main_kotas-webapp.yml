@@ -71,4 +71,6 @@ jobs:
           app-name: 'kotas-webapp'
           slot-name: 'Production'
           package: .
-          
+          app_location: "./" # App source code path
+          api_location: "build/server" # Api source code path - optional
+          output_location: "build/static" # Built app content directory - optional
