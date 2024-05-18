@@ -42,6 +42,7 @@ jobs:
           name: node-app
           path: |
             build
+            package.json
 
   deploy:
     runs-on: ubuntu-latest
