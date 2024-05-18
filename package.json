@@ -44,6 +44,7 @@
 	"dependencies": {
 		"@supabase/ssr": "^0.3.0",
 		"@supabase/supabase-js": "^2.43.1",
+		"@sveltejs/adapter-node": "^5.0.1",
 		"dotenv": "^16.4.5"
 	},
 	"engines": {
