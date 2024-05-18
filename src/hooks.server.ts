@@ -41,7 +41,15 @@ const supabase: Handle = async ({ event, resolve }) => {
    * JWT before returning the session.
    */
   event.locals.safeGetSession = async () => {
-    
+    const {
+      data: { session },
+      error: serr
+    } = await event.locals.supabase.auth.getSession()
+    if (!session) {
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
+      return { session: null, user: null }
+    }
+
     const {
       data: { user },
       error: uerr,
@@ -49,15 +57,6 @@ const supabase: Handle = async ({ event, resolve }) => {
     if (uerr) {
       // JWT validation has failed
       console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() JWT validation failed.',uerr);  // Log when action is called
-      return { session: null, user: null }
-    }
-
-    const {
-      data: { session },
-      error: serr
-    } = await event.locals.supabase.auth.getSession()
-    if (!session) {
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
@@ -82,12 +81,6 @@ const authGuard: Handle = async ({ event, resolve }) => {
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
-
-  // if (!event.locals.session && cookie) {
-  //   const session: Session = JSON.parse(cookie);
-	// 	const response = await event.locals.supabase.auth.setSession(session);
-  //   console.log(new Date().toLocaleString(), 'src/hooks.server.ts: No session, found cookie!', cookie);  // Log when action is called  
-  // }
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {    
     console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() No session. Redirecting to /login');  // Log when action is called  

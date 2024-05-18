@@ -1,7 +1,7 @@
 // src/routes/+layout.ts
 import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import type { LayoutLoad } from './$types'
-import { createBrowserClient, createServerClient, isBrowser, parse } from '@supabase/ssr'
+import { createBrowserClient, createServerClient, combineChunks, isBrowser, parse } from '@supabase/ssr'
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
   /**
@@ -18,9 +18,12 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         },
         cookies: {
           get(key) {
-            const cookie = parse(document.cookie)
-            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, document.cookie);  // Log when action is called
-            return cookie[key]
+            const cookie = combineChunks(key, (name) => {
+              const cookies = parse(document.cookie)
+              return cookies[name]
+            })
+            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, ";", cookie);  // Log when action is called
+            return cookie;
           },
         }, 
         cookieOptions: {
