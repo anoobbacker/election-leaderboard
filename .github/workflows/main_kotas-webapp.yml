@@ -31,7 +31,7 @@ jobs:
           PUBLIC_SUPABASE_ANON_KEY: ${{vars.PUBLIC_SUPABASE_ANON_KEY }}
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: zip release.zip ./build/* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -71,6 +71,3 @@ jobs:
           app-name: 'kotas-webapp'
           slot-name: 'Production'
           package: .
-          app_location: "./" # App source code path
-          api_location: "build/server" # Api source code path - optional
-          output_location: "build/static" # Built app content directory - optional
