@@ -35,19 +35,37 @@
             <tr>
                 <th scope="col" class="px-3 py-3">#</th>
                 <th scope="col" class="px-6 py-3">Constituency</th>
-                <th scope="col" class="px-6 py-3">UDF</th>
-                <th scope="col" class="px-6 py-3">LDF</th>
-                <th scope="col" class="px-6 py-3">NDA</th>
+                <th scope="col" class="px-6 py-3">Candidates</th>
             </tr>
         </thead>
         <tbody>
           {#each electionData as places}
             <tr class="bg-white border-b">
               <td class="px-6 py-4">{places.id}</td>
-              <td class="px-6 py-4">{places.constituency}</td>
-              <td class="px-6 py-4">{places.udf_candidate} - {candidatePartyLookup?.[places.udf_candidate]}</td>
-              <td class="px-6 py-4">{places.ldf_candidate} - {candidatePartyLookup?.[places.ldf_candidate]}</td>
-              <td class="px-6 py-4">{places.nda_candidate} - {candidatePartyLookup?.[places.nda_candidate]}</td>
+              <td class="px-6 py-4 font-bold text-base">{places.constituency}</td>
+              <td class="px-6 py-4">                
+                <div class="mt-4 flex items-center space-x-3 text-base">
+                  <div class="font-semibold text-gray-900">{places.udf_candidate}</div>
+                  <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                    <circle cx="1" cy="1" r="1" />
+                  </svg>
+                  <div class="text-gray-600">UDF: {candidatePartyLookup?.[places.udf_candidate]}</div>
+                </div>
+                <div class="mt-4 flex items-center space-x-3 text-base">
+                  <div class="font-semibold  text-gray-900">{places.ldf_candidate}</div>
+                  <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                    <circle cx="1" cy="1" r="1" />
+                  </svg>
+                  <div class="text-gray-600">LDF: {candidatePartyLookup?.[places.ldf_candidate]}</div>
+                </div>
+                <div class="mt-4 flex items-center space-x-3 text-base">
+                  <div class="font-semibold text-gray-900">{places.nda_candidate}</div>
+                  <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                    <circle cx="1" cy="1" r="1" />
+                  </svg>
+                  <div class="text-gray-600">NDA: {candidatePartyLookup?.[places.nda_candidate]}</div>
+                </div>
+              </td>
             </tr>
           {/each}
         </tbody>
