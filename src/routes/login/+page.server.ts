@@ -6,7 +6,8 @@ export const actions: Actions = {
   login: async (event) => {
     console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action called');  // Log when action is called
     
-    const formData = await event.request.formData()
+    const {request, locals: {supabase} } = event
+    const formData = await request.formData()
     const email = formData.get('email') as string
     const password = formData.get('password') as string
 
@@ -22,7 +23,7 @@ export const actions: Actions = {
     
     console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login form data received:', email);
 
-    const { data, error: err } = await event.locals.supabase.auth.signInWithPassword({ 
+    const { data, error: err } = await supabase.auth.signInWithPassword({ 
       email: email,
       password: password,
     })
