@@ -41,15 +41,7 @@ const supabase: Handle = async ({ event, resolve }) => {
    * JWT before returning the session.
    */
   event.locals.safeGetSession = async () => {
-    const {
-      data: { session },
-      error: serr
-    } = await event.locals.supabase.auth.getSession()
-    if (!session) {
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
-      return { session: null, user: null }
-    }
-
+    
     const {
       data: { user },
       error: uerr,
@@ -57,6 +49,15 @@ const supabase: Handle = async ({ event, resolve }) => {
     if (uerr) {
       // JWT validation has failed
       console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() JWT validation failed.',uerr);  // Log when action is called
+      return { session: null, user: null }
+    }
+
+    const {
+      data: { session },
+      error: serr
+    } = await event.locals.supabase.auth.getSession()
+    if (!session) {
+      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
