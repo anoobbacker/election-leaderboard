@@ -1,43 +1,37 @@
-# Election prediction leaderboard
+# Set up the app
 
-## TODO
-Try to make this a viral site such that entire Kerala people can participate. The same can be used for other Kerala elections. In future, expand this to all India.
-### Pending changes
+## Pending changes
 1. Show the candidates across all consitituency in a simple list of candidates with photos. Max 3 candidates per constituency. Refer https://tailwindui.com/components/application-ui/lists/grid-lists
-1. Create a table to map candidate to party. The party symbol can be shown along with candiate using this table.
-1. Create a table for group to participant mapping. Allow only one group for now and one participant in one group. Later will expand. Provide ways to add groups in future.
-1. Create a table to capture each participant's prediction for each constituency a) candidate b) vote share c) number of votes
-1. To submit predictions use tables and once selects show the photos of the candidates. Refer https://tailwindui.com/components/application-ui/lists/tables
 1. To select the candidates use menu drop-down with photos. Refer https://tailwindui.com/components/application-ui/forms/select-menus
-1. To input vote share and number of votes use input groups. Refer https://tailwindui.com/components/application-ui/forms/input-groups
-1. Show the particpant's selection in a simple list of candidates with photos. 3 candidates per constituency. Refer https://tailwindui.com/components/application-ui/lists/grid-lists
 1. Show previous election results from that constituency, exit polls etc.
 1. Create a table to capture the final results.
 1. Create a way to calculate the score for each participant and display the leaderboard.
-
-### Good to have
 1. Use TailwindCSS login control instead of the Svelte-kit default. Refer https://tailwindui.com/components/application-ui/forms/sign-in-forms
-1. Can I do something such that AI model can be used to predict a result?
+1. Use AI model can be used to predict a result?
+
+## Collect the details for election
+1. Go to [2024 Kerala election - Wikipedia ](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
+![alt text](assets/image-2.png)
 
 ## Set up Supabase
 1. Go to https://supabase.com/dashboard/projects
 1. Create _New project_
 1. Provide the details
-    ![alt text](image-1.png)
+    ![alt text](assets/image-1.png)
 1. Go to the [SQL Editor page](https://supabase.com/dashboard/project/_/sql) in the Dashboard.
 1. Click User Management Starter.
 1. Click Run.
-    ![alt text](image-3.png)
+    ![alt text](assets/image-3.png)
 1. Go to the [API Settings page](https://supabase.com/dashboard/project/_/settings/api) in the Dashboard.
 1. Find your Project _URL_, _anon_, and _service_role_ keys on this page.
 1. Save the environment variables in a .env placed in the root directory of your SvelteKit project. 
     All we need are the _SUPABASE_URL_ and the _SUPABASE_KEY_ key that you copied earlier.
-    ```
+    ```json
     PUBLIC_SUPABASE_URL="YOUR_SUPABASE_URL"
     PUBLIC_SUPABASE_ANON_KEY="YOUR_SUPABASE_KEY"
     ```
 1. Go to SQL Editor page, create a new query and run to create election candidate list:
-    ```
+    ```sql
     CREATE TABLE kerala_election_2024 (
         id SERIAL PRIMARY KEY,
         constituency VARCHAR(255),
@@ -70,9 +64,9 @@ Try to make this a viral site such that entire Kerala people can participate. Th
     ('Thiruvananthapuram', 'Shashi Tharoor', 'Pannyan Raveendran', 'Rajeev Chandrasekhar');
     ```
 
-1. 
+1. Go to SQL Editor page, create a new query and run to create  candidate to party mapping:
 
-    ```
+    ```sql
     CREATE TABLE candidate_party_mapping (
         id SERIAL PRIMARY KEY,
         constituency_number INTEGER,
@@ -145,7 +139,7 @@ Try to make this a viral site such that entire Kerala people can participate. Th
     ```
 
 1. Go to SQL Editor page, create a new query and run to create election prediction for each participant:
-    ```
+    ```sql
     CREATE TABLE election_prediction_2024 (
         participant_id UUID NOT NULL,
         constituency TEXT NOT NULL,
@@ -157,9 +151,6 @@ Try to make this a viral site such that entire Kerala people can participate. Th
         FOREIGN KEY (participant_id) REFERENCES profiles (id) -- Assumes you have a 'users' table with 'id' as UUID.
     );
     ```
-## Collect the details for election
-1. Go to [2024 Kerala election - Wikipedia ](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
-![alt text](image-2.png)
 
 ## Use ChatGPT to generate the boilerplate code
 ```
@@ -211,19 +202,19 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
 1. DONOT follow [here](https://supabase.com/docs/guides/auth/server-side/sveltekit). Rather follow: https://supabase.com/docs/guides/auth/server-side/sveltekit
 
 1. Create certificate for localhost HTTPS server using below command
-```
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout certs/private.key -out certs/certificate.crt
-```
+    ```
+    openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout certs/private.key -out certs/certificate.crt
+    ```
 
 1. Edit `vite.config.ts` to include the below:
-```diff
-server: {
-		https: {
-			key: './certs/private.key',
-			cert: './certs/certificate.crt',
-		}
-	},
-```
+    ```diff
+    server: {
+            https: {
+                key: './certs/private.key',
+                cert: './certs/certificate.crt',
+            }
+        },
+    ```
 
 1. Run app
     Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
@@ -239,7 +230,7 @@ server: {
 1. Deploy app
 Follow the instruction at https://github.com/geoffrich/svelte-adapter-azure-swa
 Run the below command
-    ```
+    ```bash
     npm install -D svelte-adapter-azure-swa
     ```
 
@@ -260,31 +251,19 @@ Run the below command
     /// <reference types="svelte-adapter-azure-swa" />
     ```
 1. Update package.json to include the below. Here using the version supported by GitHub.
-    ```
+    ```json
 	"engines": {
         "node": ">=20.11.1"
     }
     ```
-    ![alt text](image-11.png)
-
-1. Refer [env-variables](https://kit.svelte.dev/docs/adapter-node#environment-variables) to understand how to set env variables in production. In production, .env files are not automatically loaded. To do so, install dotenv in your project...
-
-    ```
-    npm install dotenv
-    ```
-
-    ...and invoke it before running the built app:
-
-    ```diff
-    -node build
-    +node -r dotenv/config build
-    ```
+    The below shows the NodeJS versions supported by Azure Static Web App 
+    ![alt text](assets/image-11.png)
 
 1. Use VScode to publish the project to GitHub
-    ![alt text](image-4.png)
+    ![alt text](assets/image-4.png)
 
 1. View the GitHub project
-    ![alt text](image-5.png)
+    ![alt text](assets/image-5.png)
 
 1. Create a Azure Stack Web App. Click [here](https://portal.azure.com/#create/Microsoft.StaticApp)
     - Web App Name: kotas-election
@@ -299,33 +278,33 @@ Run the below command
     - Api location: `build/server`
     - Ouput location: `builder/static`
 
-    ![alt text](image-6.png)
+    ![alt text](assets/image-6.png)
 
 1. Go to the web app & copy the `URL` from _Essentials_
     
-    ![alt text](image-7.png)
+    ![alt text](assets/image-7.png)
 
 1. Go to `Static Web App` > `Environment variables`
-    ![alt text](image-8.png)
+    ![alt text](assets/image-8.png)
 
 1. Add env variable application setting `PUBLIC_SUPABASE_URL`
-    ![alt text](image-9.png)
+    ![alt text](assets/image-9.png)
 
 1. Repeat the same for env variable `PUBLIC_SUPABASE_ANON_KEY`
 
 1. Repeat the same for env variable `VITE_PUBLIC_URL` and past the Static Web App URL.
 
 1. To edit the Supabase allow list of URL, go to [URL Configuration](https://supabase.com/dashboard/project/_/auth/url-configuration) and add public URL for the Static Web App.
-    ![alt text](image-16.png)
+    ![alt text](assets/image-16.png)
 
 1. Check Your Current Node.js Version: Run `node -v` in your terminal to find out the version of Node.js that is currently installed.
 
 
 1. Go to [project settings](https://github.com/anoobbacker/election-leaderboard/settings) and add `.env` variable for Actions
-    ![alt text](image-13.png)
+    ![alt text](assets/image-13.png)
 
 1. Once added it will look like:
-    ![alt text](image-14.png)
+    ![alt text](assets/image-14.png)
 
 1. Add the variables to the workflow
     ```
@@ -335,21 +314,18 @@ Run the below command
     ```
 
 1. After adding it should look like below:
-    ![alt text](image-15.png)
+    ![alt text](assets/image-15.png)
 
 1. Re-run the workflow
 
-1. To view the Static Web App logs, open Azure Cloud Shell and run the below command:
 
-# Tech used
-This uses Svelte, Supabase, Bootstrap, HTML, JS, CSS for a static single pages design best suited for all devices like mobile, desktop etc.
-
+# Tools used
 - [SvelteKit](https://kit.svelte.dev/)
 - [Supabase](https://supabase.com)
 - [TailwindCSS](hhttps://tailwindui.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitest.dev/)
-- Avatars generated from [Getavataaars](https://getavataaars.com).
+- [Getavataaars](https://getavataaars.com).
 
 # Copyright and License
 Code released under the [MIT](https://github.com/anoobbacker/betwc/blob/master/LICENSE) license.
