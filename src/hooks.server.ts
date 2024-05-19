@@ -20,11 +20,11 @@ const supabase: Handle = async ({ event, resolve }) => {
        * standard behavior.
        */
       set: (key, value, options) => {
-        console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Set Cookie.',key, value, options);  // Log when action is called
+        console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: Set Cookie.',key, value, options);  // Log when action is called
         event.cookies.set(key, value, { ...options, path: '/' })
       },
       remove: (key, options) => {
-        console.log(new Date().toLocaleString(), 'src/hooks.server.ts: Remove Cookie.',key, options);  // Log when action is called
+        console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: Remove Cookie.',key, options);  // Log when action is called
         event.cookies.delete(key, { ...options, path: '/' })
       },
     },
@@ -46,7 +46,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       error: serr
     } = await event.locals.supabase.auth.getSession()
     if (!session) {
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
+      console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() No Session found. Error = ', serr);  // Log when action is called
       return { session: null, user: null }
     }
 
@@ -56,7 +56,7 @@ const supabase: Handle = async ({ event, resolve }) => {
     } = await event.locals.supabase.auth.getUser()
     if (uerr) {
       // JWT validation has failed
-      console.log(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() JWT validation failed.',uerr);  // Log when action is called
+      console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: safeGetSession() JWT validation failed.',uerr);  // Log when action is called
       return { session: null, user: null }
     }
 
@@ -76,23 +76,23 @@ const supabase: Handle = async ({ event, resolve }) => {
 
 const authGuard: Handle = async ({ event, resolve }) => {
   let cookies : { name: string; value: string; }[] = event.cookies.getAll()
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Cookies: ', JSON.stringify(cookies));  // Log when action is called  
+  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Cookies: ', JSON.stringify(cookies));  // Log when action is called  
     
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
 
   if (!event.locals.session && event.url.pathname.startsWith('/private')) {    
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() No session. Redirecting to /login');  // Log when action is called  
+    console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() No session. Redirecting to /login');  // Log when action is called  
     return redirect(303, '/login')
   }
 
   if (event.locals.session && event.url.pathname === '/login') {
-    console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Redirecting to /private');  // Log when action is called  
+    console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Redirecting to /private');  // Log when action is called  
     return redirect(303, '/private')
   }
 
-  console.log(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', JSON.stringify(event));  // Log when action is called  
+  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', JSON.stringify(event));  // Log when action is called  
   return resolve(event)
 }
 

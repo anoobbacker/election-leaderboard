@@ -15,6 +15,6 @@ const options = {
 app.use(handler);
 
 https.createServer(options, app).listen(443, () => {
-   console.log('Server is running on port 443');
+   console.debug('Server is running on port 443');
 });
 

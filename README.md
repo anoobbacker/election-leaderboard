@@ -13,6 +13,8 @@
 1. Go to [2024 Kerala election - Wikipedia ](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
 ![alt text](assets/image-2.png)
 
+1. Canidate photos downloaded from https://affidavit.eci.gov.in/
+
 ## Set up Supabase
 1. Go to https://supabase.com/dashboard/projects
 1. Create _New project_
@@ -72,7 +74,8 @@
         constituency_number INTEGER,
         constituency_name VARCHAR(255),
         candidate_name VARCHAR(255),
-        party VARCHAR(255)
+        party VARCHAR(255),
+        photos_url TEXT
     );
 
     INSERT INTO candidate_party_mapping (constituency_number, constituency_name, candidate_name, party) VALUES

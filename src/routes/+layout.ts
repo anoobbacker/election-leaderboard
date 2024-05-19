@@ -10,7 +10,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
    */
   depends('supabase:auth')
 
-  console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load called');  // Log when action is called
+  console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load called');  // Log when action is called
   const supabase = isBrowser()
     ? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
         global: {
@@ -22,7 +22,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
               const cookies = parse(document.cookie)
               return cookies[name]
             })
-            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, ";", cookie);  // Log when action is called
+            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, ";", cookie);  // Log when action is called
             return cookie;
           },
         }, 
@@ -38,7 +38,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         },
         cookies: {
           get() {
-            console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: createServerClient Cookie.',JSON.stringify(data.session));  // Log when action is called
+            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createServerClient Cookie.',JSON.stringify(data.session));  // Log when action is called
             return JSON.stringify(data.session)
           },
         },
@@ -62,6 +62,6 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
     data: { user },
   } = await supabase.auth.getUser()
 
-  console.log(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load return');  // Log when action is called
+  console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: Universal load return');  // Log when action is called
   return { session, supabase, user }
 }

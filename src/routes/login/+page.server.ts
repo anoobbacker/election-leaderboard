@@ -4,7 +4,7 @@ import type { Actions } from './$types'
 
 export const actions: Actions = {
   login: async (event) => {
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action called');  // Log when action is called
+    console.debug(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action called');  // Log when action is called
     
     const {request, locals: {supabase} } = event
     const formData = await request.formData()
@@ -21,7 +21,7 @@ export const actions: Actions = {
 			return fail(400, { password, missing: true });
 		}
     
-    console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login form data received:', email);
+    console.debug(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login form data received:', email);
 
     const { data, error: err } = await supabase.auth.signInWithPassword({ 
       email: email,
@@ -29,11 +29,11 @@ export const actions: Actions = {
     })
 
     if (err) {
-      console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action signIn error.', 'Error = ', err.message);  // Log when action is called
+      console.debug(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action signIn error.', 'Error = ', err.message);  // Log when action is called
       return fail(500, {email, incorrect: true});
     } else {
       const { session, user } = data
-      console.log(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', JSON.stringify(session).replace(/\r/g, ''), JSON.stringify(user).replace(/\r/g, ''));  // Log when action is called    
+      console.debug(new Date().toLocaleString(), 'src/routes/login/+page.server.ts: Login action return successfully', JSON.stringify(session).replace(/\r/g, ''), JSON.stringify(user).replace(/\r/g, ''));  // Log when action is called    
       return redirect(303, '/private')
     }
   },

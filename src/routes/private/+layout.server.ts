@@ -2,11 +2,11 @@
 import type { LayoutServerLoad } from './$types'
 
 export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) => {
-  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad called');  // Log when action is called
+  console.debug(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad called');  // Log when action is called
   const uuid = session?.user.id
 
   let avatar_url = ''
-  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad ', JSON.stringify(session).replace(/\r/g, ''), uuid);  // Log when action is called
+  console.debug(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad ', JSON.stringify(session).replace(/\r/g, ''), uuid);  // Log when action is called
   if (uuid) {
     const { data: profile, error: profileError } = await supabase
     .from('profiles')
@@ -25,7 +25,7 @@ export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) 
     console.error(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad No session or  user');  // Log when action is called  
   }
 
-  console.log(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
+  console.debug(new Date().toLocaleString(), 'src/routes/private/+layout.server.ts: ServerLoad return. Avatar url = ', avatar_url);  // Log when action is called
   return {
     avatar_url
   }

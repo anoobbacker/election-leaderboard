@@ -4,7 +4,7 @@ import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
 interface CandidatePartyLookup {
-  [key: string]: string;  // Define an index signature
+  [key: string]: {party: string, photo_url: string};  // Define an index signature
 }
 
 interface CandidatePredictionLookup {
@@ -16,12 +16,13 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
   // Fetching election data if needed for other parts of your page
   const { data: electionData, error: electionError } = await supabase
     .from('kerala_election_2024')
-    .select();
+    .select()
+    .order("id");
 
   // Fetch candidate and party information
   const { data: candidatePartyData, error: candidatePartyError } = await supabase
     .from('candidate_party_mapping')
-    .select('candidate_name, party');
+    .select('candidate_name, party, photo_url');
   
   // Fetch previous predictions
   const { data: candidatePrediction, error: candidatePredictionError } = await supabase
@@ -36,8 +37,8 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
 
   // Transform data into a lookup object
   const candidatePartyLookup:CandidatePartyLookup = {};
-  candidatePartyData.forEach(({ candidate_name, party }) => {
-    candidatePartyLookup[candidate_name] = party;
+  candidatePartyData.forEach(({ candidate_name, party, photo_url}) => {
+    candidatePartyLookup[candidate_name] = {party, photo_url};
   });
 
   const candidatePredictionLookup:CandidatePredictionLookup = {}
@@ -50,13 +51,13 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
 
 export const actions: Actions = {
   update: async ({ request, locals: { supabase, session } }) => {
-    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
+    console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
 
     const formData = await request.formData()
     const formDataEntries = Array.from(formData.entries());
     const constituencies = new Set();
 
-    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Form data received:', Object.fromEntries(formData));
+    console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Form data received:', Object.fromEntries(formData));
 
     // Extract constituency names from form keys
     formDataEntries.forEach(([key, _]) => {
@@ -66,7 +67,7 @@ export const actions: Actions = {
       }
     });
 
-    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Processed form constituencies:', constituencies);
+    console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Processed form constituencies:', constituencies);
 
     const uuid = session?.user.id;
 
@@ -76,7 +77,7 @@ export const actions: Actions = {
       const voteShare = formData.get(`${constituency}-winnervoteshare`);
       const winningMargin = formData.get(`${constituency}-winningvotes`);
 
-      console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Candidate:', candidate, 'Votes Share:', voteShare, 'Votes:', winningMargin);
+      console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Candidate:', candidate, 'Votes Share:', voteShare, 'Votes:', winningMargin);
 
       const { data, error } = await supabase
         .from('election_prediction_2024')
@@ -93,7 +94,7 @@ export const actions: Actions = {
         }
     }
 
-    console.log(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action return');  // Log when action is called
+    console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action return');  // Log when action is called
     return {};
   },
 }

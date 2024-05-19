@@ -14,13 +14,13 @@
 				 * Queue this as a task so the navigation won't prevent the
 				 * triggering function from completing
 				 */
-         console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession);  // Log when action is called
+         console.debug(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession);  // Log when action is called
 				setTimeout(() => {
 					goto('/', { invalidateAll: true });
 				});
 			}
 			if (newSession?.expires_at !== session?.expires_at) {
-				console.log(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession, session);  // Log when action is called
+				console.debug(new Date().toLocaleString(), 'src/routes/+layout.svelte: OnAuthStateChange!', _, newSession, session);  // Log when action is called
 				invalidate('supabase:auth');
 			}
 		});
