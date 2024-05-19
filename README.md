@@ -6,12 +6,12 @@
   Your browser does not support the video tag.
 </video>
 
+[Play video](./assets/kotas-election-leaderboard.mp4)
+
 ## Pending changes
-1. Show the candidates across all consitituency in a simple list of candidates with photos. Max 3 candidates per constituency. Refer https://tailwindui.com/components/application-ui/lists/grid-lists
-1. To select the candidates use menu drop-down with photos. Refer https://tailwindui.com/components/application-ui/forms/select-menus
-1. Show previous election results from that constituency, exit polls etc.
 1. Create a table to capture the final results.
 1. Create a way to calculate the score for each participant and display the leaderboard.
+1. Show previous election results from that constituency, exit polls etc.
 1. Use AI model can be used to predict a result?
 
 ## Collect the details for election
