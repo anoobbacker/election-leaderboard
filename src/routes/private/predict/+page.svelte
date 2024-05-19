@@ -58,8 +58,8 @@
 
                 <!-- Candidates Photos -->
                 <div class="flex flex-row space-x-3">
-                  <img class="inline-block h-12 rounded-full ring-2 ring-white" src="{candidatePartyLookup?.[places.udf_candidate].photo_url}" alt="{places.udf_candidate}" />
                   <img class="inline-block h-12 rounded-full ring-2 ring-white" src="{candidatePartyLookup?.[places.ldf_candidate].photo_url}" alt="{places.ldf_candidate}" />
+                  <img class="inline-block h-12 rounded-full ring-2 ring-white" src="{candidatePartyLookup?.[places.udf_candidate].photo_url}" alt="{places.udf_candidate}" />
                   <img class="inline-block h-12 rounded-full ring-2 ring-white" src="{candidatePartyLookup?.[places.nda_candidate].photo_url}" alt="{places.nda_candidate}" />
                 </div>
 

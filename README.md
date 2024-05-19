@@ -6,7 +6,6 @@
 1. Show previous election results from that constituency, exit polls etc.
 1. Create a table to capture the final results.
 1. Create a way to calculate the score for each participant and display the leaderboard.
-1. Use TailwindCSS login control instead of the Svelte-kit default. Refer https://tailwindui.com/components/application-ui/forms/sign-in-forms
 1. Use AI model can be used to predict a result?
 
 ## Collect the details for election
