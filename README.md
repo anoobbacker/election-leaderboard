@@ -1,12 +1,8 @@
 # Set up the app
 
 ## Demo
-<video width="320" height="240" controls>
-  <source src="./assets/kotas-election-leaderboard.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Alt Text](assets/kotas-election-leaderboard.gif)
 
-[Play video](./assets/kotas-election-leaderboard.mp4)
 
 ## Pending changes
 1. Create a table to capture the final results.
@@ -321,6 +317,10 @@ Run the below command
 
 1. Re-run the workflow
 
+1. Record the demo and convert to GIF for embedding into the README.md
+```bash
+ffmpeg -i .\assets\kotas-election-leaderboard.mp4 -vf "fps=10,scale=1024:-1:flags=lanczos" -c:v gif .\assets\kotas-election-leaderboard.gif
+```
 
 # Tools used
 - [SvelteKit](https://kit.svelte.dev/)
