@@ -69,7 +69,7 @@
 
                 <!-- Winning votes input -->
                 <label for="{places.constituency}-winningvotes" class="block text-sm font-medium leading-6 text-gray-900">Winning votes</label>
-                <input type="number" name="{places.constituency}-winningvotes" id="{places.constituency}-winningvotes" class="block w-1/2 rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder={candidatePredictionLookup?.[places.constituency]?.winning_margin ? candidatePredictionLookup[places.constituency]?.winning_margin : "1000"} min="1" max="200000">
+                <input type="number" name="{places.constituency}-winningvotes" id="{places.constituency}-winningvotes" class="block w-1/2 rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder={candidatePredictionLookup?.[places.constituency]?.winning_margin ? candidatePredictionLookup[places.constituency]?.winning_margin : "1000"} min="1" max="2000000">
               </div>
             </div>
           </div>
