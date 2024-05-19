@@ -207,7 +207,7 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     ```
 
 1. Edit `vite.config.ts` to include the below:
-    ```diff
+    ```typescript
     server: {
             https: {
                 key: './certs/private.key',
@@ -281,8 +281,6 @@ Run the below command
     ![alt text](assets/image-6.png)
 
 1. Go to the web app & copy the `URL` from _Essentials_
-    
-    ![alt text](assets/image-7.png)
 
 1. Go to `Static Web App` > `Environment variables`
     ![alt text](assets/image-8.png)
@@ -302,9 +300,6 @@ Run the below command
 
 1. Go to [project settings](https://github.com/anoobbacker/election-leaderboard/settings) and add `.env` variable for Actions
     ![alt text](assets/image-13.png)
-
-1. Once added it will look like:
-    ![alt text](assets/image-14.png)
 
 1. Add the variables to the workflow
     ```
