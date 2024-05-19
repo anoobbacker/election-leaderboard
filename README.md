@@ -1,5 +1,11 @@
 # Set up the app
 
+## Demo
+<video width="320" height="240" controls>
+  <source src="./assets/kotas-election-leaderboard.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Pending changes
 1. Show the candidates across all consitituency in a simple list of candidates with photos. Max 3 candidates per constituency. Refer https://tailwindui.com/components/application-ui/lists/grid-lists
 1. To select the candidates use menu drop-down with photos. Refer https://tailwindui.com/components/application-ui/forms/select-menus
