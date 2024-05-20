@@ -5,10 +5,11 @@
 
 
 ## Pending changes
-1. Create a table to capture the final results.
-1. Create a way to calculate the score for each participant and display the leaderboard.
+1. Create a table to capture the final election results, winning vote margin & vote share percentage
+1. Create a way to calculate the score for each participant & display the leaderboard.
 1. Show previous election results from that constituency, exit polls etc.
-1. Use AI model can be used to predict a result?
+1. Add validation while entering the prediction.
+1. Assist using AI while entering the prediction.
 
 ## Collect the details for election
 1. Collect data from 
