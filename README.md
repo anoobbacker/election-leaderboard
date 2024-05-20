@@ -11,10 +11,14 @@
 1. Use AI model can be used to predict a result?
 
 ## Collect the details for election
-1. Go to [2024 Kerala election - Wikipedia ](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
+1. Collect data from 
+    - [2024 Kerala Lok Sabha election](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
 ![alt text](assets/image-2.png)
+    - Collect data from [2019 Kerala Lok Sabha election](https://en.wikipedia.org/wiki/2019_Indian_general_election_in_Kerala)
 
 1. Canidate photos downloaded from https://affidavit.eci.gov.in/
+
+1. Collect voter turnout percentage from https://elections24.eci.gov.in/eci-updates.html
 
 ## Set up Supabase
 1. Go to https://supabase.com/dashboard/projects
