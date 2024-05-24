@@ -77,7 +77,7 @@ export const actions: Actions = {
       const voteShare = formData.get(`${constituency}-winnervoteshare`);
       const winningMargin = formData.get(`${constituency}-winningvotes`);
 
-      console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Candidate:', candidate, 'Votes Share:', voteShare, 'Votes:', winningMargin);
+      console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Candidate:', candidate, 'Votes Share:', voteShare, 'Vote margin:', winningMargin);
 
       const { data, error } = await supabase
         .from('election_prediction_2024')
@@ -85,16 +85,17 @@ export const actions: Actions = {
           participant_id: uuid,
           constituency: constituency,
           candidate_name: candidate,
-          vote_share: voteShare ? voteShare : '40',
-          winning_margin: winningMargin ? winningMargin : '1000'
+          ...( ((voteShare !== null) && ('' !== voteShare)) && {vote_share: voteShare}),
+          ...( (winningMargin !== null) && ('' !== winningMargin) && {winning_margin: winningMargin})
         }).select();
 
         if (error) {
-          return fail(500, {constituency: constituency, message: 'Failed to save data'})
+          console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Failed to save predictions', error);  // Log when action is called
+          return fail(500, {constituency: constituency, error: `Failed to save predictions ${error.message}` })
         }
     }
 
     console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action return');  // Log when action is called
-    return {};
+    return {success: true };
   },
 }
