@@ -1,4 +1,4 @@
-No.,Constituency,Male,Female,Third Gender,Total Electors,Votes Polled,Male Votes,Female Votes,Third Gender Votes,Turnout %,Change %
+#,Constituency,Male,Female,Third Gender,Total Electors,Votes Polled,Male Votes,Female Votes,Third Gender Votes,Turnout %,Change %
 1,Kasaragod,701475,750741,14,1452230,1104331,513460,590866,5,76.04,decrease 4.62
 2,Kannur,646181,712181,6,1358368,1048839,485112,563724,3,77.21,decrease 6.07
 3,Vatakara,681615,740246,22,1421883,1114950,507584,607362,4,78.41,decrease 4.29
@@ -8,7 +8,7 @@ No.,Constituency,Male,Female,Third Gender,Total Electors,Votes Polled,Male Votes
 7,Ponnani,729255,741522,27,1470804,1019889,467726,552148,15,69.34,decrease 5.64
 8,Palakkad,682281,715849,13,1398143,1028627,495567,533051,9,73.57,decrease 4.20
 9,Alathur,648437,689047,12,1337496,981945,476187,505753,5,73.42,decrease 7.05
-10,Thrissur,708317,774718,20,1483055,1081125,509052,572067,6,72.90,decrease 5.04
+10,Thrissur,708317,774718,20,1483055,1081125,509052,572067,6,72.9,decrease 5.04
 11,Chalakudy,634347,676161,21,1310529,942787,460351,482428,8,71.94,decrease 8.57
 12,Ernakulam,640662,683370,15,1324047,904131,450659,453468,4,68.29,decrease 9.35
 13,Idukki,615084,635064,9,1250157,831936,425598,406332,6,66.55,decrease 9.81
@@ -19,4 +19,3 @@ No.,Constituency,Male,Female,Third Gender,Total Electors,Votes Polled,Male Votes
 18,Kollam,631625,695004,19,1326648,904047,424134,479906,7,68.15,decrease 6.58
 19,Attingal,653549,743223,35,1396807,970517,449212,521292,13,69.48,decrease 5.0
 20,Thiruvananthapuram,689155,741317,59,1430531,950829,467078,483722,29,66.47,decrease 7.27
-Total,13415293,14333499,367,27749159,19777478,9475090,10302238,150,71.27,decrease 6.57
