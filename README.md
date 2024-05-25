@@ -1,39 +1,36 @@
-# Set up the app
+# Kerala Election Prediction Leaderboard
 
 ## Demo
 ![Alt Text](assets/kotas-election-leaderboard.gif)
 
 
 ## Pending changes
-1. Create a table to capture the final election results, winning vote margin & vote share percentage
-1. Create a way to calculate the score for each participant & display the leaderboard.
-1. Show previous election results from that constituency, exit polls etc.
-1. Add validation while entering the prediction.
-1. Assist using AI while entering the prediction.
+1. Add table for final election results, vote margins, and vote share percentages.
+1. Calculate scores and display leaderboard.
+1. Show previous election results and exit polls.
+1. Validate predictions.
+1. Use AI to assist with predictions.
 
 ## Collect the details for election
-1. Collect data from 
-    - [2024 Kerala Lok Sabha election](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala) and get details
-![alt text](assets/image-2.png)
-    - Collect data from [2019 Kerala Lok Sabha election](https://en.wikipedia.org/wiki/2019_Indian_general_election_in_Kerala)
+1. Collect data for Kerala General Election
+    - [2024](https://en.wikipedia.org/wiki/2024_Indian_general_election_in_Kerala)
+    - [2019](https://en.wikipedia.org/wiki/2019_Indian_general_election_in_Kerala#Constituency-wise_Result)
+    - [2014](https://en.wikipedia.org/wiki/2014_Indian_general_election_in_Kerala#Results)
+    - [2009](https://en.wikipedia.org/wiki/2009_Indian_general_election_in_Kerala#List_of_Elected_MPs)
 
-1. Canidate photos downloaded from https://affidavit.eci.gov.in/
+    ![alt text](assets/image-2.png)
 
-1. Collect voter turnout percentage from https://elections24.eci.gov.in/eci-updates.html
+1. Download candidate photos from https://affidavit.eci.gov.in/
+
+1. Get voter turnout percentages from https://elections24.eci.gov.in/eci-updates.html
 
 ## Set up Supabase
-1. Go to https://supabase.com/dashboard/projects
-1. Create _New project_
-1. Provide the details
+1. Go to [Dashboard](https://supabase.com/dashboard/projects) & create _New project_
     ![alt text](assets/image-1.png)
-1. Go to the [SQL Editor page](https://supabase.com/dashboard/project/_/sql) in the Dashboard.
-1. Click User Management Starter.
-1. Click Run.
+1. Use [SQL Editor page](https://supabase.com/dashboard/project/_/sql) to run _User Management Starter_ and set up the database:
     ![alt text](assets/image-3.png)
-1. Go to the [API Settings page](https://supabase.com/dashboard/project/_/settings/api) in the Dashboard.
-1. Find your Project _URL_, _anon_, and _service_role_ keys on this page.
-1. Save the environment variables in a .env placed in the root directory of your SvelteKit project. 
-    All we need are the _SUPABASE_URL_ and the _SUPABASE_KEY_ key that you copied earlier.
+1. Find your Project _URL_, _anon_, and _service_role_ keys from [API Settings page](https://supabase.com/dashboard/project/_/settings/api) in the Dashboard.
+1. Save _SUPABASE_URL_ and the _SUPABASE_KEY_ key in a .env file in your root directory of your SvelteKit project.
     ```json
     PUBLIC_SUPABASE_URL="YOUR_SUPABASE_URL"
     PUBLIC_SUPABASE_ANON_KEY="YOUR_SUPABASE_KEY"
@@ -165,16 +162,14 @@
 ```
 write a code using SvleteKit, TailwindCSS and TypeScript for a modern website for entering election predictions for Kerala Election 2024 and find the leader using below rules.
 1. Admin can create a group with name and participant's email addresses
-2. Particpants can login using one-time password sent to to their email.
+2. Particpants can login using email and password.
 3. After login participants can select the winner name for each consistency, enter vote share percentage, and number of votes by which the person will win.
 4. After submission of the predictions, participant sees the leaderboard where for each consituency it shows the list of participants winner selection.
 5. Find the constituency, UDF, LDF and NDA candidate details from attached image
 ```
 
 # Set up env
-1. Install the miniconda. Refer [Documentation](https://conda.io/projects/conda/en/stable/user-guide/install/index.html)
-
-1. I am using Windows 11 and PowerShell. Go to the installation directory and run the below:
+1. Install the miniconda. Refer [Documentation](https://conda.io/projects/conda/en/stable/user-guide/install/index.html). I used Windows 11 and PowerShell. Go to the installation directory and run the below:
     ```PowerShell
     cd E:\miniconda3-py3.9\Library\bin
 
@@ -188,10 +183,7 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     ```
     conda activate election-leaderboard
     ```
-
-1. Download and install Node.js. 
-    Follow the instructions from https://nodejs.org/en/download
-
+1. To download and install Node.js, refer [instructions](https://nodejs.org/en/download)
 1. Set up SvelteKit with TailwindCSS & Supabase
     Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
@@ -204,7 +196,6 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     npm install
 
     npm install @supabase/ssr @supabase/supabase-js
-
     npm install -D @tailwindcss/forms
     ```
 
@@ -215,7 +206,7 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout certs/private.key -out certs/certificate.crt
     ```
 
-1. Edit `vite.config.ts` to include the below:
+1. Edit [`vite.config.ts`](./vite.config.ts) to include the below:
     ```typescript
     server: {
             https: {
@@ -236,14 +227,13 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a modern website fo
     npm run dev -- --open
     ```
 
-1. Deploy app
-Follow the instruction at https://github.com/geoffrich/svelte-adapter-azure-swa
+1. To deploy Azure Static Web. Follow the instruction at https://github.com/geoffrich/svelte-adapter-azure-swa
 Run the below command
     ```bash
     npm install -D svelte-adapter-azure-swa
     ```
 
-1. Update  your `svelete.config.js`
+1. Update  your [`svelete.config.js`](./svelte.config.js)
     ```javascript
     import azure from 'svelte-adapter-azure-swa';
 
@@ -255,11 +245,11 @@ Run the below command
     };
     ```
 
-1. Update  your  `src/app.d.ts`
+1. Update  your  [`src/app.d.ts`](./src/app.d.ts)
     ```typescript
     /// <reference types="svelte-adapter-azure-swa" />
     ```
-1. Update package.json to include the below. Here using the version supported by GitHub.
+1. Update [`package.json`](./package.json) to include the below. Here using the version supported by GitHub.
     ```json
 	"engines": {
         "node": ">=20.11.1"
@@ -323,9 +313,9 @@ Run the below command
 1. Re-run the workflow
 
 1. Record the demo and convert to GIF for embedding into the README.md
-```bash
-ffmpeg -i .\assets\kotas-election-leaderboard.mp4 -vf "fps=10,scale=1024:-1:flags=lanczos" -c:v gif .\assets\kotas-election-leaderboard.gif
-```
+    ```bash
+    ffmpeg -i .\assets\kotas-election-leaderboard.mp4 -vf "fps=10,scale=1024:-1:flags=lanczos" -c:v gif .\assets\kotas-election-leaderboard.gif
+    ```
 
 # Tools used
 - [SvelteKit](https://kit.svelte.dev/)
@@ -333,7 +323,8 @@ ffmpeg -i .\assets\kotas-election-leaderboard.mp4 -vf "fps=10,scale=1024:-1:flag
 - [TailwindCSS](hhttps://tailwindui.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitest.dev/)
-- [Getavataaars](https://getavataaars.com).
+- [Getavataaars](https://getavataaars.com)
+- [FFmpeg](https://ffmpeg.org/)
 
 # Copyright and License
-Code released under the [MIT](https://github.com/anoobbacker/betwc/blob/master/LICENSE) license.
+Code released under the [MIT](./LICENSE) license.
