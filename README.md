@@ -20,6 +20,8 @@
 
     ![alt text](assets/image-2.png)
 
+1. Collect data from [keralaassembly.org](http://keralaassembly.org/lok/index.html)
+
 1. Download candidate photos from https://affidavit.eci.gov.in/
 
 1. Get voter turnout percentages from https://elections24.eci.gov.in/eci-updates.html
@@ -157,6 +159,8 @@
         FOREIGN KEY (participant_id) REFERENCES profiles (id) -- Assumes you have a 'users' table with 'id' as UUID.
     );
     ```
+
+1. Repeat the same for [`election_results`](./data/loksabha/kerala_election_results.sql) table
 
 ## Use ChatGPT to generate the boilerplate code
 ```

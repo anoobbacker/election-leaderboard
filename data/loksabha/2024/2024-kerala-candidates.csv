@@ -1,18 +1,18 @@
-#,Constituency,UDF Party,UDF Candidate,LDF Party,LDF Candidate,NDA Party,NDA Candidate
+#,Constituency,UDF Party,UDF Member,LDF Party,LDF Member,NDA Party,NDA Member
 1,Kasaragod,INC,Rajmohan Unnithan,CPI(M),MV Balakrishnan,BJP,ML Ashwini
 2,Kannur,INC,K. Sudhakaran,CPI(M),MV Jayarajan,BJP,C Raghunath
 3,Vatakara,INC,Shafi Parambil,CPI(M),K. K. Shailaja,BJP,Prafulla Krishna
 4,Wayanad,INC,Rahul Gandhi,CPI,Annie Raja,BJP,K Surendran
 5,Kozhikode,INC,MK Raghavan,CPI(M),Elamaram Kareem,BJP,MT Ramesh
-6,Malappuram,Indian Union Muslim League,ET Mohammed Basheer,CPI(M),V Vaseef,BJP,M Abdul Salam
-7,Ponnani,Indian Union Muslim League,Abdussamad Samadani,CPI(M),K.S. Hamza,BJP,Niveditha Subramanian
+6,Malappuram,IUML,ET Mohammed Basheer,CPI(M),V Vaseef,BJP,M Abdul Salam
+7,Ponnani,IUML,Abdussamad Samadani,CPI(M),K.S. Hamza,BJP,Niveditha Subramanian
 8,Palakkad,INC,VK Sreekandan,CPI(M),A Vijayaraghavan,BJP,C KrishnaKumar
 9,Alathur (SC),INC,Ramya Haridas,CPI(M),K. Radhakrishnan,BJP,TN Sarasu
 10,Thrissur,INC,K Muraleedharan,CPI,VS Sunil Kumar,BJP,Suresh Gopi
 11,Chalakudy,INC,Benny Behanan,CPI(M),C Raveendranath,BDJS,KA Unnikrishnan
 12,Ernakulam,INC,Hibi Eden,CPI(M),KJ Shine,BJP,KS Radhakrishnan
 13,Idukki,INC,Dean Kuriakose,CPI(M),Joice George,BDJS,Sangeetha Vishwanathan
-14,Kottayam,Kerala Congress,Francis George,KC(M),Thomas Chazhikadan,BDJS,Thushar Velapally
+14,Kottayam,KEC,Francis George,KC(M),Thomas Chazhikadan,BDJS,Thushar Velapally
 15,Alappuzha,INC,KC Venugopal,CPI(M),AM Ariff,BJP,Sobha Surendran
 16,Mavelikara (SC),INC,Kodikunnil Suresh,CPI,CA Arun Kumar,BDJS,Baiju Kalasala
 17,Pathanamthitta,INC,Anto Antony,CPI(M),Thomas Issac,BJP,Anil Antony

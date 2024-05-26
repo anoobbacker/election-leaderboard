@@ -12,7 +12,7 @@
   <div class="flex flex-wrap gap-8 p-2 place-content-center">
     {#each electionData as places}
       <!-- Constituency -->
-      <div class="flex bg-white shadow rounded-lg p-4 place-content-center">
+      <div class="flex shadow rounded-lg p-4 w-fit place-content-center">
         <div class="flex flex-col space-y-3">
           <p class="px-6 py-4 font-bold text-center">{places.id}. {places.constituency}</p>
           <!-- UDF candidate -->
@@ -23,6 +23,8 @@
             <div class="text-gray-600">UDF</div>
             <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
             <div class="text-gray-600 bg-green-100 rounded-full px-2 py-1 text-center">{candidatePartyLookup?.[places.udf_candidate].party}</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
+            <img class="inline-block h-6 rounded-full ring-2 ring-white" src="/images/party/{candidatePartyLookup?.[places.udf_candidate].party}.webp" alt="{candidatePartyLookup?.[places.udf_candidate].party}">
           </div>
           <!-- LDF candidate -->
           <div class="flex flex-row items-center space-x-3 space-y-3">
@@ -32,6 +34,8 @@
             <div class="text-gray-600">LDF</div>
             <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
             <div class="text-gray-600 bg-green-100 rounded-full px-2 py-1 text-center">{candidatePartyLookup?.[places.ldf_candidate].party}</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
+            <img class="inline-block h-6 rounded-full ring-2 ring-white" src="/images/party/{candidatePartyLookup?.[places.ldf_candidate].party}.webp" alt="{candidatePartyLookup?.[places.ldf_candidate].party}">
           </div>
           <!-- NDA candidate -->
           <div class="flex flex-row items-center space-x-3 space-y-3">
@@ -41,6 +45,8 @@
             <div class="text-gray-600">NDA</div>
             <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
             <div class="text-gray-600 bg-green-100 rounded-full px-2 py-1 text-center">{candidatePartyLookup?.[places.nda_candidate].party}</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900"><circle cx="1" cy="1" r="1" /></svg>
+            <img class="inline-block h-6 rounded-full ring-2 ring-white" src="/images/party/{candidatePartyLookup?.[places.nda_candidate].party}.webp" alt="{candidatePartyLookup?.[places.nda_candidate].party}">
           </div>
         </div>
       </div>

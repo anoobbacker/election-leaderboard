@@ -1,21 +1,21 @@
-Constituency,Turnout%,Elected Member,Party,Margin
-Kasaragod,80.66,Rajmohan Unnithan,INC,40438
-Kannur,83.28,K. Sudhakaran,INC,94559
-Vatakara,82.70,K. Muraleedharan,INC,84663
-Wayanad,80.37,Rahul Gandhi,INC,431770
-Kozhikode,81.70,M. K. Raghavan,INC,85225
-Malappuram,75.50,P. K. Kunhalikutty,IUML,260153
-Ponnani,74.98,E. T. Mohammed Basheer,IUML,193273
-Palakkad,77.77,V. K. Sreekandan,INC,11637
-Alathur,80.47,Ramya Haridas,INC,158968
-Thrissur,77.94,T. N. Prathapan,INC,93633
-Chalakudy,80.51,Benny Behanan,INC,132274
-Ernakulam,77.64,Hibi Eden,INC,169153
-Idukki,76.36,Dean Kuriakose,INC,171053
-Kottayam,75.47,Thomas Chazhikadan,KC(M),106259
-Alappuzha,80.35,A. M. Ariff,CPI(M),10474
-Mavelikkara,74.33,Kodikunnil Suresh,INC,61138
-Pathanamthitta,74.30,Anto Antony,INC,44243
-Kollam,74.73,N. K. Premachandran,RSP,148856
-Attingal,74.48,Adoor Prakash,INC,38247
-Thiruvananthapuram,73.74,Shashi Tharoor,INC,99989
+#,Constituency,Electors,Total Votes,Turnout%,Elected Member,Elected Party,Vote Share%,Margin
+1,Kasaragod,1363937,1100099,80.66,Rajmohan Unnithan,INC,43.18,40438
+2,Kannur,1266550,1054746,83.28,K. Sudhakaran,INC,50.27,94559
+3,Vatakara,1288926,1065932,82.7,K. Muraleedharan,INC,49.43,84663
+4,Wayanad,1359679,1092759,80.37,Rahul Gandhi,INC,64.67,431770
+5,Kozhikode,1318024,1076882,81.7,M. K. Raghavan,INC,45.85,85225
+6,Malappuram,1370544,1034799,75.5,P. K. Kunhalikutty,IUML,57.01,260153
+7,Ponnani,1356803,1017366,74.98,E. T. Mohammed Basheer,IUML,51.3,193273
+8,Palakkad,1323010,1028874,77.77,V. K. Sreekandan,INC,38.83,11637
+9,Alathur (SC),1266794,1019376,80.47,Ramya Haridas,INC,52.4,158968
+10,Thrissur,1337110,1042122,77.94,T. N. Prathapan,INC,39.84,93633
+11,Chalakudy,1230197,990433,80.51,Benny Behanan,INC,47.81,132274
+12,Ernakulam,1245972,967390,77.64,Hibi Eden,INC,50.79,169153
+13,Idukki,1204191,919559,76.36,Dean Kuriakose,INC,54.23,171053
+14,Kottayam,1206698,910648,75.47,Thomas Chazhikadan,KC(M),46.25,106259
+15,Alappuzha,1356701,1090112,80.35,A. M. Ariff,CPI(M),40.96,10474
+16,Mavelikkara (SC),1308102,972360,74.33,Kodikunnil Suresh,INC,45.36,61138
+17,Pathanamthitta,1382741,1027378,74.3,Anto Antony,INC,37.11,44243
+18,Kollam,1296720,969017,74.73,N. K. Premachandran,RSP,51.61,148856
+19,Attingal,1350710,1006048,74.48,Adoor Prakash,INC,37.91,38247
+20,Thiruvananthapuram,1371427,1011268,73.74,Shashi Tharoor,INC,41.19,99989

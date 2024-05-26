@@ -1,6 +1,6 @@
 // /src/routes/private/predict/+page.server.ts
 
-import { fail, redirect } from '@sveltejs/kit'
+import { fail } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
 interface CandidatePartyLookup {
@@ -52,6 +52,15 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
 export const actions: Actions = {
   update: async ({ request, locals: { supabase, session } }) => {
     console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
+
+    const cutoffDate = new Date('2024-06-03T23:59:59Z'); // Cutoff date and time (UTC)
+    const currentDate = new Date();
+
+    if (currentDate > cutoffDate) {
+      console.error(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Return with submissions closed!');  // Log when action is called
+      return fail(400, { message: 'Submissions are closed.' });
+    }
+
 
     const formData = await request.formData()
     const formDataEntries = Array.from(formData.entries());

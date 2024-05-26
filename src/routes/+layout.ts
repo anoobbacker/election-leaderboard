@@ -22,7 +22,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
               const cookies = parse(document.cookie)
               return cookies[name]
             })
-            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key, ";", cookie);  // Log when action is called
+            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createBrowserClient Cookie.', key);  // Log when action is called
             return cookie;
           },
         }, 
@@ -38,7 +38,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         },
         cookies: {
           get() {
-            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createServerClient Cookie.',JSON.stringify(data.session));  // Log when action is called
+            console.debug(new Date().toLocaleString(), 'src/routes/+layout.ts: createServerClient Cookie.');  // Log when action is called
             return JSON.stringify(data.session)
           },
         },

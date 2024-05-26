@@ -13,8 +13,6 @@
 
   let electionPredictionForm: HTMLFormElement
 	let loading = false
-  let successMessage = '';
-  let errorMessage = '';
 
   // Track if any field has changed
   let hasChanged = false;
@@ -84,20 +82,22 @@
 
 	const handleSubmit: SubmitFunction = () => {
 		loading = true
-    successMessage = '';
-    errorMessage = '';
 		return async ({result}) => {
       if (result.type === 'success') {
-        successMessage = 'Predictions saved successfully!';
         invalidateAll();
-      } else {
-        errorMessage = 'Failed to save predictions';
       }
       applyAction(result);
       loading = false
     }
 	}
 </script>
+
+{#if new Date() > new Date('2024-06-04T00:00:00Z')}
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Note:</strong>
+        <span class="block sm:inline">Submissions are disabled after 4th Jun 2024.</span>
+    </div>
+{/if}
 
 {#if electionData && electionData.length > 0}
 <div class="border-b border-gray-900/10 pb-12">
@@ -174,8 +174,8 @@
 				disabled={loading || !hasChanged}
 			/>
       {#if !hasChanged}<p class="text-xs text-gray-600 px-6">Changing a prediction enables the save button.</p>{/if}
-      {#if form?.success}<p class="text-green-600 px-6">{successMessage}</p>{/if}
-			{#if form?.error}<p class="text-red-600 px-6">{errorMessage}. Constituency: {form?.constituency}</p>{/if}
+      {#if form?.success}<p class="text-green-600 px-6">Successfully saved!</p>{/if}
+			{#if form?.error}<p class="text-red-600 px-6">Error saving! Constituency: {form?.constituency}</p>{/if}
 		</div>
 	</form>  
 </div>

@@ -76,7 +76,7 @@ const supabase: Handle = async ({ event, resolve }) => {
 
 const authGuard: Handle = async ({ event, resolve }) => {
   let cookies : { name: string; value: string; }[] = event.cookies.getAll()
-  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Cookies: ', JSON.stringify(cookies));  // Log when action is called  
+  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Cookies: ');  // Log when action is called  
     
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
@@ -92,7 +92,7 @@ const authGuard: Handle = async ({ event, resolve }) => {
     return redirect(303, '/private')
   }
 
-  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return', JSON.stringify(event));  // Log when action is called  
+  console.debug(new Date().toLocaleString(), 'src/hooks.server.ts: authGuard() Return');  // Log when action is called  
   return resolve(event)
 }
 

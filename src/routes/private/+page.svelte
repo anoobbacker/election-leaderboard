@@ -4,8 +4,8 @@
 
   export let data: LayoutData;
 
-  let { avatar_url } = data
-	$: ({ avatar_url } = data)
+  let { resultsReady, avatar_url, username } = data
+	$: ({ resultsReady, avatar_url, username } = data)
 
 </script>
 <div class="relative isolate max-w-7xl px-6 pt-4 lg:px-8">
@@ -14,17 +14,33 @@
   </div>
   <div class="mx-auto max-w-2xl py-32 sm:py-12 lg:py-20">
     <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+			{#if resultsReady === false}
       <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-        Winners will be announced on 4th July.
+        Winners will be announced on 4<sup>th</sup> Jun.
       </div>
+			{:else}
+			<div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+        🎉 The scores are now updated!
+      </div>
+			{/if}
     </div>
     <div class="text-center">
       <img class="inline-block h-16 w-16 rounded-full ring-2 ring-white" src="{avatar_url}" alt="">
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Forecast your predictions!</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Kerala Election 2024</p>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Hello {username}!</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+				{#if resultsReady === false}
+				Forecast your predictions for Kerala Election 2024!
+				{:else}
+				🎉 Scores are in! Check out the latest election results!
+				{/if}
+			</p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
+				{#if resultsReady === false}
         <a href="/private/predict" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 z-40">Predict</a>
         <a href="/private/candidate" class="text-sm font-semibold leading-6 text-gray-900 z-40">View candidates <span aria-hidden="true">→</span></a>
+				{:else}
+				<a href="/private/leaderboard" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 z-40">View leaderboard</a>
+				{/if}
       </div>
     </div>    
   </div>  

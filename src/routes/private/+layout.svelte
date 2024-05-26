@@ -5,8 +5,8 @@
 
 	export let data: LayoutData;
 
-	let { avatar_url } = data
-	$: ({ avatar_url } = data)
+	let { avatar_url, username } = data
+	$: ({ avatar_url, username } = data)
 
   export let currentPath: string = '';
   $: currentPath = $page.url.pathname;
@@ -68,6 +68,8 @@
             aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
             <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
             aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
+            <a href="/private/leaderboard" class="{currentPath === '/private/leaderboard' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
+            aria-current={currentPath === '/private/leaderboard' ? 'page' : false}>Leaderboard</a>
           </div>
         </div>
       </div>
@@ -97,20 +99,11 @@
       <a href="/private" class="{currentPath === '/private' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private' ? 'page' : false}>Home</a>
       <a href="/private/candidate" class="{currentPath === '/private/candidate' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
       <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
+      <a href="/private/leaderboard" class="{currentPath === '/private/leaderboard' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/leaderboard' ? 'page' : false}>Leaderboard</a>
     </div>
   </div>
 </nav>
 
-<!-- {#if currentPath != '/private/'}
-<div class="bg-white py-12 sm:py-16">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-base font-semibold leading-7 text-indigo-600">Kerala Election 2024</h2>
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Forecast your predictions!</p>
-    </div>
-  </div>
-</div>
-{/if} -->
 
 <div class="bg-white">
   <div class="mx-auto max-w-7xl">

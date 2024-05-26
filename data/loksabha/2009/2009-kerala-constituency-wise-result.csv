@@ -1,21 +1,21 @@
-#,Constituency,Turnout%,Elected Member,Party,Margin
-1,Kasaragod,76.11,P. Karunakaran,Communist Party of India (Marxist),64427
-2,Kannur,80.83,K. Sudhakaran,Indian National Congress,43151
-3,Vatakara,80.55,Mullappally Ramachandran,Indian National Congress,56186
-4,Wayanad,74.74,M. I. Shanavas,Indian National Congress,153439
-5,Kozhikode,75.68,M. K. Raghavan,Indian National Congress,838
-6,Malappuram,76.81,E. Ahamed,Indian Union Muslim League (Muslim League Kerala State Committee),115597
-7,Ponnani,77.17,E. T. Mohammed Basheer,Indian Union Muslim League (Muslim League Kerala State Committee),82684
-8,Palakkad,73.47,M. B. Rajesh,Communist Party of India (Marxist),1820
-9,Alathur,75.27,P. K. Biju,Communist Party of India (Marxist),20960
-10,Thrissur,69.48,P. C. Chacko,Indian National Congress,25151
-11,Chalakudy,73.72,K. P. Dhanapalan,Indian National Congress,71679
-12,Ernakulam,72.81,K. V. Thomas,Indian National Congress,11790
-13,Idukki,73.95,P. T. Thomas,Indian National Congress,74796
-14,Kottayam,73.76,Jose K. Mani,Kerala Congress (M),71570
-15,Alappuzha,79.15,K. C. Venugopal,Indian National Congress,57635
-16,Mavelikkara,70.34,Kodikunnil Suresh,Indian National Congress,48048
-17,Pathanamthitta,65.70,Anto Antony,Indian National Congress,111206
-18,Kollam,67.85,N. Peethambara Kurup,Indian National Congress,17531
-19,Attingal,66.25,A Sampath,Communist Party of India (Marxist),18341
-20,Thiruvananthapuram,65.74,Shashi Tharoor,Indian National Congress,99998
+#,Constituency,Electors,Total Votes,Turnout%,Elected Member,Elected Party,Vote Share%,Margin
+1,Kasaragod,1113954,846707,76.01,P. Karunakaran,CPI(M),45.55,64427
+2,Kannur,1069725,863947,80.76,K. Sudhakaran,INC,50.11,43151
+3,Vatakara,1071171,863136,80.58,Mullappally Ramachandran,INC,48.82,56186
+4,Wayanad,1102130,822167,74.6,M. I. Shanavas,INC,49.95,153439
+5,Kozhikode,1053817,798060,75.73,M. K. Raghavan,INC,42.92,838
+6,Malappuram,1018883,781128,76.67,E. Ahamed,IUML,54.78,115597
+7,Ponnani,995913,768350,77.15,E. T. Mohammed Basheer,IUML,50.21,82684
+8,Palakkad,1074818,788240,73.34,M. B. Rajesh,CPI(M),42.89,1820
+9,Alathur (SC),1102765,826891,74.98,P. K. Biju,CPI(M),46.84,20960
+10,Thrissur,1174161,815868,69.49,P. C. Chacko,INC,47.23,25151
+11,Chalakudy,1023053,791115,77.33,K. P. Dhanapalan,INC,50.44,71679
+12,Ernakulam,1075526,743636,69.14,K. V. Thomas,INC,46.1,11790
+13,Idukki,1062849,786041,73.96,P. T. Thomas,INC,51.98,74796
+14,Kottayam,1095242,805521,73.55,Jose K. Mani,KC(M),50.27,71570
+15,Alappuzha,1154779,903881,78.27,K. C. Venugopal,INC,51.85,57635
+16,Mavelikkara (SC),1143111,801262,70.09,Kodikunnil Suresh,INC,49.57,48048
+17,Pathanamthitta,1213370,795245,65.54,Anto Antony,INC,51.33,111206
+18,Kollam,1106712,748592,67.64,N. Peethambara Kurup,INC,47.74,17531
+19,Attingal,1091432,720700,66.03,A Sampath,CPI(M),45.52,18341
+20,Thiruvananthapuram,1122047,734924,65.5,Shashi Tharoor,INC,44.46,99998
