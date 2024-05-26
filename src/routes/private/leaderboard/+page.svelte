@@ -122,14 +122,14 @@
               <div class="min-w-0 flex-auto">
                 <p class="text-sm font-semibold leading-6 text-gray-900">{participant.username}</p>
                 <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                  {i+1}
+                  #{i+1}
                   {#if (i === 0)}
                   <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">🏆</span>
                   {/if}
                 </p>
               </div>
             </div>
-            <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <div class="shrink-0 sm:flex sm:flex-col sm:items-end">
               <p class="text-sm font-semibold leading-6 text-indigo-600">{participant.total_points}</p>
               <p class="mt-1 text-xs leading-5 text-gray-500">Points</p>
             </div>
@@ -151,11 +151,11 @@
               />
               <div class="min-w-0 flex-auto">
                 <p class="text-sm font-semibold leading-6 text-gray-900">{participant.username}</p>
-                <!-- <p class="mt-1 truncate text-xs leading-5 text-gray-500"></p> -->
+                <p class="shrink-0 sm:flex sm:flex-col sm:items-end mt-1 text-xs leading-5">✔️Submitted</p>
               </div>
             </div>
             <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-              <p class="text-sm font-semibold leading-6 text-indigo-600">✔️Submitted</p>
+              <p class="text-sm font-semibold leading-6 text-indigo-600">🕒 Stay tuned...</p>
               <p class="mt-1 text-xs leading-5 text-gray-500">
                 On <time datetime={participant.submitted_at}
                   >{formatDate(participant.submitted_at)}</time

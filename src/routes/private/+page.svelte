@@ -56,7 +56,7 @@
 			<ul class="pt-6 grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Anoob.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Anoob.webp" alt="Anoob">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Anoob Backer</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Bangalore</p>
@@ -66,7 +66,7 @@
 	
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Baiju.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Baiju.webp" alt="Baiju">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Baiju Muthukadan</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Kozhikode</p>
@@ -76,7 +76,7 @@
 	
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Ranish.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Ranish.webp" alt="Ranish">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Ranish George</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Sweden</p>
@@ -86,7 +86,7 @@
 	
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shanavas.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shanavas.webp" alt="Shanavas">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Shanavas Kodakadan</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Finland</p>
@@ -96,7 +96,7 @@
 
         <li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shibu.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shibu.webp" alt="Shibu">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Shibu Skaria</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Kochi</p>
@@ -106,17 +106,17 @@
 
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shiju.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Shiju.webp" alt="Shiju">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Shiju Aravindakshan</h3>
-							<p class="text-sm font-semibold leading-6 text-indigo-600">Bangalore / Trissur</p>
+							<p class="text-sm font-semibold leading-6 text-indigo-600">Trissur</p>
 						</div>
 					</div>
 				</li>
 
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="h-16 w-16 rounded-full" src="/images/avatars/Swami.webp" alt="">
+						<img class="h-16 w-16 rounded-full" src="/images/avatars/Swami.webp" alt="Swami">
 						<div>
 							<h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Sumesh Sukumaran</h3>
 							<p class="text-sm font-semibold leading-6 text-indigo-600">Palakkad</p>

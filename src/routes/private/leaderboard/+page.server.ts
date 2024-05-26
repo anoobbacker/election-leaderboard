@@ -166,7 +166,7 @@ export const actions: Actions = {
       // Sort participants by total points
       participantsWithTotalPoints.sort((a, b) => b.total_points - a.total_points);
 
-      console.debug(new Date().toLocaleString(), 'src/routes/private/leaderboard/+page.server.ts: showscorecard(): Return', constituencies);  // Log when action is called
+      console.debug(new Date().toLocaleString(), 'src/routes/private/leaderboard/+page.server.ts: showscorecard(): Return');  // Log when action is called
       return {
         success: true,
         constituencies,
