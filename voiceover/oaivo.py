@@ -9,13 +9,6 @@ client = OpenAI()
 
 # Define an array of sentences
 sentences = [
-    "Building a website is now super easy!",
-    "Our friends love guessing football scores. This year, with all the election excitement, we decided to guess the Lok Sabha Election 2024 results for Kerala!",
-    "I made this app from scratch using OpenAI, SvelteKit, Supabase, and Tailwind CSS.",
-    "To start, open the website, click 'Get Started', and enter your email and password to log in!",
-    "Each person can see the list of 20 constituencies in Kerala and their candidates. Then, click 'Predict' to submit your guesses!",
-    "After the results are out on July 4th, the leaderboard will show the participants and their points based on their guesses!",
-    "The entire source code and instructions are available on GitHub. Thanks for watching!",
     "Building a website is now super easy! Our friends love guessing football scores. This year, with all the election excitement, we decided to guess the Lok Sabha Election 2024 results for Kerala! I made this app from scratch using OpenAI, SvelteKit, Supabase, and Tailwind CSS. To start, open the website, click 'Get Started', and enter your email and password to log in. Each person can see the list of 20 constituencies in Kerala and their candidates. Then, click 'Predict' to submit your guesses! After the results are out on June 4th, the leaderboard will show the participants and their points based on their guesses! The entire source code and instructions are available on GitHub. Thanks for watching!"
 ]
 
