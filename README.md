@@ -162,14 +162,17 @@
 
 1. Repeat the same for [`election_results`](./data/loksabha/kerala_election_results.sql) table
 
+
+
 ## Use ChatGPT to generate the boilerplate code
 ```
-write a code using SvleteKit, TailwindCSS and TypeScript for a modern website for entering election predictions for Kerala Election 2024 and find the leader using below rules.
+write a code using SvleteKit, TailwindCSS and TypeScript for a website where participants enters election predictions for Kerala Election 2024 using below rules.
 1. Admin can create a group with name and participant's email addresses
-2. Particpants can login using email and password.
-3. After login participants can select the winner name for each consistency, enter vote share percentage, and number of votes by which the person will win.
-4. After submission of the predictions, participant sees the leaderboard where for each consituency it shows the list of participants winner selection.
-5. Find the constituency, UDF, LDF and NDA candidate details from attached image
+1. Particpants can login using email and password.
+1. Particpants can find the constituency, and candidate details
+1. Particpants can select the winner for each consistency, enter vote share percentage, and number of votes by which the person will win.
+1. After submission of the predictions, participant sees the leaderboard where for each consituency it shows the list of participants winner selection.
+
 ```
 
 # Set up env
@@ -324,7 +327,7 @@ Run the below command
 # Tools used
 - [SvelteKit](https://kit.svelte.dev/)
 - [Supabase](https://supabase.com)
-- [TailwindCSS](hhttps://tailwindui.com/)
+- [TailwindCSS](https://tailwindui.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitest.dev/)
 - [Getavataaars](https://getavataaars.com)
