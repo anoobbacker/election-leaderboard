@@ -175,7 +175,7 @@ write a code using SvleteKit, TailwindCSS and TypeScript for a website where par
 
 ```
 
-# Set up env
+## Set up env
 1. Install the miniconda. Refer [Documentation](https://conda.io/projects/conda/en/stable/user-guide/install/index.html). I used Windows 11 and PowerShell. Go to the installation directory and run the below:
     ```PowerShell
     cd E:\miniconda3-py3.9\Library\bin
@@ -323,8 +323,7 @@ Run the below command
     ```bash
     ffmpeg -i .\assets\kotas-election-leaderboard.mp4 -vf "fps=10,scale=1024:-1:flags=lanczos" -c:v gif .\assets\kotas-election-leaderboard.gif
     ```
-
-# Tools used
+## Tools used
 - [SvelteKit](https://kit.svelte.dev/)
 - [Supabase](https://supabase.com)
 - [TailwindCSS](https://tailwindui.com/)
@@ -333,5 +332,5 @@ Run the below command
 - [Getavataaars](https://getavataaars.com)
 - [FFmpeg](https://ffmpeg.org/)
 
-# Copyright and License
+## Copyright and License
 Code released under the [MIT](./LICENSE) license.

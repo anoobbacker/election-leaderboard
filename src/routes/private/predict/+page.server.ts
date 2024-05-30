@@ -53,12 +53,12 @@ export const actions: Actions = {
   update: async ({ request, locals: { supabase, session } }) => {
     console.debug(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Update action called');  // Log when action is called
 
-    const cutoffDate = new Date('2024-06-03T23:59:59Z'); // Cutoff date and time (UTC)
+    const cutoffDate = new Date('2024-05-30'); // Cutoff date and time (UTC)
     const currentDate = new Date();
 
     if (currentDate > cutoffDate) {
       console.error(new Date().toLocaleString(), 'src/routes/predict/+page.server.ts: Return with submissions closed!');  // Log when action is called
-      return fail(400, { message: 'Submissions are closed.' });
+      return fail(500, { constituency: '-', error: 'Submissions are closed.' });
     }
 
 

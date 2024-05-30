@@ -1,4 +1,4 @@
-#,Constituency,Electors,Total Votes,Turnout%,Elected Member,Elected Party,Vote Share%,Margin
+#,Constituency,Electors,Total Votes,Turnout%,Elected Member,Elected Party,VoteShare%,Margin
 1,Kasaragod,1243730,975195,78.41,P Karunakaran,CPI(M),39.52,6921
 2,Kannur,1170266,948572,81.06,P K Sreemathi Teacher,CPI(M),45.15,6566
 3,Vatakara,1182504,960264,81.21,Mullappally Ramachandran,INC,43.41,3306
@@ -14,7 +14,7 @@
 13,Idukki,1158735,820267,70.79,Adv.Joice George,Independent,46.6,50542
 14,Kottayam,1161465,832421,71.67,Jose K. Mani,KC(M),51.01,120599
 15,Alappuzha,1271324,998656,78.55,K C Venugopal,INC,46.37,19407
-16,Mavelikara (SC),1252668,889269,70.99,Kodikunnil Suresh,INC,45.26,32737
+16,Mavelikkara (SC),1252668,889269,70.99,Kodikunnil Suresh,INC,45.26,32737
 17,Pathanamthitta,1323906,871251,65.81,Anto Antony,INC,41.27,56191
 18,Kollam,1219415,879228,72.1,N.K.Premachandran,RSP,46.47,37649
 19,Attingal,1251398,859365,68.67,Dr.A .Sampath,CPI(M),45.67,69378
