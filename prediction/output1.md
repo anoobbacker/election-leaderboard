@@ -132,8 +132,9 @@ content="To predict the election result for the Vatakara constituency in 2024, w
 - **Turnout Analysis:** A slight decrease in turnout traditionally affects incumbents less if their foundational support remains strong, as with the INC.
   
 Given K.K. ShailajaÆs prominence, the race could be closer than 2019 but the historical strength of the INC and their candidateÆs promising profile should give them the edge.
-Thus, the Vatakara constituency is likely to stay with the INC, with Shafi Parambil being elected, maintaining a substantial although slightly reduced margin compared to the previous election due to reduced turnout and competitive opposition."
-#Wayanad
+Thus, the Vatakara constituency is likely to stay with the INC, with Shafi Parambil being elected, maintaining a substantial although slightly reduced margin compared to the previous election due to reduced turnout and competitive opposition.
+
+# Wayanad
 content="Based on the available data and trends observed in previous elections for the Wayanad constituency, here is a detailed analysis and prediction for the 2024 election:
 ### Historical Analysis:
 1. **2009:**
@@ -185,8 +186,9 @@ Given these factors, the prediction for the 2024 constituency election in Wayana
 - **Predicted Margin:** ~250,000 votes
 - **Predicted Vote Share:** 57%
 This prediction reflects a strong incumbency advantage, robust party base, and the impact of Rahul Gandhi's presence in the constituency."
+
 # Kozhikode
-content="### Detailed Analysis for 2024 Election in Kozhikode Constituency
+### Detailed Analysis for 2024 Election in Kozhikode Constituency
 #### Historical Context
 1. **2009**:
    - Elected Member: M. K. Raghavan (INC)
@@ -259,7 +261,7 @@ The Malappuram constituency has shown a consistent trend of electing members fro
 #### Conclusion:
 The 2024 election for the Malappuram constituency is predicted to result in the victory of *ET Mohammed Basheer* from the *IUML* with a vote share of around 56%-58% and a margin in the range of 250,000 to 270,000 votes. The slight decrease in turnout does not significantly affect the well-entrenched support for IUML in this constituency.'
 # Ponnani
-content="### Analysis and Prediction: Ponnani Constituency - 2024 Election
+### Analysis and Prediction: Ponnani Constituency - 2024 Election
 #### Historical Context
 - **2009:** E. T. Mohammed Basheer (IUML) won, with a vote share of 50.21% and a margin of 82,684 votes. Voter turnout was 77.15%.
 - **2014:** E. T. Mohammed Basheer (IUML) retained the seat, with a reduced vote share of 43.43% and a margin of 25,410 votes. Turnout was 73.81%.
@@ -291,7 +293,7 @@ IUML is likely to maintain or slightly increase its vote share due to consistent
 - **The margin of victory is predicted to be about 120,000 votes.**
 While turnout has decreased, IUML's firm grip and consistent performance suggest a strong probability of retaining this seat."
 # Palakkad
-content="To predict the election result for the Palakkad constituency in 2024, we analyze past election data, current candidate profiles, party strengths, and voter turnout trends.
+To predict the election result for the Palakkad constituency in 2024, we analyze past election data, current candidate profiles, party strengths, and voter turnout trends.
 ### Historical Data Analysis
 - **2009 Election**:
   - Elected Member: M. B. Rajesh (CPI(M))
@@ -372,8 +374,9 @@ Based on the analysis, the prediction is as follows:
 - **Predicted Margin**: Approximately 100,000 (Given a slight decrease in turnout which might slightly reduce the previously large margin)
 - **Predicted Vote Share %**: Approximately 50% (Reflecting a solid, though slightly reduced, support due to lower turnout)
 These predictions take into account the historical trends, candidate profiles, and current voter dynamics."
+
 # Thrissur
-content="To predict the election results for the Thrissur constituency in 2024, let's analyze the data and trends from previous elections:
+To predict the election results for the Thrissur constituency in 2024, let's analyze the data and trends from previous elections:
 1. **Historical Trend Analysis**:
    - **2009**: P.C. Chacko from INC won with 47.23% vote share and a margin of 25,151 votes.
    - **2014**: C.N. Jayadevan from CPI won with 42.28% vote share and a margin of 38,227 votes.
@@ -510,7 +513,7 @@ Given the historical election data and the 2024 voter turnout information for th
 Therefore, I predict that Hibi Eden of the INC will continue to hold the Ernakulam constituency with a substantial margin and a significant vote share, though slightly reduced from 2019 levels due to the lower voter turnout.'
 
 # Idukki
-content="### Analysis and Prediction for Idukki Constituency in 2024
+### Analysis and Prediction for Idukki Constituency in 2024
 #### Historical Context
 1. **2009 Elections**
    - **Elected Member:** P. T. Thomas
@@ -623,7 +626,7 @@ Based on historical data, party strength, current candidates, and turnout dynami
 - Thomas Chazhikadan, having won in 2019, maintains name recognition and incumbency benefits which aligns with maintaining a slightly lower but still leading vote share.
 Thus, KC(M) is poised to win the Kottayam constituency again in the 2024 elections with Thomas Chazhikadan continuing as the elected representative.'
 # Alappuzha
-content="To predict the election result for the Alappuzha constituency in 2024, we need to analyze past voting patterns, candidate popularity, changes in voter turnout, as well as the political climate. 
+To predict the election result for the Alappuzha constituency in 2024, we need to analyze past voting patterns, candidate popularity, changes in voter turnout, as well as the political climate. 
 ### Historical Context:
 1. **2009 Election:**
    - Elected Member: K. C. Venugopal (INC)
@@ -744,9 +747,10 @@ Election Prediction Analysis for Pathanamthitta Constituency - 2024
   - **LDF (CPI(M)):** Approximately 38-42%
   - **UDF (INC):** Approximately 34-38%
   - **NDA (BJP):** Approximately 20-23%
-This projection is based on observed trends, current candidate strength, as well as the apparent decrease in voter turnout and electorate dynamics.'
+This projection is based on observed trends, current candidate strength, as well as the apparent decrease in voter turnout and electorate dynamics.
+
 # Kollam
-content="To predict the election result for the Kollam constituency in 2024, let's analyze the data in detail:
+To predict the election result for the Kollam constituency in 2024, let's analyze the data in detail:
 1. **Historical Context and Trends**:
    - In 2009, N. Peethambara Kurup of the Indian National Congress (INC) won with a vote share of 47.74% and a margin of 17,531 votes.
    - In 2014, N.K. Premachandran of the Revolutionary Socialist Party (RSP) won with a vote share of 46.47% and a margin of 37,649 votes, indicating a significant increase in margin.
@@ -770,6 +774,7 @@ content="To predict the election result for the Kollam constituency in 2024, let
 - **Predicted Margin**: Approximately 100,000 votes
 - **Predicted Vote Share%**: 53%-55%
 These predictions consider past election trends, the strength of the incumbency, and current voter turnout dynamics indicating another likely RSP victory under N.K. Premachandran."
+
 # Attingal
 To predict the election results for the Attingal constituency in 2024, we need to analyze various historical and present data points:
 1. **Historical Voting Patterns**:
@@ -860,4 +865,4 @@ In summary, the prediction for the Attingal constituency in 2024 is a likely win
      - **Estimated Vote Share:** ~39-42%
        - This reflects a possible slight decrease from the 2019 performance but still above the critical threshold to secure victory.
 ### Conclusion
-Based on historical data, voter turnout, the strength of opposition candidates, and incumbency advantages, Shashi Tharoor is predicted to be re-elected as the Member of Parliament from Thiruvananthapuram in 2024, representing the Indian National Congress (INC). The margin might be slightly reduced due to varied factors, but he is still expected to secure a comfortable win.', role='assistant', function_call=None, tool_calls=None)]
+Based on historical data, voter turnout, the strength of opposition candidates, and incumbency advantages, Shashi Tharoor is predicted to be re-elected as the Member of Parliament from Thiruvananthapuram in 2024, representing the Indian National Congress (INC). The margin might be slightly reduced due to varied factors, but he is still expected to secure a comfortable win.

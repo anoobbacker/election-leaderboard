@@ -1,10 +1,11 @@
+import os
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.multioutput import MultiOutputClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import accuracy_score
 from openai import OpenAI
+import re
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from gensim.models import Word2Vec
 
 client = OpenAI()
 
@@ -42,16 +43,9 @@ def search_historical_data(historical_data, query, top_k=5):
     
     return matching_rows
 
-def get_chatgpt_prediction(constituency_number, constituency_name, candidate_names, predicted_party, turnout):
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "system", "content": "You are an expert in political analysis and election predictions."},
-            {"role": "user", "content": f"Predict the election result for constituency {constituency_number} ({constituency_name}). The candidates are {candidate_names}. The voter turnout is {turnout}%. The initial prediction is {predicted_party}. Provide a detailed analysis and final Predicted Elected Member, Predicted Elected Party, Predicted Margin, Predicated Vote Share%."}
-        ]
-    )
-    return response.choices[0].message
-
+def search_poll(data, statename, top_k=10):
+    # Search for relevant rows    
+    return data[(data['State'] == statename)]
 
 # Define response generation function
 def generate_response(query, context):
@@ -61,12 +55,82 @@ def generate_response(query, context):
             {"role": "system", "content": "You are an expert in political analysis and election predictions. Provide a detailed analysis and final Predicted Elected Member, Predicted Elected Party, Predicted Margin, Predicated Vote Share%."},
             {"role": "user", "content": f"Context: {context}\n\nQuery: {query}"}
         ],
-        max_tokens=150,
+        max_tokens=1000,
         n=1,
         stop=None,
         temperature=0.2
     )
-    return response.choices[0].message
+    return response.choices[0].message.content
+
+def read_file(file_path):
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
+        return file.read()
+
+def preprocess_unstructured_data(files):
+    # Process unstructured documents to create a structured context
+    processed_docs = []
+    model = None
+    if os.path.exists('model.bin'):
+        # Load model
+        model = Word2Vec.load('model.bin')
+    else:
+        for file in files:
+            print(f"Processing file: {file}")
+            content = read_file(file)
+        
+            # Text Cleaning: This involves removing unnecessary and redundant data like HTML tags, URLs, emojis, and punctuation. It also includes converting all text to lower case to maintain uniformity.
+            content = clean_text(content)
+
+            # Tokenization: This is the process of breaking down the text into individual words or tokens. This can be done using the tokenize function from the nltk.tokenize module in Python.
+            tokens = word_tokenize(content)
+
+            # Stopword Removal: Stopwords are common words that do not add much meaning to a sentence (e.g., "the", "is", "in"). These can be removed to reduce the size of the data.
+            stop_words = set(stopwords.words('english'))
+            tokens = [token for token in tokens if token not in stop_words]
+
+            # Stemming/Lemmatization: This is the process of reducing words to their root form. For example, "running" becomes "run". This can be done using the PorterStemmer or WordNetLemmatizer from the nltk.stem module.
+            stemmer = PorterStemmer()
+            tokens = [stemmer.stem(token) for token in tokens]
+
+            print("Tokens:", tokens)
+            processed_docs.append(tokens)
+
+
+        # Vectorization: This involves converting text data into a numerical format that can be understood by the model. This can be done using techniques like Word Embeddings.
+        # Train a Word2Vec model
+        model = Word2Vec(processed_docs, min_count=1)
+
+        # Save model
+        model.save('model.bin')
+
+    # Summarize the loaded model
+    # print(model)
+    
+    return model
+
+# Function to retrieve documents based on a query
+def retrieve_documents(query, index, documents):
+    query_words = query.split()
+    relevant_docs = set()
+    for word in query_words:
+        if word in index:
+            relevant_docs.update(index[word])
+    return [documents[doc_id] for doc_id in relevant_docs]
+
+
+def clean_text(text):
+    text = re.sub(r'<.*?>', '', text)  # remove HTML tags
+    text = re.sub(r'\n', ' ', text)  # remove newline characters
+    text = re.sub(r'[^\w\s]', '', text)  # remove punctuation
+    text = text.lower()  # convert to lower case
+    return text
+
+def get_most_similar_words(model, word):
+    try:
+        return model.wv[word]
+    except KeyError:
+        # print(f"The word '{word}' is not in the vocabulary.")
+        return []
 
 def MainRAG():
     # Load datasets
@@ -75,6 +139,13 @@ def MainRAG():
     data_2019   = pd.read_csv('../data/loksabha/2019/2019-kerala-constituency-wise-result.csv')
     data_2014  = pd.read_csv('../data/loksabha/2014/2014-kerala-constituency-wise-result.csv')
     data_2009  = pd.read_csv('../data/loksabha/2009/2009-kerala-constituency-wise-result.csv')
+    poll_2024  = pd.read_csv('../data/loksabha/2024/polls.csv')
+
+    # Check for leading/trailing spaces in column names
+    poll_2024.columns = poll_2024.columns.str.strip()
+
+    # Print the first few rows of the DataFrame to ensure it is loaded correctly
+    # print("First few rows of the DataFrame:\n", poll_2024.head())
 
     # Add year columns
     data_2009['Year'] = 2009
@@ -88,14 +159,39 @@ def MainRAG():
     historical_data.fillna('', inplace=True)
     # print(historical_data)
 
-    results = []
+    data_mp  = pd.read_csv('../data/loksabha/2024/mp-performance.csv')
+    data_mp = data_mp[data_mp['State'] == 'Kerala']    
+
+    # Search for poll data for Kerala
+    kerala_other_poll_data = search_poll(poll_2024, 'Kerala')
+    # print(f"Kerala other poll: \n{kerala_other_poll_data}")
     
+    allindia_other_poll_data = search_poll(poll_2024, 'ALL INDIA')
+    # print(f"All India other poll: \n{allindia_other_poll_data}")
+
+    # Process unstructured data
+    unstructured_docs = [
+        "./data/manorama-14Dec2023.txt", 
+        "./data/mathrubhumi-21Mar2024.txt",
+        "./data/new18-13Mar2024.txt",
+        "./data/news-abplive-12Mar2024.txt"]  # Placeholder for actual unstructured data file paths
+    
+    unstructured_model = preprocess_unstructured_data(unstructured_docs)
+
+
+    results = []
+    print("# Election Predictions\n")
     for constituency in constituencies:
         constituency_number = constituency["#"]
         constituency_name = constituency["Constituency"]
 
         # Example query
         query = f"Predict the election result for constituency {constituency_name} in 2024."
+
+        # Analyze the user's input
+        relevant_words = get_most_similar_words(unstructured_model, constituency_name)
+        # if relevant_words:
+        #    print(f"Relevant words for query '{constituency_name}': {relevant_words}")
 
         # Retrieve relevant documents
         retrieved_docs = search_historical_data(historical_data, constituency_number)
@@ -105,7 +201,6 @@ def MainRAG():
         
         # Retrieve 2024 candidate and voter turnout data
         candidate_info = candidates_2024[candidates_2024['#'] == constituency_number]
-
         turnout_info = voter_turnout_2024[voter_turnout_2024['#'] == constituency_number]
 
         # Extract 2024 candidate information by party
@@ -114,100 +209,38 @@ def MainRAG():
         nda_info = f"'NDA Party': '{candidate_info['NDA Party'].values[0]}', 'NDA Member': '{candidate_info['NDA Member'].values[0]}'"
 
         context += f"{{'2024 Candidates': {{{udf_info} {ldf_info}{nda_info}}}}}"
-        # context += f"{{2024 Voter Turnout: {turnout_info.to_string(index=False)}}}"
         turnout_context = "".join([str(doc) for doc in turnout_info.to_dict(orient='records')])
-        context += f"{{2024 Voter Turnout: {turnout_context} }}\n"
+        context += f"{{2024 Voter Turnout: {turnout_context} }}"
+
+        mp_info = data_mp[data_mp['Constituency'] == constituency_name]
+        mp_info_context = "".join([str(doc) for doc in mp_info.to_dict(orient='records')])
+        context += f"{{Current Elected Member Performance: {mp_info_context} }}"
+
+        if relevant_words:
+            context += f"{{Unstructured data: {relevant_words} }}"
+
+        if not kerala_other_poll_data.empty:
+            kerala_other_poll_data_context = "".join([str(doc) for doc in kerala_other_poll_data.to_dict(orient='records')])
+            context += f"{{Kerala Opinion and Exit Poll Data: {kerala_other_poll_data_context} }}"
+
+        if not allindia_other_poll_data.empty:
+            allindia_other_poll_data_context = "".join([str(doc) for doc in allindia_other_poll_data.to_dict(orient='records')])
+            context += f"{{All India Opinion Opinion and Exit Poll Data: {allindia_other_poll_data_context} }}"
         
-        # Generate response using GPT-3
+        # Display context
+        # print(f"Context for constituency {constituency_name}: {context}")
+
+        # Generate response using OpenAI API
         response = generate_response(query, context)
         results.append({'Constituency': constituency_name, 'Prediction': response})
+        print(f"## {constituency_name}\n")
+        print(f"{response}\n")  
     
-    print(results)
-
-def MainRandomForestClassifier():
-    # Load datasets
-    constituency_df = pd.read_csv('../data/loksabha/2024/kerala-constituency.csv')
-    candidates_df = pd.read_csv('../data/loksabha/2024/2024-kerala-candidates.csv')
-    voter_turnout_df = pd.read_csv('../data/loksabha/2024/2024-kerala-voter-turnout.csv')
-    result_2019_df = pd.read_csv('../data/loksabha/2019/2019-kerala-constituency-wise-result.csv')
-    result_2014_df = pd.read_csv('../data/loksabha/2014/2014-kerala-constituency-wise-result.csv')
-    result_2009_df = pd.read_csv('../data/loksabha/2009/2009-kerala-constituency-wise-result.csv')
-
-    # Add year columns
-    result_2009_df['Year'] = 2009
-    result_2014_df['Year'] = 2014
-    result_2019_df['Year'] = 2019
-
-    # Combine historical data
-    historical_data = pd.concat([result_2009_df, result_2014_df, result_2019_df], ignore_index=True)
-
-    # Preprocess data if necessary
-    historical_data.fillna('', inplace=True)
-    # Data Preprocessing
-    # Convert the 'Turnout%' and 'Vote Share%' columns to string to avoid AttributeError
-    historical_data['Turnout%'] = historical_data['Turnout%'].astype(str)
-    historical_data['VoteShare%'] = historical_data['VoteShare%'].astype(str)
-
-    # Remove '%' sign and convert to float
-    historical_data['Turnout%'] = historical_data['Turnout%'].str.rstrip('%').astype(float)
-    historical_data['VoteShare%'] = historical_data['VoteShare%'].str.rstrip('%').astype(float)
-
-    # Encoding categorical variables
-    party_encoder = LabelEncoder()
-    member_encoder = LabelEncoder()
-
-    historical_data['Elected Party Encoded'] = party_encoder.fit_transform(historical_data['Elected Party'])
-    historical_data['Elected Member Encoded'] = member_encoder.fit_transform(historical_data['Elected Member'])
-
-    print(historical_data)
-
-    # Features and Labels
-    X = historical_data[['Year', 'Turnout%', 'VoteShare%']]
-    y = historical_data[['Elected Party Encoded', 'Elected Member Encoded']]
-
-    # Train-test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # Model training
-    model = MultiOutputClassifier(RandomForestClassifier(n_estimators=100, random_state=42))
-    model.fit(X_train, y_train)
-
-    # Model evaluation
-    y_pred = model.predict(X_test)
-    accuracy_party = accuracy_score(y_test['Elected Party Encoded'], y_pred[:, 0])
-    accuracy_member = accuracy_score(y_test['Elected Member Encoded'], y_pred[:, 1])
-    print(f'Model Accuracy for Party: {accuracy_party * 100:.2f}%')
-    print(f'Model Accuracy for Member: {accuracy_member * 100:.2f}%')
-
-    # Preparing 2024 data for prediction
-    voter_turnout_df['Turnout%'] = voter_turnout_df['Turnout%'].astype(str)
-    voter_turnout_df['Turnout%'] = voter_turnout_df['Turnout%'].str.rstrip('%').astype(float)
-    voter_turnout_df['Year'] = 2024  # Add the Year column for 2024 data
-
-    candidates_df = candidates_df.merge(constituency_df, on='#')
-    prediction_data = voter_turnout_df.merge(candidates_df, on='#')
-    prediction_data['VoteShare%'] = prediction_data['Turnout%']  # Simplified assumption
-
-    # Prediction
-    X_2024 = prediction_data[['Turnout%', 'VoteShare%', 'Year']]
-    y_2024_pred = model.predict(X_2024)
-    prediction_data['Predicted Party Encoded'] = y_2024_pred[:, 0]
-    prediction_data['Predicted Member Encoded'] = y_2024_pred[:, 1]
-    # prediction_data['Predicted Party', 'Predicted Member'] = model.predict(X_2024)
-
-    prediction_data['Predicted Party'] = party_encoder.inverse_transform(prediction_data['Predicted Party Encoded'])
-    prediction_data['Predicted Member'] = member_encoder.inverse_transform(prediction_data['Predicted Member Encoded'])
-
-    # Apply ChatGPT predictions
-    for index, row in prediction_data.iterrows():
-        print(f"Start predicting {row['Constituency']}...")
-        candidate_names = f"UDF: {row['UDF Member']}, LDF: {row['LDF Member']}, NDA: {row['NDA Member']}"
-        analysis = get_chatgpt_prediction(row['#'], row['Constituency'], candidate_names, row['Predicted Party'], row['Turnout%'])
-        prediction_data.loc[index, 'ChatGPT Analysis'] = analysis
-        print(f"Completed predicting {row['Constituency']}: {analysis}")
-
-    # Display predictions
-    print(prediction_data[['#', 'Constituency', 'Predicted Party', 'Predicted Member', 'ChatGPT Analysis']])
+    # Printing in Markdown format
+    # print("# Election Predictions\n")
+    # for i, result in enumerate(results, start=1):
+    #     print(f"## {result['Constituency']}\n")
+    #     print(f"{result['Prediction']}\n")
 
 # Run the main function
 if __name__ == "__main__":
