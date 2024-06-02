@@ -6,6 +6,10 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from gensim.models import Word2Vec
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 client = OpenAI()
 
@@ -52,7 +56,7 @@ def generate_response(query, context):
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are an expert in political analysis and election predictions. Provide a detailed analysis and final Predicted Elected Member, Predicted Elected Party, Predicted Margin, Predicated Vote Share%."},
+            {"role": "system", "content": "You are an expert in political analysis and election predictions. Provide a detailed analysis and final Predicted Elected Member, Predicted Elected Party, Predicted Winning votes, Predicated Vote Share%. Calculate the predicted vote share percentage as the proportion of total votes received by the winning candidate compared to the overall votes cast in the election. Ensure that the difference in vote share percentage between the winner and the second-place candidate correctly maps to the predicted winning votes, which is the difference in the number of votes received by the winning candidate and the second-place candidate."},
             {"role": "user", "content": f"Context: {context}\n\nQuery: {query}"}
         ],
         max_tokens=1000,
@@ -225,7 +229,7 @@ def MainRAG():
 
         if not allindia_other_poll_data.empty:
             allindia_other_poll_data_context = "".join([str(doc) for doc in allindia_other_poll_data.to_dict(orient='records')])
-            context += f"{{All India Opinion Opinion and Exit Poll Data: {allindia_other_poll_data_context} }}"
+            context += f"{{All India Opinion and Exit Poll Data: {allindia_other_poll_data_context} }}"
         
         # Display context
         # print(f"Context for constituency {constituency_name}: {context}")
