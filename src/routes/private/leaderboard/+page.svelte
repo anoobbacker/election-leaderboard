@@ -218,8 +218,9 @@
                     <div class="flex flex-row gap-2 items-center">
                       <img class="h-8 w-8 rounded-full bg-gray-50" src="{prediction.avatar_url}" alt="{prediction.username}" />
                       <p class="text-sm font-semibold leading-6 text-gray-900">{prediction.username}</p>
-                      <p class="text-xs leading-5 text-gray-500">{prediction.vote_share ? `${prediction.vote_share}%` : ''}</p>
-                      <p class="text-xs leading-5 text-gray-500">{prediction.winning_margin ? prediction.winning_margin : ''}</p>
+                      <p class="text-xs leading-5 text-gray-500">{prediction.points ? prediction.points : '-'}</p>
+                      <p class="text-xs leading-5 text-gray-500">{prediction.vote_share ? `${prediction.vote_share}%` : '-'}</p>
+                      <p class="text-xs leading-5 text-gray-500">{prediction.winning_margin ? prediction.winning_margin : '-'}</p>
                     </div>
                     {/if}
                     {/each}

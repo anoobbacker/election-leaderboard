@@ -117,16 +117,20 @@ export const actions: Actions = {
 
                 if ( (prediction.vote_share !== null) && (result.vote_share_percentage > 0) ) {
                   const maxVoteShareDiff = result.vote_share_percentage; // Maximum possible difference for vote share (percentage)
-                  const voteShareDiff = Math.abs(result.vote_share_percentage - prediction.vote_share) / maxVoteShareDiff;
-                  const voteSharePoints = MAX_POINTS_FOR_VOTE_SHARE * voteShareDiff;
+                  const voteShareDiff = Math.min(Math.abs(result.vote_share_percentage - prediction.vote_share) / maxVoteShareDiff);
+                  const voteSharePoints = MAX_POINTS_FOR_VOTE_SHARE * (1 - voteShareDiff);
+                  
                   points += voteSharePoints;
+                  
                 }
 
                 if ( (prediction.winning_margin !== null) && (result.margin > 0) ) {
                   const maxWinningMarginDiff = result.margin; // Maximum possible winning margin
-                  const winningMarginDiff = Math.abs(result.margin - prediction.winning_margin) / maxWinningMarginDiff;
-                  const winningMarginPoints = MAX_POINTS_FOR_WINNING_MARGIN * winningMarginDiff;
+                  const winningMarginDiff = Math.min(Math.abs(result.margin - prediction.winning_margin) / maxWinningMarginDiff, 1);
+                  const winningMarginPoints = MAX_POINTS_FOR_WINNING_MARGIN * (1 - winningMarginDiff);
+                  
                   points += winningMarginPoints;
+                  
                 }
 
                 // Round points to the nearest integer
