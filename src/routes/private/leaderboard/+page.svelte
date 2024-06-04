@@ -64,7 +64,7 @@
       </div>
 			{:else}
 			<div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-        🎉 The scores are now updated!
+        🎉 LIVE: Counting in progress. The scores are updated at 12PM 4Jun!
       </div>
 			{/if}
 		</div>

@@ -30,6 +30,6 @@ export const load: LayoutServerLoad = async ({ locals: { supabase, session } }) 
   return {
     avatar_url: profileURL,
     username: profileUserName,    
-    resultsReady: false,
+    resultsReady: true,
   };
 }

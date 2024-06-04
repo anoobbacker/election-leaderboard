@@ -113,17 +113,17 @@ export const actions: Actions = {
             let points = 0;
             if (prediction.candidate_name === result.elected_member) {
                 points += MAX_POINTS_FOR_CORRECT_WINNER;
+              
 
-                const maxVoteShareDiff = result.vote_share_percentage; // Maximum possible difference for vote share (percentage)
-                const maxWinningMarginDiff = result.margin; // Maximum possible winning margin
-
-                if (prediction.vote_share !== null ) {
+                if ( (prediction.vote_share !== null) && (result.vote_share_percentage > 0) ) {
+                  const maxVoteShareDiff = result.vote_share_percentage; // Maximum possible difference for vote share (percentage)
                   const voteShareDiff = Math.abs(result.vote_share_percentage - prediction.vote_share) / maxVoteShareDiff;
                   const voteSharePoints = MAX_POINTS_FOR_VOTE_SHARE * voteShareDiff;
                   points += voteSharePoints;
                 }
 
-                if (prediction.winning_margin !== null ) {
+                if ( (prediction.winning_margin !== null) && (result.margin > 0) ) {
+                  const maxWinningMarginDiff = result.margin; // Maximum possible winning margin
                   const winningMarginDiff = Math.abs(result.margin - prediction.winning_margin) / maxWinningMarginDiff;
                   const winningMarginPoints = MAX_POINTS_FOR_WINNING_MARGIN * winningMarginDiff;
                   points += winningMarginPoints;
