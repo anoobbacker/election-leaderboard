@@ -1,0 +1,72 @@
+-- Sample SQL to update data with actual results
+UPDATE candidate_party_mapping 
+SET
+    alliance = actual_results.alliance
+FROM
+    (VALUES
+        (1, 'Kasaragod', 'Rajmohan Unnithan', 'INC', 'UDF'),
+        (1, 'Kasaragod', 'MV Balakrishnan', 'CPI(M)','LDF'),
+        (1, 'Kasaragod', 'ML Ashwini', 'BJP','NDA'),
+        (2, 'Kannur', 'K. Sudhakaran', 'INC','UDF'),
+        (2, 'Kannur', 'MV Jayarajan', 'CPI(M)','LDF'),
+        (2, 'Kannur', 'C Raghunath', 'BJP','NDA'),
+        (3, 'Vatakara', 'Shafi Parambil', 'INC','UDF'),
+        (3, 'Vatakara', 'K. K. Shailaja', 'CPI(M)','LDF'),
+        (3, 'Vatakara', 'Prafulla Krishna', 'BJP','NDA'),
+        (4, 'Wayanad', 'Rahul Gandhi', 'INC','UDF'),
+        (4, 'Wayanad', 'Annie Raja', 'CPI','LDF'),
+        (4, 'Wayanad', 'K Surendran', 'BJP','NDA'),
+        (5, 'Kozhikode', 'MK Raghavan', 'INC','UDF'),
+        (5, 'Kozhikode', 'Elamaram Kareem', 'CPI(M)','LDF'),
+        (5, 'Kozhikode', 'MT Ramesh', 'BJP','NDA'),
+        (6, 'Malappuram', 'ET Mohammed Basheer', 'IUML','UDF'),
+        (6, 'Malappuram', 'V Vaseef', 'CPI(M)','LDF'),
+        (6, 'Malappuram', 'M Abdul Salam', 'BJP','NDA'),
+        (7, 'Ponnani', 'Abdussamad Samadani', 'IUML','UDF'),
+        (7, 'Ponnani', 'K.S. Hamza', 'CPI(M)','LDF'),
+        (7, 'Ponnani', 'Niveditha Subramanian', 'BJP','NDA'),
+        (8, 'Palakkad', 'VK Sreekandan', 'INC','UDF'),
+        (8, 'Palakkad', 'A Vijayaraghavan', 'CPI(M)','LDF'),
+        (8, 'Palakkad', 'C KrishnaKumar', 'BJP','NDA'),
+        (9, 'Alathur (SC)', 'Ramya Haridas', 'INC','UDF'),
+        (9, 'Alathur (SC)', 'K. Radhakrishnan', 'CPI(M)','LDF'),
+        (9, 'Alathur (SC)', 'TN Sarasu', 'BJP','NDA'),
+        (10, 'Thrissur', 'K Muraleedharan', 'INC','UDF'),
+        (10, 'Thrissur', 'VS Sunil Kumar', 'CPI(M)','LDF'),
+        (10, 'Thrissur', 'Suresh Gopi', 'BJP','NDA'),
+        (11, 'Chalakudy', 'Benny Behanan', 'INC','UDF'),
+        (11, 'Chalakudy', 'C Raveendranath', 'CPI(M)','LDF'),
+        (11, 'Chalakudy', 'KA Unnikrishnan', 'BJP','NDA'),
+        (12, 'Ernakulam', 'Hibi Eden', 'INC','UDF'),
+        (12, 'Ernakulam', 'KJ Shine', 'CPI(M)','LDF'),
+        (12, 'Ernakulam', 'KS Radhakrishnan', 'BJP','NDA'),
+        (13, 'Idukki', 'Dean Kuriakose', 'INC','UDF'),
+        (13, 'Idukki', 'Joice George', 'CPI(M)','LDF'),
+        (13, 'Idukki', 'Sangeetha Vishwanathan', 'BDJS','NDA'),
+        (14, 'Kottayam', 'Francis George', 'KEC','UDF'),
+        (14, 'Kottayam', 'Thomas Chazhikadan', 'KC(M)','LDF'),
+        (14, 'Kottayam', 'Thushar Vellapally', 'BDJS','NDA'),
+        (15, 'Alappuzha', 'KC Venugopal', 'INC','UDF'),
+        (15, 'Alappuzha', 'AM Ariff', 'CPI(M)','LDF'),
+        (15, 'Alappuzha', 'Sobha Surendran', 'BJP','NDA'),
+        (16, 'Mavelikara (SC)', 'Kodikunnil Suresh', 'INC','UDF'),
+        (16, 'Mavelikara (SC)', 'CA Arun Kumar', 'CPI(M)','LDF'),
+        (16, 'Mavelikara (SC)', 'Baiju Kalasala', 'BJP','NDA'),
+        (17, 'Pathanamthitta', 'Anto Antony', 'INC','UDF'),
+        (17, 'Pathanamthitta', 'Thomas Isaac', 'CPI(M)','LDF'),
+        (17, 'Pathanamthitta', 'Anil Antony', 'BJP','NDA'),
+        (18, 'Kollam', 'NK Premachandran', 'RSP','UDF'),
+        (18, 'Kollam', 'Mukesh Madhavan', 'CPI(M)','LDF'),
+        (18, 'Kollam', 'G Krishnakumar', 'BJP','NDA'),
+        (19, 'Attingal', 'Adoor Prakash', 'INC','UDF'),
+        (19, 'Attingal', 'V Joy', 'CPI(M)','LDF'),
+        (19, 'Attingal', 'V Muraleedharan', 'BJP','NDA'),
+        (20, 'Thiruvananthapuram', 'Shashi Tharoor', 'INC','UDF'),
+        (20, 'Thiruvananthapuram', 'Pannyan Raveendran', 'CPI','LDF'),
+        (20, 'Thiruvananthapuram', 'Rajeev Chandrasekhar', 'BJP','NDA')
+    ) AS actual_results(constituency_number, constituency_name, candidate_name, party, alliance)
+WHERE
+    candidate_party_mapping.constituency_number = actual_results.constituency_number
+    AND candidate_party_mapping.constituency_name = actual_results.constituency_name
+    AND candidate_party_mapping.candidate_name = actual_results.candidate_name
+    AND candidate_party_mapping.party = actual_results.party;
