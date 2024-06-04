@@ -65,6 +65,7 @@
 			{:else}
 			<div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
         🎉 LIVE: Counting in progress. The scores are updated at 12PM 4Jun!
+        <!-- 🎉 The scores got updated! -->
       </div>
 			{/if}
 		</div>
@@ -75,7 +76,8 @@
         {#if resultsReady === false}
 				🕒 Stay tuned, scores will be updated after announcing election results!
         {:else}
-        🎉 The wait is over, the election results are in – <i>check your scores now</i>!
+        <!-- 🎉 The wait is over, the election results are in – <i>check your scores now</i>! -->
+        🚧 The election counting in progress – <i>check your scores now</i>!
         {/if}        
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
