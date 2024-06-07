@@ -3,10 +3,10 @@ import { fail } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
 interface CandidatePartyLookup {
-  [key: string]: {party: string, photo_url: string};  // Define an index signature
+  [key: string]: {party: string, alliance: string, photo_url: string};  // Define an index signature
 }
 
-export const load: PageServerLoad = async ({ depends, locals: { supabase, session } }) => {
+export const load: PageServerLoad = async ({ depends, locals: { supabase } }) => {
   depends('supabase:db:profiles');
   depends('supabase:db:election_prediction_2024');
 
@@ -38,7 +38,7 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
     // Fetch candidate and party information
     const { data: candidatePartyData, error: candidatePartyError } = await supabase
     .from('candidate_party_mapping')
-    .select('candidate_name, party, photo_url');
+    .select('candidate_name, party, alliance, photo_url');
 
     if (candidatePartyError) {
       console.error(new Date().toLocaleString(), 'src/routes/private/leaderboard/+page.server.ts: Failed to save predictions', candidatePartyError);  // Log when action is called
@@ -47,8 +47,8 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase, sessio
 
     // Transform data into a lookup object
     const partylookup:CandidatePartyLookup = {};
-    candidatePartyData.forEach(({ candidate_name, party, photo_url }) => {
-      partylookup[candidate_name] = {party, photo_url};
+    candidatePartyData.forEach(({ candidate_name, party, alliance, photo_url }) => {
+      partylookup[candidate_name] = {party, alliance, photo_url};
     });
 
     // Merge profiles with submission dates
@@ -90,11 +90,11 @@ export const actions: Actions = {
       // Fetch actual election results
       const { data: results, error: resultsError } = await supabase
         .from('election_results')
-        .select('constituency_name, elected_member, elected_party, vote_share_percentage, margin')
+        .select('constituency_name, elected_member, elected_party, local_alliance, vote_share_percentage, margin')
         .eq('year', '2024');
 
       if (resultsError) throw new Error(resultsError.message);
-
+      
       // Constants for point calculation
       const MAX_POINTS_FOR_CORRECT_WINNER = 50;
       const MAX_POINTS_FOR_VOTE_SHARE = 25;
@@ -169,6 +169,7 @@ export const actions: Actions = {
 
       // Sort participants by total points
       participantsWithTotalPoints.sort((a, b) => b.total_points - a.total_points);
+
 
       console.debug(new Date().toLocaleString(), 'src/routes/private/leaderboard/+page.server.ts: showscorecard(): Return');  // Log when action is called
       return {

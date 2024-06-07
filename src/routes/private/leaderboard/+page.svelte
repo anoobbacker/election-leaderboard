@@ -16,7 +16,7 @@
 	participants = participants || [];
 
 	let constituencies: string | any[] = [];
-  let calculatedParticipants: string | any[] = [];  
+  let calculatedParticipants: string | any[] = [];
 
 	// Sort participants alphabetically by username
 	participants.sort((a, b) => a.username.localeCompare(b.username));
@@ -47,6 +47,10 @@
       console.debug(new Date().toLocaleString(), 'src/routes/private/leaderboard/+page.svelte: handleViewPredictions(): Return');  // Log when action is called
 		};
 	};
+
+  function formatNumberWithSeparator(num: number, locale: string = 'en-US'): string {
+    return num.toLocaleString(locale);
+  }
 </script>
 
 <div class="relative isolate max-w-7xl px-6 pt-4 lg:px-8">
@@ -64,8 +68,7 @@
       </div>
 			{:else}
 			<div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-        🎉 LIVE: Counting in progress. The scores are updated at 12PM 4Jun!
-        <!-- 🎉 The scores got updated! -->
+        🎉 The scores got updated!
       </div>
 			{/if}
 		</div>
@@ -76,8 +79,8 @@
         {#if resultsReady === false}
 				🕒 Stay tuned, scores will be updated after announcing election results!
         {:else}
-        <!-- 🎉 The wait is over, the election results are in – <i>check your scores now</i>! -->
-        🚧 The election counting in progress – <i>check your scores now</i>!
+        🎉 The wait is over, the election results are in – <i>check your scores now</i>!
+        <!-- 🚧 The election counting in progress – <i>check your scores now</i>! -->
         {/if}        
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
@@ -108,11 +111,17 @@
 			style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
 		></div>
 	</div>
+</div>
 
-	{#if calculatedParticipants.length > 0}
-    <!-- Final score & winner -->
+
+{#if calculatedParticipants.length > 0}
+<!-- Final score & winner -->
+<div class="max-w-full mx-auto p-6">
+  <div class="flex flex-col place-content-center items-center min-w-full gap-8 p-2">
+    <h1 class="p-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Leaderboard</h1>
     <div class="flex flex-wrap place-content-center min-w-full gap-8 p-2">
-      <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md">
+      <!-- participant points -->
+      <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md w-1/2 ">
         {#each calculatedParticipants as participant, i}
           <li class="flex justify-between gap-x-6 py-5">
             <div class="flex min-w-0 gap-x-4">
@@ -139,112 +148,106 @@
         {/each}
       </ul>
     </div>
-  {:else if (participants.length > 0) && (resultsReady === false)}
-    <!-- Submission -->
-    <div class="flex flex-wrap place-content-center gap-8 p-2">
-      <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md">
-        {#each participants as participant}
-          <li class="flex justify-between gap-x-6 py-5">
-            <div class="flex min-w-0 gap-x-4">
-              <img
-                class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                src={participant.avatar_url}
-                alt={participant.username}
-              />
-              <div class="min-w-0 flex-auto">
-                <p class="text-sm font-semibold leading-6 text-gray-900">{participant.username}</p>
-                <p class="shrink-0 sm:flex sm:flex-col sm:items-end mt-1 text-xs leading-5">✔️Submitted</p>
-              </div>
-            </div>
-            <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-              <p class="text-sm font-semibold leading-6 text-indigo-600">🕒 Stay tuned...</p>
-              <p class="mt-1 text-xs leading-5 text-gray-500">
-                On <time datetime={participant.submitted_at}
-                  >{formatDate(participant.submitted_at)}</time
-                >
-              </p>
-            </div>
-          </li>
-        {/each}
-      </ul>
-    </div>  
-  {/if}
-
-  {#if constituencies.length > 0}
-  <div class="max-w-full mx-auto p-6">
-    <h1 class="p-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Detailed scorecard</h1>
-    <div class="flex flex-wrap gap-8 p-2">
-        {#each constituencies as constituency}
-          <!-- Constituency -->
-          <div class="flex shadow rounded-lg p-4 max-w-fill place-content-center">
-            <div class="flex flex-col space-y-3">
-              <p class="px-6 py-4 font-bold text-center">{constituency.constituency_name}</p>
-              <!-- Winning candidate -->
-              <div class="flex flex-row items-center p-4 space-x-3 space-y-3">
-                <!-- Winner Details -->
-                <div class="flex flex-row place-content-center gap-2">
-                  <!-- Canidate image -->
-                  <img class="inline-block h-32 rounded-full ring-2 ring-white" src="{partylookup?.[constituency.elected_member].photo_url}" alt="{constituency.elected_member}">                  
-                  <!-- Details  -->
-                  <div class="flex flex-col gap-2">
-                    <div class="text-left">
-                      <p class="font-semibold text-gray-900">{constituency.elected_member}</p>
-                      <img class="inline-block h-6 rounded-full ring-2 ring-white" src="/images/party/{constituency.elected_party}.webp" alt="{constituency.elected_party}">
-                    </div>
-                    <div class="text-left">
-                      <p class="font-semibold text-gray-600">Party:</p>
-                      <p class="text-gray-600">{constituency.elected_party}</p>                      
-                    </div>
-                    <div class="text-left">
-                      <p class="font-semibold text-gray-600">Vote Share:</p>
-                      <p class="text-gray-600">{constituency.vote_share_percentage}%</p>                      
-                    </div>
-                    
-                    <div class="text-left">
-                      <p class="font-semibold text-gray-600">Winning votes:</p>
-                      <p class="text-gray-600">{constituency.margin}</p>
-                    </div>
-                  </div>
-                </div>            
-              </div>
-              <!-- Prediction by participants -->
-              <div class="flex flex-col flex-wrap p-4 space-y-3">                
-                <div class="flex flex-row items-baseline gap-8">
-                  <!-- Correct predictions -->
-                  <div class="flex flex-col gap-2 items-left">
-                    <p class="font-semibold text-left">✅Correct</p>
-                    {#each constituency.predictions as prediction}
-                    {#if prediction.candidate_name === constituency.elected_member}
-                    <div class="flex flex-row gap-2 items-center">
-                      <img class="h-8 w-8 rounded-full bg-gray-50" src="{prediction.avatar_url}" alt="{prediction.username}" />
-                      <p class="text-sm font-semibold leading-6 text-gray-900">{prediction.username}</p>
-                      <p class="text-xs leading-5 text-gray-500">{prediction.points ? prediction.points : '-'}</p>
-                      <p class="text-xs leading-5 text-gray-500">{prediction.vote_share ? `${prediction.vote_share}%` : '-'}</p>
-                      <p class="text-xs leading-5 text-gray-500">{prediction.winning_margin ? prediction.winning_margin : '-'}</p>
-                    </div>
-                    {/if}
-                    {/each}
-                  </div>
-                  <!-- Wrong predictions -->
-                  <div class="flex flex-col gap-2 items-left">
-                    <p class="font-semibold text-left">❌ Wrong</p>
-                    {#each constituency.predictions as prediction}
-                    {#if prediction.candidate_name !== constituency.elected_member}
-                    <div class="flex flex-row gap-2 items-center">
-                      <img class="h-8 w-8 rounded-full bg-gray-50" src="{prediction.avatar_url}" alt="{prediction.username}" />
-                      <p class="text-sm font-semibold leading-6 text-gray-900">{prediction.username}</p>
-                      <!-- <p class="text-xs leading-5 text-gray-500">{prediction.vote_share}%</p> -->
-                      <!-- <p class="text-xs leading-5 text-gray-500">{prediction.winning_margin}</p> -->
-                    </div>
-                    {/if}
-                    {/each}
-                  </div>
-                </div>                
-              </div>
-            </div>            
-          </div>
-        {/each}
-    </div>
   </div>
-  {/if}
+</div>  
+{:else if (participants.length > 0) && (resultsReady === false)}
+<!-- Submission -->
+<div class="max-w-full mx-auto p-6">
+  <div class="flex flex-wrap place-content-center gap-8 p-2">
+    <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md">
+      {#each participants as participant}
+        <li class="flex justify-between gap-x-6 py-5">
+          <div class="flex min-w-0 gap-x-4">
+            <img
+              class="h-12 w-12 flex-none rounded-full bg-gray-50"
+              src={participant.avatar_url}
+              alt={participant.username}
+            />
+            <div class="min-w-0 flex-auto">
+              <p class="text-sm font-semibold leading-6 text-gray-900">{participant.username}</p>
+              <p class="shrink-0 sm:flex sm:flex-col sm:items-end mt-1 text-xs leading-5">✔️Submitted</p>
+            </div>
+          </div>
+          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <p class="text-sm font-semibold leading-6 text-indigo-600">🕒 Stay tuned...</p>
+            <p class="mt-1 text-xs leading-5 text-gray-500">
+              On <time datetime={participant.submitted_at}
+                >{formatDate(participant.submitted_at)}</time
+              >
+            </p>
+          </div>
+        </li>
+      {/each}
+    </ul>
+  </div>
 </div>
+{/if}
+
+{#if constituencies.length > 0}
+<div class="max-w-full mx-auto p-6">
+  <h1 class="p-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Detailed scorecard</h1>
+  <div class="flex flex-wrap gap-8 p-2">
+      {#each constituencies as constituency}
+        <!-- Constituency -->
+        <div class="flex shadow rounded-lg p-4 max-w-fill place-content-center">
+          <div class="flex flex-col space-y-3">
+            <p class="px-6 py-4 font-bold text-center">{constituency.constituency_name}</p>
+            <!-- Winning candidate -->
+            <div class="flex flex-row items-center p-4 space-x-3 space-y-3">
+              <!-- Winner Details -->
+              <div class="flex flex-row place-content-center gap-2">
+                <!-- Canidate image -->
+                <img class="inline-block h-32 rounded-full ring-2 ring-white" src="{partylookup?.[constituency.elected_member].photo_url}" alt="{constituency.elected_member}">                  
+                <!-- Details  -->
+                <div class="flex flex-col gap-2">
+                  <div class="text-left">
+                    <p class="font-semibold text-gray-900">{constituency.elected_member}</p>
+                    <img class="inline-block h-6 rounded-full ring-2 ring-white" src="/images/party/{constituency.elected_party}.webp" alt="{constituency.elected_party}">
+                  </div>
+                  <div class="text-left">
+                    <p class="font-semibold text-gray-600">Party:</p>
+                    <p class="text-gray-600">{constituency.elected_party}</p>                      
+                  </div>
+                  <div class="text-left">
+                    <p class="font-semibold text-gray-600">Vote Share:</p>
+                    <p class="text-gray-600">{constituency.vote_share_percentage}%</p>                      
+                  </div>
+                  
+                  <div class="text-left">
+                    <p class="font-semibold text-gray-600">Winning votes:</p>
+                    <p class="text-gray-600">{formatNumberWithSeparator(constituency.margin)}</p>
+                  </div>
+                </div>
+              </div>            
+            </div>
+            <!-- Prediction by participants -->
+            <div class="flex flex-col flex-wrap p-4 space-y-3">                
+              <div class="flex flex-row items-baseline gap-8">
+                <!-- Correct predictions -->
+                <div class="flex flex-col gap-2 items-left">
+                  <p class="font-semibold text-left">Predictions</p>
+                  {#each constituency.predictions as prediction}                  
+                  <div class="flex flex-row gap-2 items-center">
+                    {#if prediction.candidate_name === constituency.elected_member}
+                    <p class="flex-none text-left">✅</p>
+                    {:else}
+                    <p class="flex-none text-left">❌</p>
+                    {/if}
+                    <img class="flex-none h-8 w-8 rounded-full bg-gray-50" src="{prediction.avatar_url}" alt="{prediction.username}" />
+                    <p class="flex-grow text-sm font-semibold leading-6 text-gray-900">{prediction.username}</p>
+                    {#if prediction.candidate_name === constituency.elected_member}
+                    <p class="flex-none text-xs leading-5 text-gray-500 min-w-[50px]">🎯{prediction.points ? prediction.points : '─'}</p>
+                    {/if}
+                    <p class="flex-none text-xs leading-5 text-gray-500 min-w-[50px]">{prediction.vote_share ? `${prediction.vote_share}%` : '─'}</p>
+                    <p class="flex-none text-xs leading-5 text-gray-500 min-w-[70px] ">{prediction.winning_margin ? formatNumberWithSeparator(prediction.winning_margin) : '─'}</p>
+                  </div>                  
+                  {/each}
+                </div>
+              </div>                
+            </div>
+          </div>            
+        </div>
+      {/each}
+  </div>
+</div>
+{/if}

@@ -70,6 +70,8 @@
             aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
             <a href="/private/leaderboard" class="{currentPath === '/private/leaderboard' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
             aria-current={currentPath === '/private/leaderboard' ? 'page' : false}>Leaderboard</a>
+            <a href="/private/results" class="{currentPath === '/private/results' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium': 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}"
+            aria-current={currentPath === '/private/results' ? 'page' : false}>Results</a>
           </div>
         </div>
       </div>
@@ -100,6 +102,7 @@
       <a href="/private/candidate" class="{currentPath === '/private/candidate' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/candidate' ? 'page' : false}>Candidate</a>
       <a href="/private/predict" class="{currentPath === '/private/predict' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/predict' ? 'page' : false}>Predict</a>
       <a href="/private/leaderboard" class="{currentPath === '/private/leaderboard' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/leaderboard' ? 'page' : false}>Leaderboard</a>
+      <a href="/private/results" class="{currentPath === '/private/results' ? 'bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'}" aria-current={currentPath === '/private/results' ? 'page' : false}>Results</a>
     </div>
   </div>
 </nav>

@@ -1,0 +1,61 @@
+#,Constituency,Party,Votes,Vote Share%
+1,Kasaragod,UDF,474961,43.75
+1,Kasaragod,LDF,434523,40.03
+1,Kasaragod,NDA,176049,16.22
+2,Kannur,UDF,529741,51.26
+2,Kannur,LDF,435182,42.11
+2,Kannur,NDA,68509,6.63
+3,Vatakara,UDF,526755,50.22
+3,Vatakara,LDF,442092,42.15
+3,Vatakara,NDA,80128,7.64
+4,Wayanad,UDF,706367,66.65
+4,Wayanad,LDF,274597,25.91
+4,Wayanad,NDA,78816,7.44
+5,Kozhikode,UDF,493444,46.43
+5,Kozhikode,LDF,408219,38.41
+5,Kozhikode,NDA,161216,15.17
+6,Malappuram,UDF,589873,58.87
+6,Malappuram,LDF,329720,32.91
+6,Malappuram,NDA,82332,8.22
+7,Ponnani,UDF,521824,54.3
+7,Ponnani,LDF,328551,34.19
+7,Ponnani,NDA,110603,11.51
+8,Palakkad,UDF,399274,39.71
+8,Palakkad,LDF,387637,38.55
+8,Palakkad,NDA,218556,21.74
+9,Alathur (SC),UDF,533815,53.46
+9,Alathur (SC),LDF,374847,37.54
+9,Alathur (SC),NDA,89837,9
+10,Thrissur,UDF,415089,40.29
+10,Thrissur,LDF,321456,31.2
+10,Thrissur,NDA,293822,28.52
+11,Chalakudy,UDF,473444,48.87
+11,Chalakudy,LDF,341170,35.22
+11,Chalakudy,NDA,154159,15.91
+12,Ernakulam,UDF,491263,51.65
+12,Ernakulam,LDF,322110,33.87
+12,Ernakulam,NDA,137749,14.48
+13,Idukki,UDF,498493,55.11
+13,Idukki,LDF,327440,36.2
+13,Idukki,NDA,78648,8.69
+14,Kottayam,UDF,421046,47.26
+14,Kottayam,LDF,314787,35.33
+14,Kottayam,NDA,155135,17.41
+15,Alappuzha,UDF,435496,40.73
+15,Alappuzha,LDF,445970,41.71
+15,Alappuzha,NDA,187729,17.56
+16,Mavelikkara (SC),UDF,440415,46.2
+16,Mavelikkara (SC),LDF,379277,39.79
+16,Mavelikkara (SC),NDA,133546,14.01
+17,Pathanamthitta,UDF,380927,37.53
+17,Pathanamthitta,LDF,336684,33.17
+17,Pathanamthitta,NDA,297396,29.3
+18,Kollam,UDF,499677,52.39
+18,Kollam,LDF,350821,36.78
+18,Kollam,NDA,103339,10.83
+19,Attingal,UDF,380995,39.2
+19,Attingal,LDF,342748,35.27
+19,Attingal,NDA,248081,25.53
+20,Thiruvananthapuram,UDF,416151,42
+20,Thiruvananthapuram,LDF,258556,26.09
+20,Thiruvananthapuram,NDA,316142,31.91

@@ -1,0 +1,841 @@
+#,Constituency,Year,AssemblyNumber,Assembly,Alliance,Votes,Candidate,Party,Position,VoteShare%
+1,Kasaragod,2019,1,Manjeshwaram,UDF,68217,,,,
+1,Kasaragod,2019,1,Manjeshwaram,LDF,32796,,,,
+1,Kasaragod,2019,1,Manjeshwaram,NDA,57104,,,,
+1,Kasaragod,2019,2,Kasaragod,UDF,69790,,,,
+1,Kasaragod,2019,2,Kasaragod,LDF,28567,,,,
+1,Kasaragod,2019,2,Kasaragod,NDA,46630,,,,
+1,Kasaragod,2019,3,Udma,UDF,72324,,,,
+1,Kasaragod,2019,3,Udma,LDF,63387,,,,
+1,Kasaragod,2019,3,Udma,NDA,23786,,,,
+1,Kasaragod,2019,4,Kanhangad,UDF,72570,,,,
+1,Kasaragod,2019,4,Kanhangad,LDF,74791,,,,
+1,Kasaragod,2019,4,Kanhangad,NDA,20046,,,,
+1,Kasaragod,2019,5,Thrikaripur,UDF,74504,,,,
+1,Kasaragod,2019,5,Thrikaripur,LDF,76403,,,,
+1,Kasaragod,2019,5,Thrikaripur,NDA,8652,,,,
+1,Kasaragod,2019,6,Payyanur,UDF,56730,,,,
+1,Kasaragod,2019,6,Payyanur,LDF,82861,,,,
+1,Kasaragod,2019,6,Payyanur,NDA,9268,,,,
+1,Kasaragod,2019,7,Kalliasseri,UDF,59848,,,,
+1,Kasaragod,2019,7,Kalliasseri,LDF,73542,,,,
+1,Kasaragod,2019,7,Kalliasseri,NDA,9854,,,,
+2,Kannur,2019,8,Taliparamba,UDF,81444,,,,
+2,Kannur,2019,8,Taliparamba,LDF,80719,,,,
+2,Kannur,2019,8,Taliparamba,NDA,8659,,,,
+2,Kannur,2019,9,Irikkur,UDF,90221,,,,
+2,Kannur,2019,9,Irikkur,LDF,52901,,,,
+2,Kannur,2019,9,Irikkur,NDA,7289,,,,
+2,Kannur,2019,10,Azhikode,UDF,73075,,,,
+2,Kannur,2019,10,Azhikode,LDF,51218,,,,
+2,Kannur,2019,10,Azhikode,NDA,11728,,,,
+2,Kannur,2019,11,Kannur,UDF,70683,,,,
+2,Kannur,2019,11,Kannur,LDF,47260,,,,
+2,Kannur,2019,11,Kannur,NDA,9740,,,,
+2,Kannur,2019,12,Dharmadom,UDF,70631,,,,
+2,Kannur,2019,12,Dharmadom,LDF,74730,,,,
+2,Kannur,2019,12,Dharmadom,NDA,8538,,,,
+2,Kannur,2019,13,Mattanur,UDF,67092,,,,
+2,Kannur,2019,13,Mattanur,LDF,74580,,,,
+2,Kannur,2019,13,Mattanur,NDA,11612,,,,
+2,Kannur,2019,14,Peravoor,UDF,74539,,,,
+2,Kannur,2019,14,Peravoor,LDF,50874,,,,
+2,Kannur,2019,14,Peravoor,NDA,10054,,,,
+3,Vatakara,2019,15,Thalassery,UDF,53932,,,,
+3,Vatakara,2019,15,Thalassery,LDF,65401,,,,
+3,Vatakara,2019,15,Thalassery,NDA,13456,,,,
+3,Vatakara,2019,16,Kuthuparamba,UDF,68492,,,,
+3,Vatakara,2019,16,Kuthuparamba,LDF,64359,,,,
+3,Vatakara,2019,16,Kuthuparamba,NDA,15303,,,,
+3,Vatakara,2019,17,Vadakara,UDF,71162,,,,
+3,Vatakara,2019,17,Vadakara,LDF,48199,,,,
+3,Vatakara,2019,17,Vadakara,NDA,9469,,,,
+3,Vatakara,2019,18,Kuttiadi,UDF,83628,,,,
+3,Vatakara,2019,18,Kuttiadi,LDF,65736,,,,
+3,Vatakara,2019,18,Kuttiadi,NDA,7851,,,,
+3,Vatakara,2019,19,Nadapuram,UDF,87061,,,,
+3,Vatakara,2019,19,Nadapuram,LDF,69465,,,,
+3,Vatakara,2019,19,Nadapuram,NDA,8408,,,,
+3,Vatakara,2019,20,Koyilandy,UDF,79800,,,,
+3,Vatakara,2019,20,Koyilandy,LDF,58755,,,,
+3,Vatakara,2019,20,Koyilandy,NDA,16588,,,,
+3,Vatakara,2019,21,Perambra,UDF,80929,,,,
+3,Vatakara,2019,21,Perambra,LDF,67725,,,,
+3,Vatakara,2019,21,Perambra,NDA,8505,,,,
+4,Wayanad,2019,22,Mananthavady,UDF,93237,,,,
+4,Wayanad,2019,22,Mananthavady,LDF,38606,,,,
+4,Wayanad,2019,22,Mananthavady,NDA,13916,,,,
+4,Wayanad,2019,23,Sulthan Bathery,UDF,110697,,,,
+4,Wayanad,2019,23,Sulthan Bathery,LDF,40232,,,,
+4,Wayanad,2019,23,Sulthan Bathery,NDA,17602,,,,
+4,Wayanad,2019,24,Kalpetta,UDF,101229,,,,
+4,Wayanad,2019,24,Kalpetta,LDF,37475,,,,
+4,Wayanad,2019,24,Kalpetta,NDA,14122,,,,
+4,Wayanad,2019,25,Thiruvambady,UDF,91152,,,,
+4,Wayanad,2019,25,Thiruvambady,LDF,36681,,,,
+4,Wayanad,2019,25,Thiruvambady,NDA,7767,,,,
+4,Wayanad,2019,26,Eranad,UDF,92909,,,,
+4,Wayanad,2019,26,Eranad,LDF,36382,,,,
+4,Wayanad,2019,26,Eranad,NDA,6133,,,,
+4,Wayanad,2019,27,Nilambur,UDF,103862,,,,
+4,Wayanad,2019,27,Nilambur,LDF,42202,,,,
+4,Wayanad,2019,27,Nilambur,NDA,10749,,,,
+4,Wayanad,2019,28,Wandoor,UDF,111948,,,,
+4,Wayanad,2019,28,Wandoor,LDF,42393,,,,
+4,Wayanad,2019,28,Wandoor,NDA,8301,,,,
+5,Kozhikode,2019,29,Balussery,UDF,83059,,,,
+5,Kozhikode,2019,29,Balussery,LDF,73314,,,,
+5,Kozhikode,2019,29,Balussery,NDA,18836,,,,
+5,Kozhikode,2019,30,Elathur,UDF,67280,,,,
+5,Kozhikode,2019,30,Elathur,LDF,67177,,,,
+5,Kozhikode,2019,30,Elathur,NDA,24649,,,,
+5,Kozhikode,2019,31,Kozhikode North,UDF,54246,,,,
+5,Kozhikode,2019,31,Kozhikode North,LDF,49688,,,,
+5,Kozhikode,2019,31,Kozhikode North,NDA,28665,,,,
+5,Kozhikode,2019,32,Kozhikode South,UDF,54608,,,,
+5,Kozhikode,2019,32,Kozhikode South,LDF,40877,,,,
+5,Kozhikode,2019,32,Kozhikode South,NDA,20173,,,,
+5,Kozhikode,2019,33,Beypore,UDF,69402,,,,
+5,Kozhikode,2019,33,Beypore,LDF,58979,,,,
+5,Kozhikode,2019,33,Beypore,NDA,25697,,,,
+5,Kozhikode,2019,34,Kunnamangalam,UDF,81551,,,,
+5,Kozhikode,2019,34,Kunnamangalam,LDF,70259,,,,
+5,Kozhikode,2019,34,Kunnamangalam,NDA,30650,,,,
+5,Kozhikode,2019,35,Koduvally,UDF,81689,,,,
+5,Kozhikode,2019,35,Koduvally,LDF,45781,,,,
+5,Kozhikode,2019,35,Koduvally,NDA,11682,,,,
+6,Malappuram,2019,36,Kondotty,UDF,87561,,,,
+6,Malappuram,2019,36,Kondotty,LDF,48248,,,,
+6,Malappuram,2019,36,Kondotty,NDA,13832,,,,
+6,Malappuram,2019,37,Manjeri,UDF,85579,,,,
+6,Malappuram,2019,37,Manjeri,LDF,49531,,,,
+6,Malappuram,2019,37,Manjeri,NDA,11595,,,,
+6,Malappuram,2019,38,Perinthalmanna,UDF,79867,,,,
+6,Malappuram,2019,38,Perinthalmanna,LDF,56829,,,,
+6,Malappuram,2019,38,Perinthalmanna,NDA,9851,,,,
+6,Malappuram,2019,39,Mankada,UDF,85193,,,,
+6,Malappuram,2019,39,Mankada,LDF,49928,,,,
+6,Malappuram,2019,39,Mankada,NDA,10160,,,,
+6,Malappuram,2019,40,Malappuram,UDF,94704,,,,
+6,Malappuram,2019,40,Malappuram,LDF,49728,,,,
+6,Malappuram,2019,40,Malappuram,NDA,7343,,,,
+6,Malappuram,2019,41,Vengara,UDF,82388,,,,
+6,Malappuram,2019,41,Vengara,LDF,30500,,,,
+6,Malappuram,2019,41,Vengara,NDA,7504,,,,
+6,Malappuram,2019,42,Vallikunnu,UDF,73861,,,,
+6,Malappuram,2019,42,Vallikunnu,LDF,44339,,,,
+6,Malappuram,2019,42,Vallikunnu,NDA,21802,,,,
+7,Ponnani,2019,43,Tirurangadi,UDF,85428,,,,
+7,Ponnani,2019,43,Tirurangadi,LDF,38444,,,,
+7,Ponnani,2019,43,Tirurangadi,NDA,10663,,,,
+7,Ponnani,2019,44,Tanur,UDF,75210,,,,
+7,Ponnani,2019,44,Tanur,LDF,43044,,,,
+7,Ponnani,2019,44,Tanur,NDA,14791,,,,
+7,Ponnani,2019,45,Tirur,UDF,90734,,,,
+7,Ponnani,2019,45,Tirur,LDF,49349,,,,
+7,Ponnani,2019,45,Tirur,NDA,11365,,,,
+7,Ponnani,2019,46,Kottakkal,UDF,87795,,,,
+7,Ponnani,2019,46,Kottakkal,LDF,45596,,,,
+7,Ponnani,2019,46,Kottakkal,NDA,13506,,,,
+7,Ponnani,2019,47,Thavanur,UDF,62481,,,,
+7,Ponnani,2019,47,Thavanur,LDF,50128,,,,
+7,Ponnani,2019,47,Thavanur,NDA,20769,,,,
+7,Ponnani,2019,48,Ponnani,UDF,61294,,,,
+7,Ponnani,2019,48,Ponnani,LDF,51555,,,,
+7,Ponnani,2019,48,Ponnani,NDA,17498,,,,
+7,Ponnani,2019,49,Thrithala,UDF,58496,,,,
+7,Ponnani,2019,49,Thrithala,LDF,50092,,,,
+7,Ponnani,2019,49,Thrithala,NDA,21838,,,,
+8,Palakkad,2019,50,Pattambi,UDF,67644,,,,
+8,Palakkad,2019,50,Pattambi,LDF,50465,,,,
+8,Palakkad,2019,50,Pattambi,NDA,20716,,,,
+8,Palakkad,2019,51,Shornur,UDF,49810,,,,
+8,Palakkad,2019,51,Shornur,LDF,60902,,,,
+8,Palakkad,2019,51,Shornur,NDA,32308,,,,
+8,Palakkad,2019,52,Ottapalam,UDF,54386,,,,
+8,Palakkad,2019,52,Ottapalam,LDF,60846,,,,
+8,Palakkad,2019,52,Ottapalam,NDA,35683,,,,
+8,Palakkad,2019,53,Kongad,UDF,52456,,,,
+8,Palakkad,2019,53,Kongad,LDF,52812,,,,
+8,Palakkad,2019,53,Kongad,NDA,29104,,,,
+8,Palakkad,2019,54,Mannarkkad,UDF,78250,,,,
+8,Palakkad,2019,54,Mannarkkad,LDF,48625,,,,
+8,Palakkad,2019,54,Mannarkkad,NDA,18560,,,,
+8,Palakkad,2019,55,Malampuzha,UDF,47743,,,,
+8,Palakkad,2019,55,Malampuzha,LDF,69037,,,,
+8,Palakkad,2019,55,Malampuzha,NDA,41413,,,,
+8,Palakkad,2019,56,Palakkad,UDF,48425,,,,
+8,Palakkad,2019,56,Palakkad,LDF,44086,,,,
+8,Palakkad,2019,56,Palakkad,NDA,39963,,,,
+9,Alathur (SC),2019,57,Tarur,UDF,72441,,,,
+9,Alathur (SC),2019,57,Tarur,LDF,47602,,,,
+9,Alathur (SC),2019,57,Tarur,NDA,8601,,,,
+9,Alathur (SC),2019,58,Chittur,UDF,79423,,,,
+9,Alathur (SC),2019,58,Chittur,LDF,55956,,,,
+9,Alathur (SC),2019,58,Chittur,NDA,9885,,,,
+9,Alathur (SC),2019,59,Nenmara,UDF,82539,,,,
+9,Alathur (SC),2019,59,Nenmara,LDF,52318,,,,
+9,Alathur (SC),2019,59,Nenmara,NDA,12345,,,,
+9,Alathur (SC),2019,60,Alathur,UDF,73120,,,,
+9,Alathur (SC),2019,60,Alathur,LDF,50407,,,,
+9,Alathur (SC),2019,60,Alathur,NDA,6959,,,,
+9,Alathur (SC),2019,61,Chelakkara,UDF,76034,,,,
+9,Alathur (SC),2019,61,Chelakkara,LDF,52339,,,,
+9,Alathur (SC),2019,61,Chelakkara,NDA,17133,,,,
+9,Alathur (SC),2019,62,Kunnamkulam,UDF,69908,,,,
+9,Alathur (SC),2019,62,Kunnamkulam,LDF,55586,,,,
+9,Alathur (SC),2019,62,Kunnamkulam,NDA,17228,,,,
+9,Alathur (SC),2019,63,Wadakkanchery,UDF,79028,,,,
+9,Alathur (SC),2019,63,Wadakkanchery,LDF,59488,,,,
+9,Alathur (SC),2019,63,Wadakkanchery,NDA,17424,,,,
+10,Thrissur,2019,64,Guruvayur,UDF,65160,,,,
+10,Thrissur,2019,64,Guruvayur,LDF,44695,,,,
+10,Thrissur,2019,64,Guruvayur,NDA,33967,,,,
+10,Thrissur,2019,65,Manalur,UDF,63420,,,,
+10,Thrissur,2019,65,Manalur,LDF,50482,,,,
+10,Thrissur,2019,65,Manalur,NDA,44765,,,,
+10,Thrissur,2019,66,Ollur,UDF,63406,,,,
+10,Thrissur,2019,66,Ollur,LDF,47372,,,,
+10,Thrissur,2019,66,Ollur,NDA,39594,,,,
+10,Thrissur,2019,67,Thrissur,UDF,55668,,,,
+10,Thrissur,2019,67,Thrissur,LDF,31110,,,,
+10,Thrissur,2019,67,Thrissur,NDA,37641,,,,
+10,Thrissur,2019,68,Nattika,UDF,52558,,,,
+10,Thrissur,2019,68,Nattika,LDF,50131,,,,
+10,Thrissur,2019,68,Nattika,NDA,48171,,,,
+10,Thrissur,2019,69,Irinjalakuda,UDF,57481,,,,
+10,Thrissur,2019,69,Irinjalakuda,LDF,46091,,,,
+10,Thrissur,2019,69,Irinjalakuda,NDA,42857,,,,
+10,Thrissur,2019,70,Puthukkad,UDF,56848,,,,
+10,Thrissur,2019,70,Puthukkad,LDF,51006,,,,
+10,Thrissur,2019,70,Puthukkad,NDA,46410,,,,
+11,Chalakudy,2019,71,Kaipamangalam,UDF,51212,,,,
+11,Chalakudy,2019,71,Kaipamangalam,LDF,51154,,,,
+11,Chalakudy,2019,71,Kaipamangalam,NDA,24420,,,,
+11,Chalakudy,2019,72,Chalakudy,UDF,69536,,,,
+11,Chalakudy,2019,72,Chalakudy,LDF,48827,,,,
+11,Chalakudy,2019,72,Chalakudy,NDA,23433,,,,
+11,Chalakudy,2019,73,Kodungallur,UDF,61085,,,,
+11,Chalakudy,2019,73,Kodungallur,LDF,49355,,,,
+11,Chalakudy,2019,73,Kodungallur,NDA,29732,,,,
+11,Chalakudy,2019,74,Perumbavoor,UDF,69526,,,,
+11,Chalakudy,2019,74,Perumbavoor,LDF,46903,,,,
+11,Chalakudy,2019,74,Perumbavoor,NDA,22954,,,,
+11,Chalakudy,2019,75,Angamaly,UDF,72496,,,,
+11,Chalakudy,2019,75,Angamaly,LDF,44696,,,,
+11,Chalakudy,2019,75,Angamaly,NDA,13863,,,,
+11,Chalakudy,2019,76,Aluva,UDF,76318,,,,
+11,Chalakudy,2019,76,Aluva,LDF,44215,,,,
+11,Chalakudy,2019,76,Aluva,NDA,21951,,,,
+11,Chalakudy,2019,77,Kunnathunad,UDF,72762,,,,
+11,Chalakudy,2019,77,Kunnathunad,LDF,55431,,,,
+11,Chalakudy,2019,77,Kunnathunad,NDA,17581,,,,
+12,Ernakulam,2019,78,Kalamassery,UDF,73745,,,,
+12,Ernakulam,2019,78,Kalamassery,LDF,53056,,,,
+12,Ernakulam,2019,78,Kalamassery,NDA,21026,,,,
+12,Ernakulam,2019,79,Paravur,UDF,71025,,,,
+12,Ernakulam,2019,79,Paravur,LDF,56940,,,,
+12,Ernakulam,2019,79,Paravur,NDA,23035,,,,
+12,Ernakulam,2019,80,Vypen,UDF,68047,,,,
+12,Ernakulam,2019,80,Vypen,LDF,44806,,,,
+12,Ernakulam,2019,80,Vypen,NDA,14940,,,,
+12,Ernakulam,2019,81,Kochi,UDF,71270,,,,
+12,Ernakulam,2019,81,Kochi,LDF,41957,,,,
+12,Ernakulam,2019,81,Kochi,NDA,14747,,,,
+12,Ernakulam,2019,82,Thrippunithura,UDF,71631,,,,
+12,Ernakulam,2019,82,Thrippunithura,LDF,52404,,,,
+12,Ernakulam,2019,82,Thrippunithura,NDA,25304,,,,
+12,Ernakulam,2019,83,Ernakulam,UDF,61920,,,,
+12,Ernakulam,2019,83,Ernakulam,LDF,30742,,,,
+12,Ernakulam,2019,83,Ernakulam,NDA,17769,,,,
+12,Ernakulam,2019,84,Thrikkakara,UDF,73216,,,,
+12,Ernakulam,2019,84,Thrikkakara,LDF,41439,,,,
+12,Ernakulam,2019,84,Thrikkakara,NDA,20710,,,,
+13,Idukki,2019,85,Muvattupuzha,UDF,78799,,,,
+13,Idukki,2019,85,Muvattupuzha,LDF,46260,,,,
+13,Idukki,2019,85,Muvattupuzha,NDA,12867,,,,
+13,Idukki,2019,86,Kothamangalam,UDF,67942,,,,
+13,Idukki,2019,86,Kothamangalam,LDF,47346,,,,
+13,Idukki,2019,86,Kothamangalam,NDA,12092,,,,
+13,Idukki,2019,87,Devikulam,UDF,66748,,,,
+13,Idukki,2019,87,Devikulam,LDF,42712,,,,
+13,Idukki,2019,87,Devikulam,NDA,7498,,,,
+13,Idukki,2019,88,Udumbanchola,UDF,63550,,,,
+13,Idukki,2019,88,Udumbanchola,LDF,51056,,,,
+13,Idukki,2019,88,Udumbanchola,NDA,10863,,,,
+13,Idukki,2019,89,Thodupuzha,UDF,79342,,,,
+13,Idukki,2019,89,Thodupuzha,LDF,42319,,,,
+13,Idukki,2019,89,Thodupuzha,NDA,15223,,,,
+13,Idukki,2019,90,Idukki,UDF,71218,,,,
+13,Idukki,2019,90,Idukki,LDF,50290,,,,
+13,Idukki,2019,90,Idukki,NDA,10891,,,,
+13,Idukki,2019,91,Peerumade,UDF,70098,,,,
+13,Idukki,2019,91,Peerumade,LDF,46718,,,,
+13,Idukki,2019,91,Peerumade,NDA,9070,,,,
+14,Kottayam,2019,92,Piravom,UDF,66192,,,,
+14,Kottayam,2019,92,Piravom,LDF,57088,,,,
+14,Kottayam,2019,92,Piravom,NDA,22772,,,,
+14,Kottayam,2019,93,Pala,UDF,66971,,,,
+14,Kottayam,2019,93,Pala,LDF,33499,,,,
+14,Kottayam,2019,93,Pala,NDA,26533,,,,
+14,Kottayam,2019,94,Kaduthuruthy,UDF,65877,,,,
+14,Kottayam,2019,94,Kaduthuruthy,LDF,39170,,,,
+14,Kottayam,2019,94,Kaduthuruthy,NDA,20895,,,,
+14,Kottayam,2019,95,Vaikom,UDF,47256,,,,
+14,Kottayam,2019,95,Vaikom,LDF,56476,,,,
+14,Kottayam,2019,95,Vaikom,NDA,21871,,,,
+14,Kottayam,2019,96,Ettumanoor,UDF,55356,,,,
+14,Kottayam,2019,96,Ettumanoor,LDF,46911,,,,
+14,Kottayam,2019,96,Ettumanoor,NDA,20112,,,,
+14,Kottayam,2019,97,Kottayam,UDF,54831,,,,
+14,Kottayam,2019,97,Kottayam,LDF,40864,,,,
+14,Kottayam,2019,97,Kottayam,NDA,21564,,,,
+14,Kottayam,2019,98,Puthuppally,UDF,63811,,,,
+14,Kottayam,2019,98,Puthuppally,LDF,39484,,,,
+14,Kottayam,2019,98,Puthuppally,NDA,20911,,,,
+15,Alappuzha,2019,99,Aroor,UDF,65656,,,,
+15,Alappuzha,2019,99,Aroor,LDF,65008,,,,
+15,Alappuzha,2019,99,Aroor,NDA,25250,,,,
+15,Alappuzha,2019,100,Cherthala,UDF,66326,,,,
+15,Alappuzha,2019,100,Cherthala,LDF,83221,,,,
+15,Alappuzha,2019,100,Cherthala,NDA,22655,,,,
+15,Alappuzha,2019,101,Alappuzha,UDF,65828,,,,
+15,Alappuzha,2019,101,Alappuzha,LDF,65759,,,,
+15,Alappuzha,2019,101,Alappuzha,NDA,21303,,,,
+15,Alappuzha,2019,102,Ambalappuzha,UDF,53159,,,,
+15,Alappuzha,2019,102,Ambalappuzha,LDF,52521,,,,
+15,Alappuzha,2019,102,Ambalappuzha,NDA,25061,,,,
+15,Alappuzha,2019,103,Haripad,UDF,61445,,,,
+15,Alappuzha,2019,103,Haripad,LDF,55601,,,,
+15,Alappuzha,2019,103,Haripad,NDA,26238,,,,
+15,Alappuzha,2019,104,Kayamkulam,UDF,58073,,,,
+15,Alappuzha,2019,104,Kayamkulam,LDF,62370,,,,
+15,Alappuzha,2019,104,Kayamkulam,NDA,31660,,,,
+15,Alappuzha,2019,105,Karunagappally,UDF,63303,,,,
+15,Alappuzha,2019,105,Karunagappally,LDF,58523,,,,
+15,Alappuzha,2019,105,Karunagappally,NDA,34111,,,,
+16,Mavelikara (SC),2019,106,Changanassery,UDF,64368,,,,
+16,Mavelikara (SC),2019,106,Changanassery,LDF,40958,,,,
+16,Mavelikara (SC),2019,106,Changanassery,NDA,13884,,,,
+16,Mavelikara (SC),2019,107,Kuttanad,UDF,55253,,,,
+16,Mavelikara (SC),2019,107,Kuttanad,LDF,52630,,,,
+16,Mavelikara (SC),2019,107,Kuttanad,NDA,14476,,,,
+16,Mavelikara (SC),2019,108,Mavelikara,UDF,60392,,,,
+16,Mavelikara (SC),2019,108,Mavelikara,LDF,59423,,,,
+16,Mavelikara (SC),2019,108,Mavelikara,NDA,23387,,,,
+16,Mavelikara (SC),2019,109,Chengannur,UDF,61242,,,,
+16,Mavelikara (SC),2019,109,Chengannur,LDF,51403,,,,
+16,Mavelikara (SC),2019,109,Chengannur,NDA,24854,,,,
+16,Mavelikara (SC),2019,110,Kunnathur,UDF,69500,,,,
+16,Mavelikara (SC),2019,110,Kunnathur,LDF,62327,,,,
+16,Mavelikara (SC),2019,110,Kunnathur,NDA,21136,,,,
+16,Mavelikara (SC),2019,111,Kottarakkara,UDF,62998,,,,
+16,Mavelikara (SC),2019,111,Kottarakkara,LDF,60244,,,,
+16,Mavelikara (SC),2019,111,Kottarakkara,NDA,19091,,,,
+16,Mavelikara (SC),2019,112,Pathanapuram,UDF,64244,,,,
+16,Mavelikara (SC),2019,112,Pathanapuram,LDF,49512,,,,
+16,Mavelikara (SC),2019,112,Pathanapuram,NDA,15495,,,,
+17,Pathanamthitta,2019,113,Kanjirappally,UDF,55330,,,,
+17,Pathanamthitta,2019,113,Kanjirappally,LDF,45587,,,,
+17,Pathanamthitta,2019,113,Kanjirappally,NDA,36628,,,,
+17,Pathanamthitta,2019,114,Poonjar,UDF,61530,,,,
+17,Pathanamthitta,2019,114,Poonjar,LDF,43601,,,,
+17,Pathanamthitta,2019,114,Poonjar,NDA,30990,,,,
+17,Pathanamthitta,2019,115,Thiruvalla,UDF,54250,,,,
+17,Pathanamthitta,2019,115,Thiruvalla,LDF,50511,,,,
+17,Pathanamthitta,2019,115,Thiruvalla,NDA,40186,,,,
+17,Pathanamthitta,2019,116,Ranni,UDF,50755,,,,
+17,Pathanamthitta,2019,116,Ranni,LDF,42931,,,,
+17,Pathanamthitta,2019,116,Ranni,NDA,39560,,,,
+17,Pathanamthitta,2019,117,Aranmula,UDF,59277,,,,
+17,Pathanamthitta,2019,117,Aranmula,LDF,52684,,,,
+17,Pathanamthitta,2019,117,Aranmula,NDA,50497,,,,
+17,Pathanamthitta,2019,118,Konni,UDF,49667,,,,
+17,Pathanamthitta,2019,118,Konni,LDF,46946,,,,
+17,Pathanamthitta,2019,118,Konni,NDA,46506,,,,
+17,Pathanamthitta,2019,119,Adoor,UDF,49280,,,,
+17,Pathanamthitta,2019,119,Adoor,LDF,53216,,,,
+17,Pathanamthitta,2019,119,Adoor,NDA,51260,,,,
+18,Kollam,2019,120,Chavara,UDF,74562,,,,
+18,Kollam,2019,120,Chavara,LDF,46994,,,,
+18,Kollam,2019,120,Chavara,NDA,11655,,,,
+18,Kollam,2019,121,Punalur,UDF,73622,,,,
+18,Kollam,2019,121,Punalur,LDF,54956,,,,
+18,Kollam,2019,121,Punalur,NDA,16168,,,,
+18,Kollam,2019,122,Chadayamangalam,UDF,70387,,,,
+18,Kollam,2019,122,Chadayamangalam,LDF,56155,,,,
+18,Kollam,2019,122,Chadayamangalam,NDA,15820,,,,
+18,Kollam,2019,123,Kundara,UDF,79217,,,,
+18,Kollam,2019,123,Kundara,LDF,54908,,,,
+18,Kollam,2019,123,Kundara,NDA,14696,,,,
+18,Kollam,2019,124,Kollam,UDF,68748,,,,
+18,Kollam,2019,124,Kollam,LDF,44203,,,,
+18,Kollam,2019,124,Kollam,NDA,12871,,,,
+18,Kollam,2019,125,Eravipuram,UDF,67582,,,,
+18,Kollam,2019,125,Eravipuram,LDF,44162,,,,
+18,Kollam,2019,125,Eravipuram,NDA,11488,,,,
+18,Kollam,2019,126,Chathannoor,UDF,63146,,,,
+18,Kollam,2019,126,Chathannoor,LDF,46114,,,,
+18,Kollam,2019,126,Chathannoor,NDA,19621,,,,
+19,Attingal,2019,127,Varkala,UDF,48019,,,,
+19,Attingal,2019,127,Varkala,LDF,42335,,,,
+19,Attingal,2019,127,Varkala,NDA,34343,,,,
+19,Attingal,2019,128,Attingal,UDF,50045,,,,
+19,Attingal,2019,128,Attingal,LDF,48492,,,,
+19,Attingal,2019,128,Attingal,NDA,42389,,,,
+19,Attingal,2019,129,Chirayinkeezhu,UDF,56314,,,,
+19,Attingal,2019,129,Chirayinkeezhu,LDF,47750,,,,
+19,Attingal,2019,129,Chirayinkeezhu,NDA,32829,,,,
+19,Attingal,2019,130,Nedumangad,UDF,54506,,,,
+19,Attingal,2019,130,Nedumangad,LDF,55265,,,,
+19,Attingal,2019,130,Nedumangad,NDA,36417,,,,
+19,Attingal,2019,131,Vamanapuram,UDF,59671,,,,
+19,Attingal,2019,131,Vamanapuram,LDF,50231,,,,
+19,Attingal,2019,131,Vamanapuram,NDA,29681,,,,
+19,Attingal,2019,132,Aruvikkara,UDF,58952,,,,
+19,Attingal,2019,132,Aruvikkara,LDF,50403,,,,
+19,Attingal,2019,132,Aruvikkara,NDA,30151,,,,
+19,Attingal,2019,133,Kattakkada,UDF,51962,,,,
+19,Attingal,2019,133,Kattakkada,LDF,45822,,,,
+19,Attingal,2019,133,Kattakkada,NDA,40692,,,,
+20,Thiruvananthapuram,2019,134,Kazhakoottam,UDF,46964,,,,
+20,Thiruvananthapuram,2019,134,Kazhakoottam,LDF,37688,,,,
+20,Thiruvananthapuram,2019,134,Kazhakoottam,NDA,45479,,,,
+20,Thiruvananthapuram,2019,135,Vattiyoorkavu,UDF,53545,,,,
+20,Thiruvananthapuram,2019,135,Vattiyoorkavu,LDF,29414,,,,
+20,Thiruvananthapuram,2019,135,Vattiyoorkavu,NDA,50709,,,,
+20,Thiruvananthapuram,2019,136,Thiruvananthapuram,UDF,57077,,,,
+20,Thiruvananthapuram,2019,136,Thiruvananthapuram,LDF,27530,,,,
+20,Thiruvananthapuram,2019,136,Thiruvananthapuram,NDA,42877,,,,
+20,Thiruvananthapuram,2019,137,Nemom,UDF,46472,,,,
+20,Thiruvananthapuram,2019,137,Nemom,LDF,33921,,,,
+20,Thiruvananthapuram,2019,137,Nemom,NDA,58513,,,,
+20,Thiruvananthapuram,2019,138,Parassala,UDF,69944,,,,
+20,Thiruvananthapuram,2019,138,Parassala,LDF,47942,,,,
+20,Thiruvananthapuram,2019,138,Parassala,NDA,42887,,,,
+20,Thiruvananthapuram,2019,139,Kovalam,UDF,73221,,,,
+20,Thiruvananthapuram,2019,139,Kovalam,LDF,42050,,,,
+20,Thiruvananthapuram,2019,139,Kovalam,NDA,41092,,,,
+20,Thiruvananthapuram,2019,140,Neyyattinkara,UDF,66834,,,,
+20,Thiruvananthapuram,2019,140,Neyyattinkara,LDF,37925,,,,
+20,Thiruvananthapuram,2019,140,Neyyattinkara,NDA,32368,,,,
+1,Kasaragod,2014,1,Manjeshwaram,UDF,52459,T. Siddique,INC,First,38.80%
+1,Kasaragod,2014,1,Manjeshwaram,NDA,46631,K. Surendran,BJP,Second,34.50%
+1,Kasaragod,2014,1,Manjeshwaram,LDF,29433,P. Karunakaran,CPI(M),Third,21.80%
+1,Kasaragod,2014,2,Kasaragod,UDF,54426,T. Siddique,INC,First,43.80%
+1,Kasaragod,2014,2,Kasaragod,NDA,41236,K. Surendran,BJP,Second,33.20%
+1,Kasaragod,2014,2,Kasaragod,LDF,22827,P. Karunakaran,CPI(M),Third,18.40%
+1,Kasaragod,2014,3,Udma,UDF,56291,T. Siddique,INC,First,40.00%
+1,Kasaragod,2014,3,Udma,LDF,55456,P. Karunakaran,CPI(M),Second,39.40%
+1,Kasaragod,2014,3,Udma,NDA,24584,K. Surendran,BJP,Third,17.50%
+1,Kasaragod,2014,4,Kanhangad,LDF,64669,P. Karunakaran,CPI(M),First,43.00%
+1,Kasaragod,2014,4,Kanhangad,UDF,56954,T. Siddique,INC,Second,37.90%
+1,Kasaragod,2014,4,Kanhangad,NDA,23578,K. Surendran,BJP,Third,15.70%
+1,Kasaragod,2014,5,Thrikaripur,LDF,65452,P. Karunakaran,CPI(M),First,45.40%
+1,Kasaragod,2014,5,Thrikaripur,UDF,62001,T. Siddique,INC,Second,43.00%
+1,Kasaragod,2014,5,Thrikaripur,NDA,12990,K. Surendran,BJP,Third,9.00%
+1,Kasaragod,2014,6,Payyanur,LDF,75167,P. Karunakaran,CPI(M),First,54.50%
+1,Kasaragod,2014,6,Payyanur,UDF,47025,T. Siddique,INC,Second,34.10%
+1,Kasaragod,2014,6,Payyanur,NDA,12878,K. Surendran,BJP,Third,9.30%
+1,Kasaragod,2014,7,Kalliasseri,LDF,71208,P. Karunakaran,CPI(M),First,53.00%
+1,Kasaragod,2014,7,Kalliasseri,UDF,48423,T. Siddique,INC,Second,36.00%
+1,Kasaragod,2014,7,Kalliasseri,NDA,10758,K. Surendran,BJP,Third,8.00%
+2,Kannur,2014,8,Taliparamba,LDF,78922,P. K. Sreemathi,CPI(M),First,51.00%
+2,Kannur,2014,8,Taliparamba,UDF,64703,K. Sudhakaran,INC,Second,41.80%
+2,Kannur,2014,8,Taliparamba,NDA,6793,P. C. Mohanan,BJP,Third,4.40%
+2,Kannur,2014,9,Irikkur,UDF,75083,K. Sudhakaran,INC,First,54.60%
+2,Kannur,2014,9,Irikkur,LDF,52928,P. K. Sreemathi,CPI(M),Second,38.50%
+2,Kannur,2014,9,Irikkur,NDA,5234,P. C. Mohanan,BJP,Third,3.80%
+2,Kannur,2014,10,Azhikode,UDF,56288,K. Sudhakaran,INC,First,45.60%
+2,Kannur,2014,10,Azhikode,LDF,51278,P. K. Sreemathi,CPI(M),Second,41.50%
+2,Kannur,2014,10,Azhikode,NDA,8780,P. C. Mohanan,BJP,Third,7.10%
+2,Kannur,2014,11,Kannur,UDF,55173,K. Sudhakaran,INC,First,47.70%
+2,Kannur,2014,11,Kannur,LDF,47116,P. K. Sreemathi,CPI(M),Second,40.70%
+2,Kannur,2014,11,Kannur,NDA,6829,P. C. Mohanan,BJP,Third,5.90%
+2,Kannur,2014,12,Dharmadom,LDF,72158,P. K. Sreemathi,CPI(M),First,50.80%
+2,Kannur,2014,12,Dharmadom,UDF,57197,K. Sudhakaran,INC,Second,40.30%
+2,Kannur,2014,12,Dharmadom,NDA,6916,P. C. Mohanan,BJP,Third,4.90%
+2,Kannur,2014,13,Mattanur,LDF,74399,P. K. Sreemathi,CPI(M),First,52.10%
+2,Kannur,2014,13,Mattanur,UDF,53666,K. Sudhakaran,INC,Second,37.60%
+2,Kannur,2014,13,Mattanur,NDA,9695,P. C. Mohanan,BJP,Third,6.80%
+2,Kannur,2014,14,Peravoor,UDF,57886,K. Sudhakaran,INC,First,47.70%
+2,Kannur,2014,14,Peravoor,LDF,49677,P. K. Sreemathi,CPI(M),Second,41.00%
+2,Kannur,2014,14,Peravoor,NDA,7265,P. C. Mohanan,BJP,Third,6.00%
+3,Vatakara,2014,15,Thalassery,LDF,64404,A. N. Shamseer,CPI(M),First,52.20%
+3,Vatakara,2014,15,Thalassery,UDF,41365,Mullappally Ramachandran,INC,Second,33.50%
+3,Vatakara,2014,15,Thalassery,NDA,11780,V. K. Sajeevan,BJP,Third,9.50%
+3,Vatakara,2014,16,Kuthuparamba,LDF,59486,A. N. Shamseer,CPI(M),First,44.30%
+3,Vatakara,2014,16,Kuthuparamba,UDF,54761,Mullappally Ramachandran,INC,Second,40.80%
+3,Vatakara,2014,16,Kuthuparamba,NDA,14774,V. K. Sajeevan,BJP,Third,11.00%
+3,Vatakara,2014,17,Vadakara,UDF,57656,Mullappally Ramachandran,INC,First,47.60%
+3,Vatakara,2014,17,Vadakara,LDF,42315,A. N. Shamseer,CPI(M),Second,34.90%
+3,Vatakara,2014,17,Vadakara,NDA,9061,V. K. Sajeevan,BJP,Third,7.50%
+3,Vatakara,2014,18,Kuttiadi,UDF,68177,Mullappally Ramachandran,INC,First,47.40%
+3,Vatakara,2014,18,Kuttiadi,LDF,61912,A. N. Shamseer,CPI(M),Second,43.00%
+3,Vatakara,2014,18,Kuttiadi,NDA,8087,V. K. Sajeevan,BJP,Third,5.60%
+3,Vatakara,2014,19,Nadapuram,UDF,68103,Mullappally Ramachandran,INC,First,45.20%
+3,Vatakara,2014,19,Nadapuram,LDF,66356,A. N. Shamseer,CPI(M),Second,44.00%
+3,Vatakara,2014,19,Nadapuram,NDA,9107,V. K. Sajeevan,BJP,Third,6.00%
+3,Vatakara,2014,20,Koyilandy,UDF,62371,Mullappally Ramachandran,INC,First,45.30%
+3,Vatakara,2014,20,Koyilandy,LDF,55745,A. N. Shamseer,CPI(M),Second,40.50%
+3,Vatakara,2014,20,Koyilandy,NDA,14093,V. K. Sajeevan,BJP,Third,10.20%
+3,Vatakara,2014,21,Perambra,UDF,63012,Mullappally Ramachandran,INC,First,45.00%
+3,Vatakara,2014,21,Perambra,LDF,61837,A. N. Shamseer,CPI(M),Second,44.20%
+3,Vatakara,2014,21,Perambra,NDA,9325,V. K. Sajeevan,BJP,Third,6.70%
+4,Wayanad,2014,22,Mananthavady,LDF,56285,Sathyan Mokeri,CPI,First,44.70%
+4,Wayanad,2014,22,Mananthavady,UDF,47619,M. I. Shanavas,INC,Second,37.80%
+4,Wayanad,2014,22,Mananthavady,NDA,12950,P. S. Rasmilnath,BJP,Third,10.30%
+4,Wayanad,2014,23,Sulthan Bathery,LDF,63165,Sathyan Mokeri,CPI,First,43.50%
+4,Wayanad,2014,23,Sulthan Bathery,UDF,54182,M. I. Shanavas,INC,Second,37.30%
+4,Wayanad,2014,23,Sulthan Bathery,NDA,18918,P. S. Rasmilnath,BJP,Third,13.00%
+4,Wayanad,2014,24,Kalpetta,UDF,53383,M. I. Shanavas,INC,First,41.70%
+4,Wayanad,2014,24,Kalpetta,LDF,51503,Sathyan Mokeri,CPI,Second,40.20%
+4,Wayanad,2014,24,Kalpetta,NDA,12824,P. S. Rasmilnath,BJP,Third,10.00%
+4,Wayanad,2014,25,Thiruvambady,UDF,49349,M. I. Shanavas,INC,First,43.20%
+4,Wayanad,2014,25,Thiruvambady,LDF,46964,Sathyan Mokeri,CPI,Second,41.20%
+4,Wayanad,2014,25,Thiruvambady,NDA,6153,P. S. Rasmilnath,BJP,Third,5.40%
+4,Wayanad,2014,26,Eranad,UDF,56566,M. I. Shanavas,INC,First,48.60%
+4,Wayanad,2014,26,Eranad,LDF,37728,Sathyan Mokeri,CPI,Second,32.40%
+4,Wayanad,2014,26,Eranad,NDA,6163,P. S. Rasmilnath,BJP,Third,5.30%
+4,Wayanad,2014,27,Nilambur,UDF,55403,M. I. Shanavas,INC,First,40.90%
+4,Wayanad,2014,27,Nilambur,LDF,52137,Sathyan Mokeri,CPI,Second,38.50%
+4,Wayanad,2014,27,Nilambur,NDA,13120,P. S. Rasmilnath,BJP,Third,9.70%
+4,Wayanad,2014,28,Wandoor,UDF,60249,M. I. Shanavas,INC,First,43.60%
+4,Wayanad,2014,28,Wandoor,LDF,47982,Sathyan Mokeri,CPI,Second,34.70%
+4,Wayanad,2014,28,Wandoor,NDA,10571,P. S. Rasmilnath,BJP,Third,7.60%
+5,Kozhikode,2014,29,Balussery,UDF,69414,M. K. Raghavan,INC,First,43.60%
+5,Kozhikode,2014,29,Balussery,LDF,68747,A. Vijayaraghavan,CPI(M),Second,43.20%
+5,Kozhikode,2014,29,Balussery,NDA,15332,C. K. Padmanabhan,BJP,Third,9.60%
+5,Kozhikode,2014,30,Elathur,LDF,63241,A. Vijayaraghavan,CPI(M),First,44.00%
+5,Kozhikode,2014,30,Elathur,UDF,57792,M. K. Raghavan,INC,Second,40.20%
+5,Kozhikode,2014,30,Elathur,NDA,17392,C. K. Padmanabhan,BJP,Third,12.10%
+5,Kozhikode,2014,31,Kozhikode North,UDF,47899,M. K. Raghavan,INC,First,40.20%
+5,Kozhikode,2014,31,Kozhikode North,LDF,46380,A. Vijayaraghavan,CPI(M),Second,38.90%
+5,Kozhikode,2014,31,Kozhikode North,NDA,19918,C. K. Padmanabhan,BJP,Third,16.70%
+5,Kozhikode,2014,32,Kozhikode South,UDF,45128,M. K. Raghavan,INC,First,43.20%
+5,Kozhikode,2014,32,Kozhikode South,LDF,39912,A. Vijayaraghavan,CPI(M),Second,38.20%
+5,Kozhikode,2014,32,Kozhikode South,NDA,14155,C. K. Padmanabhan,BJP,Third,13.50%
+5,Kozhikode,2014,33,Beypore,LDF,54896,A. Vijayaraghavan,CPI(M),First,41.10%
+5,Kozhikode,2014,33,Beypore,UDF,53128,M. K. Raghavan,INC,Second,39.80%
+5,Kozhikode,2014,33,Beypore,NDA,18031,C. K. Padmanabhan,BJP,Third,13.50%
+5,Kozhikode,2014,34,Kunnamangalam,LDF,64584,A. Vijayaraghavan,CPI(M),First,41.00%
+5,Kozhikode,2014,34,Kunnamangalam,UDF,64364,M. K. Raghavan,INC,Second,40.90%
+5,Kozhikode,2014,34,Kunnamangalam,NDA,21726,C. K. Padmanabhan,BJP,Third,13.80%
+5,Kozhikode,2014,35,Koduvally,UDF,58494,M. K. Raghavan,INC,First,50.10%
+5,Kozhikode,2014,35,Koduvally,LDF,41895,A. Vijayaraghavan,CPI(M),Second,35.90%
+5,Kozhikode,2014,35,Koduvally,NDA,9041,C. K. Padmanabhan,BJP,Third,7.70%
+6,Malappuram,2014,36,Kondotty,UDF,65846,E. Ahammed,IUML,First,53.30%
+6,Malappuram,2014,36,Kondotty,LDF,34129,P. K. Sainaba,CPI(M),Second,27.60%
+6,Malappuram,2014,36,Kondotty,NDA,10960,N. Sreeprakash,BJP,Third,8.90%
+6,Malappuram,2014,37,Manjeri,UDF,64677,E. Ahammed,IUML,First,51.70%
+6,Malappuram,2014,37,Manjeri,LDF,38615,P. K. Sainaba,CPI(M),Second,30.80%
+6,Malappuram,2014,37,Manjeri,NDA,10656,N. Sreeprakash,BJP,Third,8.50%
+6,Malappuram,2014,38,Perinthalmanna,UDF,59210,E. Ahammed,IUML,First,47.50%
+6,Malappuram,2014,38,Perinthalmanna,LDF,48596,P. K. Sainaba,CPI(M),Second,39.00%
+6,Malappuram,2014,38,Perinthalmanna,NDA,7356,N. Sreeprakash,BJP,Third,5.90%
+6,Malappuram,2014,39,Mankada,UDF,59738,E. Ahammed,IUML,First,50.10%
+6,Malappuram,2014,39,Mankada,LDF,36277,P. K. Sainaba,CPI(M),Second,30.50%
+6,Malappuram,2014,39,Mankada,NDA,8279,N. Sreeprakash,BJP,Third,6.90%
+6,Malappuram,2014,40,Malappuram,UDF,72304,E. Ahammed,IUML,First,56.70%
+6,Malappuram,2014,40,Malappuram,LDF,35980,P. K. Sainaba,CPI(M),Second,28.20%
+6,Malappuram,2014,40,Malappuram,OTHERS,6946,Nasarudheen,SDPI,Third,5.40%
+6,Malappuram,2014,41,Vengara,UDF,60323,E. Ahammed,IUML,First,62.10%
+6,Malappuram,2014,41,Vengara,LDF,17691,P. K. Sainaba,CPI(M),Second,18.20%
+6,Malappuram,2014,41,Vengara,OTHERS,9058,Nasarudheen,SDPI,Third,9.30%
+6,Malappuram,2014,42,Vallikunnu,UDF,55422,E. Ahammed,IUML,First,48.60%
+6,Malappuram,2014,42,Vallikunnu,LDF,31487,P. K. Sainaba,CPI(M),Second,27.60%
+6,Malappuram,2014,42,Vallikunnu,NDA,15982,N. Sreeprakash,BJP,Third,14.00%
+7,Ponnani,2014,43,Tirurangadi,UDF,61073,E. T. Mohammed Basheer,IUML,First,53.10%
+7,Ponnani,2014,43,Tirurangadi,LDF,37706,V. Abdurahman,LDF-IND,Second,32.80%
+7,Ponnani,2014,43,Tirurangadi,NDA,7530,K. Narayanan,BJP,Third,6.50%
+7,Ponnani,2014,44,Tanur,UDF,51365,E. T. Mohammed Basheer,IUML,First,45.30%
+7,Ponnani,2014,44,Tanur,LDF,45145,V. Abdurahman,LDF-IND,Second,39.80%
+7,Ponnani,2014,44,Tanur,NDA,10141,K. Narayanan,BJP,Third,8.90%
+7,Ponnani,2014,45,Tirur,UDF,63711,E. T. Mohammed Basheer,IUML,First,46.90%
+7,Ponnani,2014,45,Tirur,LDF,56466,V. Abdurahman,LDF-IND,Second,41.60%
+7,Ponnani,2014,45,Tirur,NDA,6860,K. Narayanan,BJP,Third,5.00%
+7,Ponnani,2014,46,Kottakkal,UDF,62791,E. T. Mohammed Basheer,IUML,First,47.80%
+7,Ponnani,2014,46,Kottakkal,LDF,50910,V. Abdurahman,LDF-IND,Second,38.80%
+7,Ponnani,2014,46,Kottakkal,NDA,8931,K. Narayanan,BJP,Third,6.80%
+7,Ponnani,2014,47,Thavanur,LDF,56209,V. Abdurahman,LDF-IND,First,45.20%
+7,Ponnani,2014,47,Thavanur,UDF,47039,E. T. Mohammed Basheer,IUML,Second,37.90%
+7,Ponnani,2014,47,Thavanur,NDA,13921,K. Narayanan,BJP,Third,11.20%
+7,Ponnani,2014,48,Ponnani,LDF,52600,V. Abdurahman,LDF-IND,First,43.80%
+7,Ponnani,2014,48,Ponnani,UDF,44942,E. T. Mohammed Basheer,IUML,Second,37.50%
+7,Ponnani,2014,48,Ponnani,NDA,12163,K. Narayanan,BJP,Third,10.10%
+7,Ponnani,2014,49,Thrithala,LDF,53921,V. Abdurahman,LDF-IND,First,43.50%
+7,Ponnani,2014,49,Thrithala,UDF,47488,E. T. Mohammed Basheer,IUML,Second,38.30%
+7,Ponnani,2014,49,Thrithala,NDA,15640,K. Narayanan,BJP,Third,12.60%
+8,Palakkad,2014,50,Pattambi,LDF,53821,M. B. Rajesh,CPI(M),First,42.90%
+8,Palakkad,2014,50,Pattambi,UDF,47231,M. P. Veerendrakumar,SJD,Second,37.60%
+8,Palakkad,2014,50,Pattambi,NDA,15102,Sobha Surendran,BJP,Third,12.00%
+8,Palakkad,2014,51,Shornur,LDF,64559,M. B. Rajesh,CPI(M),First,50.00%
+8,Palakkad,2014,51,Shornur,UDF,39180,M. P. Veerendrakumar,SJD,Second,30.30%
+8,Palakkad,2014,51,Shornur,NDA,19586,Sobha Surendran,BJP,Third,15.20%
+8,Palakkad,2014,52,Ottapalam,LDF,65945,M. B. Rajesh,CPI(M),First,47.50%
+8,Palakkad,2014,52,Ottapalam,UDF,46366,M. P. Veerendrakumar,SJD,Second,33.40%
+8,Palakkad,2014,52,Ottapalam,NDA,20564,Sobha Surendran,BJP,Third,14.80%
+8,Palakkad,2014,53,Kongad,LDF,56160,M. B. Rajesh,CPI(M),First,46.70%
+8,Palakkad,2014,53,Kongad,UDF,41799,M. P. Veerendrakumar,SJD,Second,34.80%
+8,Palakkad,2014,53,Kongad,NDA,17598,Sobha Surendran,BJP,Third,14.60%
+8,Palakkad,2014,54,Mannarkkad,UDF,54553,M. P. Veerendrakumar,SJD,First,42.20%
+8,Palakkad,2014,54,Mannarkkad,LDF,54265,M. B. Rajesh,CPI(M),Second,42.00%
+8,Palakkad,2014,54,Mannarkkad,NDA,14271,Sobha Surendran,BJP,Third,11.00%
+8,Palakkad,2014,55,Malampuzha,LDF,71816,M. B. Rajesh,CPI(M),First,51.20%
+8,Palakkad,2014,55,Malampuzha,UDF,40466,M. P. Veerendrakumar,SJD,Second,28.80%
+8,Palakkad,2014,55,Malampuzha,NDA,23433,Sobha Surendran,BJP,Third,16.70%
+8,Palakkad,2014,56,Palakkad,LDF,45861,M. B. Rajesh,CPI(M),First,40.00%
+8,Palakkad,2014,56,Palakkad,UDF,37692,M. P. Veerendrakumar,SJD,Second,32.90%
+8,Palakkad,2014,56,Palakkad,NDA,25892,Sobha Surendran,BJP,Third,22.60%
+9,Alathur (SC),2014,57,Tarur,LDF,54510,P. K. Biju,CPI(M),First,46.60%
+9,Alathur (SC),2014,57,Tarur,UDF,49563,Sheeba,INC,Second,42.40%
+9,Alathur (SC),2014,57,Tarur,NDA,9226,Shajumon Vattekad,BJP,Third,7.90%
+9,Alathur (SC),2014,58,Chittur,LDF,59155,P. K. Biju,CPI(M),First,45.90%
+9,Alathur (SC),2014,58,Chittur,UDF,52658,Sheeba,INC,Second,40.90%
+9,Alathur (SC),2014,58,Chittur,NDA,11585,Shajumon Vattekad,BJP,Third,9.00%
+9,Alathur (SC),2014,59,Nenmara,LDF,59802,P. K. Biju,CPI(M),First,44.00%
+9,Alathur (SC),2014,59,Nenmara,UDF,54887,Sheeba,INC,Second,40.30%
+9,Alathur (SC),2014,59,Nenmara,NDA,15602,Shajumon Vattekad,BJP,Third,11.50%
+9,Alathur (SC),2014,60,Alathur,LDF,58613,P. K. Biju,CPI(M),First,49.00%
+9,Alathur (SC),2014,60,Alathur,UDF,48092,Sheeba,INC,Second,40.20%
+9,Alathur (SC),2014,60,Alathur,NDA,9134,Shajumon Vattekad,BJP,Third,7.60%
+9,Alathur (SC),2014,61,Chelakkara,LDF,58759,P. K. Biju,CPI(M),First,44.20%
+9,Alathur (SC),2014,61,Chelakkara,UDF,54801,Sheeba,INC,Second,41.20%
+9,Alathur (SC),2014,61,Chelakkara,NDA,14564,Shajumon Vattekad,BJP,Third,11.00%
+9,Alathur (SC),2014,62,Kunnamkulam,LDF,58079,P. K. Biju,CPI(M),First,44.10%
+9,Alathur (SC),2014,62,Kunnamkulam,UDF,54262,Sheeba,INC,Second,41.20%
+9,Alathur (SC),2014,62,Kunnamkulam,NDA,14559,Shajumon Vattekad,BJP,Third,11.00%
+9,Alathur (SC),2014,63,Wadakkanchery,LDF,62392,P. K. Biju,CPI(M),First,45.00%
+9,Alathur (SC),2014,63,Wadakkanchery,UDF,59729,Sheeba,INC,Second,43.10%
+9,Alathur (SC),2014,63,Wadakkanchery,NDA,13082,Shajumon Vattekad,BJP,Third,9.40%
+10,Thrissur,2014,64,Guruvayur,LDF,53316,C. N. Jayadevan,CPI,First,42.20%
+10,Thrissur,2014,64,Guruvayur,UDF,49465,K. P. Dhanapalan,INC,Second,39.10%
+10,Thrissur,2014,64,Guruvayur,NDA,13936,K. P. Sreesan,BJP,Third,11.00%
+10,Thrissur,2014,65,Manalur,LDF,60735,C. N. Jayadevan,CPI,First,43.00%
+10,Thrissur,2014,65,Manalur,UDF,53807,K. P. Dhanapalan,INC,Second,38.10%
+10,Thrissur,2014,65,Manalur,NDA,16548,K. P. Sreesan,BJP,Third,11.70%
+10,Thrissur,2014,66,Ollur,LDF,55778,C. N. Jayadevan,CPI,First,41.90%
+10,Thrissur,2014,66,Ollur,UDF,54436,K. P. Dhanapalan,INC,Second,40.90%
+10,Thrissur,2014,66,Ollur,NDA,12889,K. P. Sreesan,BJP,Third,9.70%
+10,Thrissur,2014,67,Thrissur,UDF,47171,K. P. Dhanapalan,INC,First,42.50%
+10,Thrissur,2014,67,Thrissur,LDF,40318,C. N. Jayadevan,CPI,Second,36.40%
+10,Thrissur,2014,67,Thrissur,NDA,12166,K. P. Sreesan,BJP,Third,11.00%
+10,Thrissur,2014,68,Nattika,LDF,60013,C. N. Jayadevan,CPI,First,45.10%
+10,Thrissur,2014,68,Nattika,UDF,46048,K. P. Dhanapalan,INC,Second,34.60%
+10,Thrissur,2014,68,Nattika,NDA,16785,K. P. Sreesan,BJP,Third,12.60%
+10,Thrissur,2014,69,Irinjalakuda,LDF,56314,C. N. Jayadevan,CPI,First,43.40%
+10,Thrissur,2014,69,Irinjalakuda,UDF,51313,K. P. Dhanapalan,INC,Second,39.60%
+10,Thrissur,2014,69,Irinjalakuda,NDA,14048,K. P. Sreesan,BJP,Third,10.80%
+10,Thrissur,2014,70,Puthukkad,LDF,62300,C. N. Jayadevan,CPI,First,46.10%
+10,Thrissur,2014,70,Puthukkad,UDF,48353,K. P. Dhanapalan,INC,Second,35.80%
+10,Thrissur,2014,70,Puthukkad,NDA,16253,K. P. Sreesan,BJP,Third,12.00%
+11,Chalakudy,2014,71,Kaipamangalam,LDF,49833,Innocent,LDF-IND,First,42.80%
+11,Chalakudy,2014,71,Kaipamangalam,UDF,36575,P. C. Chacko,INC,Second,31.40%
+11,Chalakudy,2014,71,Kaipamangalam,NDA,16434,B. Gopalakrishnan,BJP,Third,14.10%
+11,Chalakudy,2014,72,Chalakudy,UDF,55279,P. C. Chacko,INC,First,42.40%
+11,Chalakudy,2014,72,Chalakudy,LDF,54662,Innocent,LDF-IND,Second,41.90%
+11,Chalakudy,2014,72,Chalakudy,NDA,13285,B. Gopalakrishnan,BJP,Third,10.20%
+11,Chalakudy,2014,73,Kodungallur,LDF,51823,Innocent,LDF-IND,First,40.60%
+11,Chalakudy,2014,73,Kodungallur,UDF,47850,P. C. Chacko,INC,Second,37.50%
+11,Chalakudy,2014,73,Kodungallur,NDA,18101,B. Gopalakrishnan,BJP,Third,14.20%
+11,Chalakudy,2014,74,Perumbavoor,LDF,51036,Innocent,LDF-IND,First,41.40%
+11,Chalakudy,2014,74,Perumbavoor,UDF,48229,P. C. Chacko,INC,Second,39.10%
+11,Chalakudy,2014,74,Perumbavoor,NDA,12985,B. Gopalakrishnan,BJP,Third,10.50%
+11,Chalakudy,2014,75,Angamaly,UDF,55431,P. C. Chacko,INC,First,46.30%
+11,Chalakudy,2014,75,Angamaly,LDF,49509,Innocent,LDF-IND,Second,41.30%
+11,Chalakudy,2014,75,Angamaly,NDA,8009,B. Gopalakrishnan,BJP,Third,6.70%
+11,Chalakudy,2014,76,Aluva,UDF,49725,P. C. Chacko,INC,First,39.40%
+11,Chalakudy,2014,76,Aluva,LDF,47639,Innocent,LDF-IND,Second,37.70%
+11,Chalakudy,2014,76,Aluva,NDA,13584,B. Gopalakrishnan,BJP,Third,10.80%
+11,Chalakudy,2014,77,Kunnathunad,LDF,53518,Innocent,LDF-IND,First,41.60%
+11,Chalakudy,2014,77,Kunnathunad,UDF,51133,P. C. Chacko,INC,Second,39.70%
+11,Chalakudy,2014,77,Kunnathunad,NDA,10395,B. Gopalakrishnan,BJP,Third,8.10%
+12,Ernakulam,2014,78,Kalamassery,UDF,51037,K. V. Thomas,INC,First,39.10%
+12,Ernakulam,2014,78,Kalamassery,LDF,42379,Christy Fernandez,LDF-IND,Second,32.40%
+12,Ernakulam,2014,78,Kalamassery,NDA,17558,A. N. Radhakrishnan,BJP,Third,13.40%
+12,Ernakulam,2014,79,Paravur,UDF,55471,K. V. Thomas,INC,First,40.00%
+12,Ernakulam,2014,79,Paravur,LDF,47706,Christy Fernandez,LDF-IND,Second,34.40%
+12,Ernakulam,2014,79,Paravur,NDA,15917,A. N. Radhakrishnan,BJP,Third,11.50%
+12,Ernakulam,2014,80,Vypen,UDF,49165,K. V. Thomas,INC,First,42.60%
+12,Ernakulam,2014,80,Vypen,LDF,39548,Christy Fernandez,LDF-IND,Second,34.20%
+12,Ernakulam,2014,80,Vypen,NDA,9324,A. N. Radhakrishnan,BJP,Third,8.10%
+12,Ernakulam,2014,81,Kochi,UDF,50548,K. V. Thomas,INC,First,46.30%
+12,Ernakulam,2014,81,Kochi,LDF,30186,Christy Fernandez,LDF-IND,Second,27.70%
+12,Ernakulam,2014,81,Kochi,NDA,9984,A. N. Radhakrishnan,BJP,Third,9.20%
+12,Ernakulam,2014,82,Thrippunithura,UDF,51605,K. V. Thomas,INC,First,39.50%
+12,Ernakulam,2014,82,Thrippunithura,LDF,45034,Christy Fernandez,LDF-IND,Second,34.50%
+12,Ernakulam,2014,82,Thrippunithura,NDA,16676,A. N. Radhakrishnan,BJP,Third,12.80%
+12,Ernakulam,2014,83,Ernakulam,UDF,43516,K. V. Thomas,INC,First,44.80%
+12,Ernakulam,2014,83,Ernakulam,LDF,26623,Christy Fernandez,LDF-IND,Second,27.40%
+12,Ernakulam,2014,83,Ernakulam,NDA,14375,A. N. Radhakrishnan,BJP,Third,14.80%
+12,Ernakulam,2014,84,Thrikkakara,UDF,52210,K. V. Thomas,INC,First,44.00%
+12,Ernakulam,2014,84,Thrikkakara,LDF,34896,Christy Fernandez,LDF-IND,Second,29.40%
+12,Ernakulam,2014,84,Thrikkakara,NDA,15099,A. N. Radhakrishnan,BJP,Third,12.70%
+13,Idukki,2014,85,Muvattupuzha,UDF,52414,Dean Kuriakose,INC,First,45.00%
+13,Idukki,2014,85,Muvattupuzha,LDF,46842,Joice George,LDF-IND,Second,40.20%
+13,Idukki,2014,85,Muvattupuzha,NDA,8137,Sabu Varghese,BJP,Third,7.00%
+13,Idukki,2014,86,Kothamangalam,UDF,47578,Dean Kuriakose,INC,First,44.20%
+13,Idukki,2014,86,Kothamangalam,LDF,45102,Joice George,LDF-IND,Second,41.90%
+13,Idukki,2014,86,Kothamangalam,NDA,7349,Sabu Varghese,BJP,Third,6.80%
+13,Idukki,2014,87,Devikulam,LDF,53647,Joice George,LDF-IND,First,49.60%
+13,Idukki,2014,87,Devikulam,UDF,44526,Dean Kuriakose,INC,Second,41.10%
+13,Idukki,2014,87,Devikulam,NDA,5592,Sabu Varghese,BJP,Third,5.20%
+13,Idukki,2014,88,Udumbanchola,LDF,62363,Joice George,LDF-IND,First,55.20%
+13,Idukki,2014,88,Udumbanchola,UDF,39671,Dean Kuriakose,INC,Second,35.10%
+13,Idukki,2014,88,Udumbanchola,NDA,5896,Sabu Varghese,BJP,Third,5.20%
+13,Idukki,2014,89,Thodupuzha,UDF,54321,Dean Kuriakose,INC,First,43.10%
+13,Idukki,2014,89,Thodupuzha,LDF,51233,Joice George,LDF-IND,Second,40.60%
+13,Idukki,2014,89,Thodupuzha,NDA,12332,Sabu Varghese,BJP,Third,9.80%
+13,Idukki,2014,90,Idukki,LDF,68100,Joice George,LDF-IND,First,56.10%
+13,Idukki,2014,90,Idukki,UDF,43873,Dean Kuriakose,INC,Second,36.10%
+13,Idukki,2014,90,Idukki,NDA,4752,Sabu Varghese,BJP,Third,3.90%
+13,Idukki,2014,91,Peerumade,LDF,54351,Joice George,LDF-IND,First,47.90%
+13,Idukki,2014,91,Peerumade,UDF,48372,Dean Kuriakose,INC,Second,42.60%
+13,Idukki,2014,91,Peerumade,NDA,6347,Sabu Varghese,BJP,Third,5.60%
+14,Kottayam,2014,92,Piravom,UDF,63942,Jose K. Mani,KC(M),First,48.00%
+14,Kottayam,2014,92,Piravom,LDF,55611,Mathew T. Thomas,JD(S),Second,41.80%
+14,Kottayam,2014,92,Piravom,OTHERS,5954,Anil Aikkara,AAP,Third,4.50%
+14,Kottayam,2014,93,Pala,UDF,66968,Jose K. Mani,KC(M),First,57.50%
+14,Kottayam,2014,93,Pala,LDF,35569,Mathew T. Thomas,JD(S),Second,30.50%
+14,Kottayam,2014,93,Pala,NDA,8533,Noble Mathew,KC(N),Third,7.30%
+14,Kottayam,2014,94,Kaduthuruthy,UDF,63554,Jose K. Mani,KC(M),First,55.10%
+14,Kottayam,2014,94,Kaduthuruthy,LDF,38594,Mathew T. Thomas,JD(S),Second,33.50%
+14,Kottayam,2014,94,Kaduthuruthy,NDA,6218,Noble Mathew,KC(N),Third,5.40%
+14,Kottayam,2014,95,Vaikom,UDF,54623,Jose K. Mani,KC(M),First,46.10%
+14,Kottayam,2014,95,Vaikom,LDF,52550,Mathew T. Thomas,JD(S),Second,44.30%
+14,Kottayam,2014,95,Vaikom,NDA,5184,Noble Mathew,KC(N),Third,4.40%
+14,Kottayam,2014,96,Ettumanoor,UDF,56429,Jose K. Mani,KC(M),First,50.50%
+14,Kottayam,2014,96,Ettumanoor,LDF,43921,Mathew T. Thomas,JD(S),Second,39.30%
+14,Kottayam,2014,96,Ettumanoor,NDA,5540,Noble Mathew,KC(N),Third,5.00%
+14,Kottayam,2014,97,Kottayam,UDF,56395,Jose K. Mani,KC(M),First,51.60%
+14,Kottayam,2014,97,Kottayam,LDF,39943,Mathew T. Thomas,JD(S),Second,36.60%
+14,Kottayam,2014,97,Kottayam,NDA,6783,Noble Mathew,KC(N),Third,6.20%
+14,Kottayam,2014,98,Puthuppally,UDF,61552,Jose K. Mani,KC(M),First,55.10%
+14,Kottayam,2014,98,Puthuppally,LDF,36793,Mathew T. Thomas,JD(S),Second,33.00%
+14,Kottayam,2014,98,Puthuppally,NDA,7372,Noble Mathew,KC(N),Third,6.60%
+15,Alappuzha,2014,99,Aroor,UDF,66584,K. C. Venugopal,INC,First,46.00%
+15,Alappuzha,2014,99,Aroor,LDF,65621,C. B. Chandrababu,CPI(M),Second,45.30%
+15,Alappuzha,2014,99,Aroor,NDA,6907,A.V. Thamarakshan,RSP(B),Third,4.80%
+15,Alappuzha,2014,100,Cherthala,UDF,76747,K. C. Venugopal,INC,First,47.20%
+15,Alappuzha,2014,100,Cherthala,LDF,75398,C. B. Chandrababu,CPI(M),Second,46.30%
+15,Alappuzha,2014,100,Cherthala,NDA,6149,A.V. Thamarakshan,RSP(B),Third,3.80%
+15,Alappuzha,2014,101,Alappuzha,UDF,70206,K. C. Venugopal,INC,First,49.60%
+15,Alappuzha,2014,101,Alappuzha,LDF,62507,C. B. Chandrababu,CPI(M),Second,44.10%
+15,Alappuzha,2014,101,Alappuzha,NDA,3827,A.V. Thamarakshan,RSP(B),Third,2.70%
+15,Alappuzha,2014,102,Ambalappuzha,UDF,54553,K. C. Venugopal,INC,First,46.20%
+15,Alappuzha,2014,102,Ambalappuzha,LDF,51316,C. B. Chandrababu,CPI(M),Second,43.40%
+15,Alappuzha,2014,102,Ambalappuzha,NDA,5454,A.V. Thamarakshan,RSP(B),Third,4.60%
+15,Alappuzha,2014,103,Haripad,UDF,66687,K. C. Venugopal,INC,First,50.10%
+15,Alappuzha,2014,103,Haripad,LDF,57822,C. B. Chandrababu,CPI(M),Second,43.50%
+15,Alappuzha,2014,103,Haripad,NDA,4794,A.V. Thamarakshan,RSP(B),Third,3.60%
+15,Alappuzha,2014,104,Kayamkulam,LDF,65948,C. B. Chandrababu,CPI(M),First,47.20%
+15,Alappuzha,2014,104,Kayamkulam,UDF,62662,K. C. Venugopal,INC,Second,44.90%
+15,Alappuzha,2014,104,Kayamkulam,NDA,6442,A.V. Thamarakshan,RSP(B),Third,4.60%
+15,Alappuzha,2014,105,Karunagappally,UDF,63662,K. C. Venugopal,INC,First,44.50%
+15,Alappuzha,2014,105,Karunagappally,LDF,62959,C. B. Chandrababu,CPI(M),Second,44.00%
+15,Alappuzha,2014,105,Karunagappally,NDA,9433,A.V. Thamarakshan,RSP(B),Third,6.60%
+16,Mavelikkara (SC),2014,106,Changanassery,UDF,52020,Kodikkunnil Suresh,INC,First,48.60%
+16,Mavelikkara (SC),2014,106,Changanassery,LDF,41624,Chengara Surendran,CPI,Second,38.80%
+16,Mavelikkara (SC),2014,106,Changanassery,NDA,9239,P. Sudheer,BJP,Third,8.60%
+16,Mavelikkara (SC),2014,107,Kuttanad,UDF,51703,Kodikkunnil Suresh,INC,First,45.60%
+16,Mavelikkara (SC),2014,107,Kuttanad,LDF,50508,Chengara Surendran,CPI,Second,44.50%
+16,Mavelikkara (SC),2014,107,Kuttanad,NDA,8739,P. Sudheer,BJP,Third,7.70%
+16,Mavelikkara (SC),2014,108,Mavelikara,LDF,61350,Chengara Surendran,CPI,First,46.00%
+16,Mavelikkara (SC),2014,108,Mavelikara,UDF,54883,Kodikkunnil Suresh,INC,Second,41.20%
+16,Mavelikkara (SC),2014,108,Mavelikara,NDA,13067,P. Sudheer,BJP,Third,9.80%
+16,Mavelikkara (SC),2014,109,Chengannur,UDF,55769,Kodikkunnil Suresh,INC,First,45.50%
+16,Mavelikkara (SC),2014,109,Chengannur,LDF,47951,Chengara Surendran,CPI,Second,39.10%
+16,Mavelikkara (SC),2014,109,Chengannur,NDA,15716,P. Sudheer,BJP,Third,12.80%
+16,Mavelikkara (SC),2014,110,Kunnathur,UDF,63686,Kodikkunnil Suresh,INC,First,43.60%
+16,Mavelikkara (SC),2014,110,Kunnathur,LDF,63599,Chengara Surendran,CPI,Second,43.60%
+16,Mavelikkara (SC),2014,110,Kunnathur,NDA,11902,P. Sudheer,BJP,Third,8.20%
+16,Mavelikkara (SC),2014,111,Kottarakkara,UDF,61444,Kodikkunnil Suresh,INC,First,46.10%
+16,Mavelikkara (SC),2014,111,Kottarakkara,LDF,56799,Chengara Surendran,CPI,Second,42.60%
+16,Mavelikkara (SC),2014,111,Kottarakkara,NDA,11785,P. Sudheer,BJP,Third,8.80%
+16,Mavelikkara (SC),2014,112,Pathanapuram,UDF,61980,Kodikkunnil Suresh,INC,First,50.70%
+16,Mavelikkara (SC),2014,112,Pathanapuram,LDF,47061,Chengara Surendran,CPI,Second,38.50%
+16,Mavelikkara (SC),2014,112,Pathanapuram,NDA,9218,P. Sudheer,BJP,Third,7.50%
+17,Pathanamthitta,2014,113,Kanjirappally,UDF,45593,Anto Antony,INC,First,41.00%
+17,Pathanamthitta,2014,113,Kanjirappally,LDF,35867,Peelipose Thomas,LDF-IND,Second,32.30%
+17,Pathanamthitta,2014,113,Kanjirappally,NDA,20840,M. T. Ramesh,BJP,Third,18.70%
+17,Pathanamthitta,2014,114,Poonjar,UDF,43614,Anto Antony,INC,First,39.80%
+17,Pathanamthitta,2014,114,Poonjar,LDF,40853,Peelipose Thomas,LDF-IND,Second,37.30%
+17,Pathanamthitta,2014,114,Poonjar,NDA,15099,M. T. Ramesh,BJP,Third,13.80%
+17,Pathanamthitta,2014,115,Thiruvalla,UDF,55701,Anto Antony,INC,First,45.30%
+17,Pathanamthitta,2014,115,Thiruvalla,LDF,42420,Peelipose Thomas,LDF-IND,Second,34.50%
+17,Pathanamthitta,2014,115,Thiruvalla,NDA,19526,M. T. Ramesh,BJP,Third,15.90%
+17,Pathanamthitta,2014,116,Ranni,UDF,48909,Anto Antony,INC,First,43.00%
+17,Pathanamthitta,2014,116,Ranni,LDF,39818,Peelipose Thomas,LDF-IND,Second,35.00%
+17,Pathanamthitta,2014,116,Ranni,NDA,18531,M. T. Ramesh,BJP,Third,16.30%
+17,Pathanamthitta,2014,117,Aranmula,UDF,58826,Anto Antony,INC,First,43.30%
+17,Pathanamthitta,2014,117,Aranmula,LDF,47477,Peelipose Thomas,LDF-IND,Second,34.90%
+17,Pathanamthitta,2014,117,Aranmula,NDA,23771,M. T. Ramesh,BJP,Third,17.50%
+17,Pathanamthitta,2014,118,Konni,UDF,53480,Anto Antony,INC,First,42.90%
+17,Pathanamthitta,2014,118,Konni,LDF,45384,Peelipose Thomas,LDF-IND,Second,36.40%
+17,Pathanamthitta,2014,118,Konni,NDA,18222,M. T. Ramesh,BJP,Third,14.60%
+17,Pathanamthitta,2014,119,Adoor,UDF,52312,Anto Antony,INC,First,39.10%
+17,Pathanamthitta,2014,119,Adoor,LDF,50354,Peelipose Thomas,LDF-IND,Second,37.70%
+17,Pathanamthitta,2014,119,Adoor,NDA,22796,M. T. Ramesh,BJP,Third,17.00%
+18,Kollam,2014,120,Chavara,UDF,68878,N. K. Premachandran,RSP,First,55.40%
+18,Kollam,2014,120,Chavara,LDF,44437,M. A. Baby,CPI(M),Second,35.80%
+18,Kollam,2014,120,Chavara,NDA,6739,P. M. Velayudhan,BJP,Third,5.40%
+18,Kollam,2014,121,Punalur,LDF,63227,M. A. Baby,CPI(M),First,46.50%
+18,Kollam,2014,121,Punalur,UDF,58587,N. K. Premachandran,RSP,Second,43.10%
+18,Kollam,2014,121,Punalur,NDA,8961,P. M. Velayudhan,BJP,Third,6.60%
+18,Kollam,2014,122,Chadayamangalam,LDF,59567,M. A. Baby,CPI(M),First,46.10%
+18,Kollam,2014,122,Chadayamangalam,UDF,52761,N. K. Premachandran,RSP,Second,40.90%
+18,Kollam,2014,122,Chadayamangalam,NDA,9473,P. M. Velayudhan,BJP,Third,7.30%
+18,Kollam,2014,123,Kundara,UDF,64351,N. K. Premachandran,RSP,First,47.50%
+18,Kollam,2014,123,Kundara,LDF,57440,M. A. Baby,CPI(M),Second,42.40%
+18,Kollam,2014,123,Kundara,NDA,8724,P. M. Velayudhan,BJP,Third,6.40%
+18,Kollam,2014,124,Kollam,UDF,59685,N. K. Premachandran,RSP,First,50.80%
+18,Kollam,2014,124,Kollam,LDF,45443,M. A. Baby,CPI(M),Second,38.70%
+18,Kollam,2014,124,Kollam,NDA,8322,P. M. Velayudhan,BJP,Third,7.10%
+18,Kollam,2014,125,Eravipuram,UDF,52500,N. K. Premachandran,RSP,First,48.00%
+18,Kollam,2014,125,Eravipuram,LDF,45936,M. A. Baby,CPI(M),Second,42.00%
+18,Kollam,2014,125,Eravipuram,NDA,6864,P. M. Velayudhan,BJP,Third,6.30%
+18,Kollam,2014,126,Chathannoor,LDF,53293,M. A. Baby,CPI(M),First,45.70%
+18,Kollam,2014,126,Chathannoor,UDF,50259,N. K. Premachandran,RSP,Second,43.10%
+18,Kollam,2014,126,Chathannoor,NDA,9522,P. M. Velayudhan,BJP,Third,8.20%
+19,Attingal,2014,127,Varkala,LDF,50382,A. Sampath,CPI(M),First,46.20%
+19,Attingal,2014,127,Varkala,UDF,41369,Bindhu Krishna,INC,Second,37.90%
+19,Attingal,2014,127,Varkala,NDA,10219,Girija Kumari S,BJP,Third,9.40%
+19,Attingal,2014,128,Attingal,LDF,64215,A. Sampath,CPI(M),First,50.70%
+19,Attingal,2014,128,Attingal,UDF,43260,Bindhu Krishna,INC,Second,34.10%
+19,Attingal,2014,128,Attingal,NDA,11587,Girija Kumari S,BJP,Third,9.10%
+19,Attingal,2014,129,Chirayinkeezhu,LDF,59186,A. Sampath,CPI(M),First,48.00%
+19,Attingal,2014,129,Chirayinkeezhu,UDF,47704,Bindhu Krishna,INC,Second,38.70%
+19,Attingal,2014,129,Chirayinkeezhu,NDA,8377,Girija Kumari S,BJP,Third,6.80%
+19,Attingal,2014,130,Nedumangad,LDF,59283,A. Sampath,CPI(M),First,46.60%
+19,Attingal,2014,130,Nedumangad,UDF,45769,Bindhu Krishna,INC,Second,36.00%
+19,Attingal,2014,130,Nedumangad,NDA,15304,Girija Kumari S,BJP,Third,12.00%
+19,Attingal,2014,131,Vamanapuram,LDF,56922,A. Sampath,CPI(M),First,45.00%
+19,Attingal,2014,131,Vamanapuram,UDF,51226,Bindhu Krishna,INC,Second,40.50%
+19,Attingal,2014,131,Vamanapuram,NDA,11207,Girija Kumari S,BJP,Third,8.90%
+19,Attingal,2014,132,Aruvikkara,LDF,52000,A. Sampath,CPI(M),First,43.30%
+19,Attingal,2014,132,Aruvikkara,UDF,47837,Bindhu Krishna,INC,Second,39.90%
+19,Attingal,2014,132,Aruvikkara,NDA,14890,Girija Kumari S,BJP,Third,12.40%
+19,Attingal,2014,133,Kattakkada,LDF,49358,A. Sampath,CPI(M),First,42.30%
+19,Attingal,2014,133,Kattakkada,UDF,44375,Bindhu Krishna,INC,Second,38.00%
+19,Attingal,2014,133,Kattakkada,NDA,18811,Girija Kumari S,BJP,Third,16.10%
+20,Thiruvananthapuram,2014,134,Kazhakoottam,NDA,41829,O. Rajagopal,BJP,First,37.10%
+20,Thiruvananthapuram,2014,134,Kazhakoottam,UDF,34220,Shashi Tharoor,INC,Second,30.40%
+20,Thiruvananthapuram,2014,134,Kazhakoottam,LDF,31799,Bennet Abraham,CPI,Third,28.20%
+20,Thiruvananthapuram,2014,135,Vattiyoorkavu,NDA,43589,O. Rajagopal,BJP,First,37.10%
+20,Thiruvananthapuram,2014,135,Vattiyoorkavu,UDF,40663,Shashi Tharoor,INC,Second,34.60%
+20,Thiruvananthapuram,2014,135,Vattiyoorkavu,LDF,27504,Bennet Abraham,CPI,Third,23.40%
+20,Thiruvananthapuram,2014,136,Thiruvananthapuram,NDA,40835,O. Rajagopal,BJP,First,36.00%
+20,Thiruvananthapuram,2014,136,Thiruvananthapuram,UDF,39027,Shashi Tharoor,INC,Second,34.40%
+20,Thiruvananthapuram,2014,136,Thiruvananthapuram,LDF,27385,Bennet Abraham,CPI,Third,24.10%
+20,Thiruvananthapuram,2014,137,Nemom,NDA,50685,O. Rajagopal,BJP,First,42.10%
+20,Thiruvananthapuram,2014,137,Nemom,UDF,32639,Shashi Tharoor,INC,Second,27.10%
+20,Thiruvananthapuram,2014,137,Nemom,LDF,31643,Bennet Abraham,CPI,Third,26.30%
+20,Thiruvananthapuram,2014,138,Parassala,UDF,50360,Shashi Tharoor,INC,First,34.80%
+20,Thiruvananthapuram,2014,138,Parassala,LDF,47953,Bennet Abraham,CPI,Second,33.20%
+20,Thiruvananthapuram,2014,138,Parassala,NDA,39753,O. Rajagopal,BJP,Third,27.50%
+20,Thiruvananthapuram,2014,139,Kovalam,UDF,51401,Shashi Tharoor,INC,First,37.70%
+20,Thiruvananthapuram,2014,139,Kovalam,LDF,42112,Bennet Abraham,CPI,Second,30.90%
+20,Thiruvananthapuram,2014,139,Kovalam,NDA,36169,O. Rajagopal,BJP,Third,26.50%
+20,Thiruvananthapuram,2014,140,Neyyattinkara,UDF,48009,Shashi Tharoor,INC,First,39.30%
+20,Thiruvananthapuram,2014,140,Neyyattinkara,LDF,39806,Bennet Abraham,CPI,Second,32.60%
+20,Thiruvananthapuram,2014,140,Neyyattinkara,NDA,28958,O. Rajagopal,BJP,Third,23.70%
