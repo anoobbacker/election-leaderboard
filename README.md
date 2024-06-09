@@ -3,6 +3,9 @@
 ## Demo
 ![Alt Text](assets/kotas-election-leaderboard.gif)
 
+## Screenshot
+![Kerala Election 2024](assets/image-17.png)
+![Kerala Election 2024](assets/image-18.png)
 
 ## Pending changes
 1. Add table for final election results, vote margins, and vote share percentages.
