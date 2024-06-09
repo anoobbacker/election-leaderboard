@@ -1,0 +1,44 @@
+{
+  "LIVE_REGISTER": {
+    "date": "01.05.2023",
+    "total_live_register": 2864631,
+    "gender_communal_wise_break_up": {
+      "male_registrants": 1034224,
+      "female_registrants": 1830389,
+      "transgender": 18,
+      "differently_abled_candidates": 107327,
+      "scheduled_caste": 529229,
+      "scheduled_tribe": 44875,
+      "wife_of_late": 40667,
+      "professionals": 131673
+    },
+    "educational_breakup": {
+      "illiterates": 1578,
+      "below_metric": 190165,
+      "matriculates": 2672888,
+      "pdc_plus_two": 1480758,
+      "graduates": 555990,
+      "post_graduates": 127053
+    },
+    "technical_registrants": {
+      "national_trade_certificate_holders": 77552,
+      "diploma_holders": 39271
+    },
+    "professional_registrants": {
+      "engineering_graduates_all_streams": 43176,
+      "health_care_professionals_bsc_nursing": 6787,
+      "health_care_professionals_bds": 1365,
+      "health_care_professionals_b_pharm": 2101,
+      "health_care_professionals_mbbs": 1420,
+      "health_care_professionals_bams": 3120,
+      "health_care_professionals_bums": 4,
+      "health_care_professionals_bsms": 120,
+      "health_care_professionals_bhms": 1745,
+      "agronomist": 1050,
+      "veterinarian": 1072,
+      "law_graduates": 664,
+      "mba_degree_holders": 6225,
+      "mca_degree_holders": 2953
+    }
+  }
+}

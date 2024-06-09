@@ -1,11 +1,5 @@
-import os
 import pandas as pd
 from openai import OpenAI
-import re
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
-from gensim.models import Word2Vec
 import sys
 import io
 
@@ -56,10 +50,10 @@ def generate_response(query, context):
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are an expert in political and election analysis. Provide a detailed analysis of Kerala Loksabha General Election 2024. Consider the trends, inflation, unemployment, fuel charges, LPG cooking gas price variations, increased taxes, and other factors that may affect the election results."},
+            {"role": "system", "content": "You are an expert in political and election analysis. Provide a detailed analysis of the Kerala Loksabha Election 2024 results announced on 4th June 2024. Highlight the trends that are hard to observe! Mention factors such as inflation, unemployment, fuel charges, LPG cooking gas prices, increased taxes, religious issues, health, education, and road conditions only if they are found online to have influenced the election results."},
             {"role": "user", "content": f"Context: {context}\n\nQuery: {query}"}
         ],
-        max_tokens=2000,
+        max_tokens=1500,
         n=1,
         stop=None,
         temperature=0.2
@@ -68,93 +62,62 @@ def generate_response(query, context):
 
 def MainRAG():
     # Load datasets
-    candidates_2024  = pd.read_csv('../data/loksabha/2024/2024-kerala-candidates.csv')
-    voter_turnout_2024  = pd.read_csv('../data/loksabha/2024/2024-kerala-voter-turnout.csv')
-    data_2009  = pd.read_csv('../data/loksabha/2009/2009-kerala-constituency-wise-result.csv')
-    data_2014  = pd.read_csv('../data/loksabha/2014/2014-kerala-constituency-wise-result.csv')
-    data_2019   = pd.read_csv('../data/loksabha/2019/2019-kerala-constituency-wise-result.csv')
-    poll_2024  = pd.read_csv('../data/loksabha/2024/polls.csv')
-    results_by_state_assembly  = pd.read_csv('../data/loksabha/2024/kerala-votes-by-state-assembly.csv')
-    results_by_constituency  = pd.read_csv('../data/loksabha/2024/kerala-candidate-results-by-constituency.csv')
-
-    # Check for leading/trailing spaces in column names
-    poll_2024.columns = poll_2024.columns.str.strip()
+    results_by_state_assembly = pd.read_csv('../data/loksabha/2024/kerala-votes-by-state-assembly.csv')
+    results_by_constituency = pd.read_csv('../data/loksabha/2024/kerala-candidate-results-by-constituency.csv')
 
     # Print the first few rows of the DataFrame to ensure it is loaded correctly
-    # print("First few rows of the DataFrame:\n", poll_2024.head())
-
-    # Add year columns
-    data_2009['Year'] = 2009
-    data_2014['Year'] = 2014
-    data_2019['Year'] = 2019
-
-    # Combine historical data
-    historical_data = pd.concat([data_2009, data_2014, data_2019], ignore_index=True)
-
-    # Preprocess data if necessary
-    historical_data.fillna('', inplace=True)
-    # print(historical_data)
+    # print("First few rows of the DataFrame:\n", results_by_state_assembly.head())
 
     data_mp  = pd.read_csv('../data/loksabha/2024/mp-performance.csv')
-    data_mp = data_mp[data_mp['State'] == 'Kerala']    
-
-    # Search for poll data for Kerala
-    kerala_other_poll_data = search_poll(poll_2024, 'Kerala')
-    # print(f"Kerala other poll: \n{kerala_other_poll_data}")
-    
-    allindia_other_poll_data = search_poll(poll_2024, 'ALL INDIA')
-    # print(f"All India other poll: \n{allindia_other_poll_data}")
+    data_mp = data_mp[data_mp['State'] == 'Kerala']
 
     print("# Election Analysis\n")
     for constituency in constituencies:
         constituency_number = constituency["#"]
         constituency_name = constituency["Constituency"]
 
+        context = ""
+
         # Example query
         query = f"Generate a comprehensive election analysis for Kerala constituency {constituency_name} in Kerala Loksabha Election 2024."
 
-        # Retrieve 2024 candidate and voter turnout data
-        candidate_info = candidates_2024[candidates_2024['#'] == constituency_number]
-        turnout_info = voter_turnout_2024[voter_turnout_2024['#'] == constituency_number]
+        # Search for historical data
         results_by_state_assembly_info = results_by_state_assembly[results_by_state_assembly['#'] == constituency_number]
-        results_by_constituency_info = results_by_constituency[results_by_constituency['#'] == constituency_number]
-        
-        # Extract 2024 candidate information by party
-        udf_info = f"'UDF Party': '{candidate_info['UDF Party'].values[0]}', 'UDF Member': '{candidate_info['UDF Member'].values[0]}'"
-        ldf_info = f"'LDF Party': '{candidate_info['LDF Party'].values[0]}', 'LDF Member': '{candidate_info['LDF Member'].values[0]}'"
-        nda_info = f"'NDA Party': '{candidate_info['NDA Party'].values[0]}', 'NDA Member': '{candidate_info['NDA Member'].values[0]}'"
 
-        context = f"{{'2024 Candidates': {{{udf_info} {ldf_info}{nda_info}}}}}"
-        turnout_context = "".join([str(doc) for doc in turnout_info.to_dict(orient='records')])
-        context += f"{{2024 Voter Turnout: {turnout_context} }}"
+        # Specify the columns you want to drop
+        state_assembly_columns_to_drop = ['#', 'Constituency', 'StateAssemblyNumber', 'Candidate Position'] 
+        results_by_state_assembly_info = results_by_state_assembly_info.drop(columns=state_assembly_columns_to_drop)
+
+        results_by_constituency_info = results_by_constituency[results_by_constituency['#'] == constituency_number]
+
+        # Specify the columns you want to drop
+        constituency_columns_to_drop = ['#', 'Constituency'] 
+        results_by_constituency_info = results_by_constituency_info.drop(columns=constituency_columns_to_drop)
+            
 
         mp_info = data_mp[data_mp['Constituency'] == constituency_name]
         mp_info_context = "".join([str(doc) for doc in mp_info.to_dict(orient='records')])
         context += f"{{Current Elected Member Performance: {mp_info_context} }}"
-
-        if not results_by_state_assembly_info.empty:
-            results_by_state_assembly_info_context = "".join([str(doc) for doc in results_by_state_assembly_info.to_dict(orient='records')])
-            context += f"{{Votes by State Assembly: {results_by_state_assembly_info_context} }}"
         
         if not results_by_constituency_info.empty:
             results_by_constituency_info_context = "".join([str(doc) for doc in results_by_constituency_info.to_dict(orient='records')])
             context += f"{{Votes by Constituency: {results_by_constituency_info_context} }}"
-
-        if not kerala_other_poll_data.empty:
-            kerala_other_poll_data_context = "".join([str(doc) for doc in kerala_other_poll_data.to_dict(orient='records')])
-            context += f"{{Kerala Opinion and Exit Poll Data: {kerala_other_poll_data_context} }}"
-
-        if not allindia_other_poll_data.empty:
-            allindia_other_poll_data_context = "".join([str(doc) for doc in allindia_other_poll_data.to_dict(orient='records')])
-            context += f"{{All India Opinion and Exit Poll Data: {allindia_other_poll_data_context} }}"
         
-        # Display context
-        # print(f"Context for constituency {constituency_name}: {context}")
-
+        
+        if not results_by_state_assembly_info.empty:
+            results_by_state_assembly_info_context = "".join([str(doc) for doc in results_by_state_assembly_info.to_dict(orient='records')])
+            context += f"{{Votes by State Assembly: {results_by_state_assembly_info_context} }}"
+            
         # Generate response using OpenAI API
         print(f"## {constituency_name}\n")        
         response = generate_response(query, context)
-        print(f"{response}\n")  
+        print(f"{response}\n")
+        
+        # Display context
+        # print(f"{context}")
+        # print(f"Context for constituency {constituency_name}: {results_by_constituency_info}")
+        # print(f"Context for constituency {constituency_name}: {results_by_state_assembly_info}")
+
 
 
 # Run the main function

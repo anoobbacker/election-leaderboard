@@ -1,21 +1,61 @@
-#,Constituency,UDF Party,UDF Member,LDF Party,LDF Member,NDA Party,NDA Member
-1,Kasaragod,INC,Rajmohan Unnithan,CPI(M),MV Balakrishnan,BJP,ML Ashwini
-2,Kannur,INC,K. Sudhakaran,CPI(M),MV Jayarajan,BJP,C Raghunath
-3,Vatakara,INC,Shafi Parambil,CPI(M),K. K. Shailaja,BJP,Prafulla Krishna
-4,Wayanad,INC,Rahul Gandhi,CPI,Annie Raja,BJP,K Surendran
-5,Kozhikode,INC,MK Raghavan,CPI(M),Elamaram Kareem,BJP,MT Ramesh
-6,Malappuram,IUML,ET Mohammed Basheer,CPI(M),V Vaseef,BJP,M Abdul Salam
-7,Ponnani,IUML,Abdussamad Samadani,CPI(M),K.S. Hamza,BJP,Niveditha Subramanian
-8,Palakkad,INC,VK Sreekandan,CPI(M),A Vijayaraghavan,BJP,C KrishnaKumar
-9,Alathur (SC),INC,Ramya Haridas,CPI(M),K. Radhakrishnan,BJP,TN Sarasu
-10,Thrissur,INC,K Muraleedharan,CPI,VS Sunil Kumar,BJP,Suresh Gopi
-11,Chalakudy,INC,Benny Behanan,CPI(M),C Raveendranath,BDJS,KA Unnikrishnan
-12,Ernakulam,INC,Hibi Eden,CPI(M),KJ Shine,BJP,KS Radhakrishnan
-13,Idukki,INC,Dean Kuriakose,CPI(M),Joice George,BDJS,Sangeetha Vishwanathan
-14,Kottayam,KEC,Francis George,KC(M),Thomas Chazhikadan,BDJS,Thushar Velapally
-15,Alappuzha,INC,KC Venugopal,CPI(M),AM Ariff,BJP,Sobha Surendran
-16,Mavelikara (SC),INC,Kodikunnil Suresh,CPI,CA Arun Kumar,BDJS,Baiju Kalasala
-17,Pathanamthitta,INC,Anto Antony,CPI(M),Thomas Issac,BJP,Anil Antony
-18,Kollam,RSP(I),NK Premachandran,CPI(M),Mukesh Madhavan,BJP,G Krishnakumar
-19,Attingal,INC,Adoor Prakash,CPI(M),V Joy,BJP,V Muraleedharan
-20,Thiruvananthapuram,INC,Shashi Tharoor,CPI,Pannyan Raveendran,BJP,Rajeev Chandrasekhar
+#,Constituency,Party,Candidate,Alliance
+1,Kasaragod,INC,Rajmohan Unnithan,UDF
+2,Kannur,INC,K. Sudhakaran,UDF
+3,Vatakara,INC,Shafi Parambil,UDF
+4,Wayanad,INC,Rahul Gandhi,UDF
+5,Kozhikode,INC,MK Raghavan,UDF
+6,Malappuram,IUML,ET Mohammed Basheer,UDF
+7,Ponnani,IUML,Abdussamad Samadani,UDF
+8,Palakkad,INC,VK Sreekandan,UDF
+9,Alathur (SC),INC,Ramya Haridas,UDF
+10,Thrissur,INC,K Muraleedharan,UDF
+11,Chalakudy,INC,Benny Behanan,UDF
+12,Ernakulam,INC,Hibi Eden,UDF
+13,Idukki,INC,Dean Kuriakose,UDF
+14,Kottayam,KEC,Francis George,UDF
+15,Alappuzha,INC,KC Venugopal,UDF
+16,Mavelikara (SC),INC,Kodikunnil Suresh,UDF
+17,Pathanamthitta,INC,Anto Antony,UDF
+18,Kollam,RSP(I),NK Premachandran,UDF
+19,Attingal,INC,Adoor Prakash,UDF
+20,Thiruvananthapuram,INC,Shashi Tharoor,UDF
+1,Kasaragod,CPI(M),MV Balakrishnan,LDF
+2,Kannur,CPI(M),MV Jayarajan,LDF
+3,Vatakara,CPI(M),K. K. Shailaja,LDF
+4,Wayanad,CPI,Annie Raja,LDF
+5,Kozhikode,CPI(M),Elamaram Kareem,LDF
+6,Malappuram,CPI(M),V Vaseef,LDF
+7,Ponnani,CPI(M),K.S. Hamza,LDF
+8,Palakkad,CPI(M),A Vijayaraghavan,LDF
+9,Alathur (SC),CPI(M),K. Radhakrishnan,LDF
+10,Thrissur,CPI,VS Sunil Kumar,LDF
+11,Chalakudy,CPI(M),C Raveendranath,LDF
+12,Ernakulam,CPI(M),KJ Shine,LDF
+13,Idukki,CPI(M),Joice George,LDF
+14,Kottayam,KC(M),Thomas Chazhikadan,LDF
+15,Alappuzha,CPI(M),AM Ariff,LDF
+16,Mavelikara (SC),CPI,CA Arun Kumar,LDF
+17,Pathanamthitta,CPI(M),Thomas Issac,LDF
+18,Kollam,CPI(M),Mukesh Madhavan,LDF
+19,Attingal,CPI(M),V Joy,LDF
+20,Thiruvananthapuram,CPI,Pannyan Raveendran,LDF
+1,Kasaragod,BJP,ML Ashwini,NDA
+2,Kannur,BJP,C Raghunath,NDA
+3,Vatakara,BJP,Prafulla Krishna,NDA
+4,Wayanad,BJP,K Surendran,NDA
+5,Kozhikode,BJP,MT Ramesh,NDA
+6,Malappuram,BJP,M Abdul Salam,NDA
+7,Ponnani,BJP,Niveditha Subramanian,NDA
+8,Palakkad,BJP,C KrishnaKumar,NDA
+9,Alathur (SC),BJP,TN Sarasu,NDA
+10,Thrissur,BJP,Suresh Gopi,NDA
+11,Chalakudy,BDJS,KA Unnikrishnan,NDA
+12,Ernakulam,BJP,KS Radhakrishnan,NDA
+13,Idukki,BDJS,Sangeetha Vishwanathan,NDA
+14,Kottayam,BDJS,Thushar Velapally,NDA
+15,Alappuzha,BJP,Sobha Surendran,NDA
+16,Mavelikara (SC),BDJS,Baiju Kalasala,NDA
+17,Pathanamthitta,BJP,Anil Antony,NDA
+18,Kollam,BJP,G Krishnakumar,NDA
+19,Attingal,BJP,V Muraleedharan,NDA
+20,Thiruvananthapuram,BJP,Rajeev Chandrasekhar,NDA

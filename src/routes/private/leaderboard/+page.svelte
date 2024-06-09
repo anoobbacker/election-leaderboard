@@ -119,9 +119,9 @@
 <div class="max-w-full mx-auto p-6">
   <div class="flex flex-col place-content-center items-center min-w-full gap-8 p-2">
     <h1 class="p-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Leaderboard</h1>
-    <div class="flex flex-wrap place-content-center min-w-full gap-8 p-2">
+    <div class="flex flex-wrap place-content-center w-full gap-8 p-2">
       <!-- participant points -->
-      <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md w-1/2 ">
+      <ul role="list" class="divide-y divide-gray-100 rounded-lg p-4 shadow-md w-11/12">
         {#each calculatedParticipants as participant, i}
           <li class="flex justify-between gap-x-6 py-5">
             <div class="flex min-w-0 gap-x-4">

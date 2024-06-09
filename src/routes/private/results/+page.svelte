@@ -85,8 +85,9 @@
 
 {#if electionResults && resultsReady !== false}
 <!-- Show Kerala SVG Image -->
-<div class="flex flex-row flex-wrap place-content-center items-center content-center">
-  <div class="flex flex-col w-1/4 z-10 p-4">
+<div class="max-w-full mx-auto p-6 align-middle place-content-center shadow-md w-11/12">
+  <div class="flex flex-row flex-wrap  place-content-center items-center">
+  <div class="flex flex-col h-3/5 z-10 p-4">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" pointer-events="none" width="100%" height="100%"
   viewBox="115 20 280 430" preserveAspectRatio="xMidYMid meet">
       <g>
@@ -175,7 +176,7 @@
   </div>
   <!-- Summary by local alliances -->
   <div class="flex flex-col">
-    <ul role="list" class="divide-y divide-gray-100rounded-lg p-4 shadow-md">
+    <ul role="list" class="divide-y divide-gray-100rounded-lg p-4 w-fit">
       {#each Object.entries(allianceSummary ?? {}) as [alliance, count]}
       <li class="flex justify-between gap-x-6 py-5">
         <div class="flex min-w-0 gap-x-4">
@@ -198,11 +199,11 @@
       {/each}
     </ul>    
   </div>
-
+</div>
 </div>
 
 <!-- Results summary -->
-<div class="flex flex-col flex-wrap place-content-center min-w-full items-center z-0">
+<div class="max-w-full mx-auto p-6 z-0">
   <h1 class="p-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Results summary</h1>
   <div class="flex flex-row flex-wrap  place-content-center">
     <!-- Summary by elected party -->
